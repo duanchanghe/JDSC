@@ -197,17 +197,4 @@ static NSString *detailController = @"JDGoodsDetailController";
     return YES;
 }
 
-
-//
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-//    self.tabBarController.tabBar.hidden= YES;
-//    NSLog(@"ccccccc");
-//    self.tabBarController.tabBar.hidden= NO;
-
-    
-}
-
-
-
 @end
