@@ -8,7 +8,10 @@
 
 #import "SecondViewController.h"
 #import "JDSortedCollectionCell.h"
+#import "JDGoodsDetailController.h"
+
 static NSString *collectionCell = @"JDSortedCollectionCell";
+static NSString *detailController = @"JDGoodsDetailController";
 
 @interface SecondViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITextFieldDelegate,UIScrollViewDelegate>
 // 商品列表的基本属性的配置
@@ -77,14 +80,6 @@ static NSString *collectionCell = @"JDSortedCollectionCell";
     }];
 }
 
-//
-- (void)collectionView:(UICollectionView *)collectionView
-didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    self.hidesBottomBarWhenPushed = YES;
-    [_searchText resignFirstResponder];
-    
-}
 
 // 数据请求设置初始值
 - (void)setInitialValue
@@ -206,8 +201,11 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 //
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    DCHTabBarViewController *tab = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DCHTabBarViewController"];
-    tab.tabBar.hidden = YES;
+//    self.tabBarController.tabBar.hidden= YES;
+//    NSLog(@"ccccccc");
+//    self.tabBarController.tabBar.hidden= NO;
+
+    
 }
 
 

@@ -24,6 +24,7 @@
                                                       alpha:1.00];
     self.navigationBar.titleTextAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:19],
                                                NSForegroundColorAttributeName:[UIColor whiteColor]};
+    
 }
 
 - (void)didReceiveMemoryWarning {

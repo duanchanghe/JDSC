@@ -27,6 +27,7 @@
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
 		B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2E1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m */; };
 		B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E311DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m */; };
+		B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E341DDC51AA006BFB12 /* JDGoodsDetailController.m */; };
 		B76D0F1E1DD9B07500EEF537 /* UIViewController+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F1D1DD9B07500EEF537 /* UIViewController+Request.m */; };
 		B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F291DDB030700EEF537 /* JDSortedCollectionCell.m */; };
 		B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2DC421DD95F9900428D66 /* UIView+Category.m */; };
@@ -78,6 +79,8 @@
 		B7413E2E1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFirstShoppingCarTableCell.m; sourceTree = "<group>"; };
 		B7413E301DDC247C006BFB12 /* JDSecondShoppingCarTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDSecondShoppingCarTableCell.h; sourceTree = "<group>"; };
 		B7413E311DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDSecondShoppingCarTableCell.m; sourceTree = "<group>"; };
+		B7413E331DDC51AA006BFB12 /* JDGoodsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDGoodsDetailController.h; sourceTree = "<group>"; };
+		B7413E341DDC51AA006BFB12 /* JDGoodsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDGoodsDetailController.m; sourceTree = "<group>"; };
 		B76D0F1C1DD9B07500EEF537 /* UIViewController+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Request.h"; sourceTree = "<group>"; };
 		B76D0F1D1DD9B07500EEF537 /* UIViewController+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Request.m"; sourceTree = "<group>"; };
 		B76D0F281DDB030700EEF537 /* JDSortedCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDSortedCollectionCell.h; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 			children = (
 				90D532CE1DD1C1D2007A7768 /* SecondViewController.h */,
 				90D532CF1DD1C1D2007A7768 /* SecondViewController.m */,
+				B7413E331DDC51AA006BFB12 /* JDGoodsDetailController.h */,
+				B7413E341DDC51AA006BFB12 /* JDGoodsDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -489,7 +494,7 @@
 				TargetAttributes = {
 					900534A41DD1ADD4000E089C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3B9779VWJ6;
+						DevelopmentTeam = 25MJECS72H;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -601,6 +606,7 @@
 				B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */,
 				CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */,
 				90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */,
+				B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */,
 				B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */,
 				90D532D31DD1C1DF007A7768 /* ThirdViewController.m in Sources */,
 				CCCA5BD21DDC341F00F6FC1C /* Footprint.m in Sources */,
@@ -727,7 +733,7 @@
 			baseConfigurationReference = 1E86B6114A010C97FB24BD1B /* Pods-商城模板.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3B9779VWJ6;
+				DEVELOPMENT_TEAM = 25MJECS72H;
 				INFOPLIST_FILE = "商城模板/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -742,7 +748,7 @@
 			baseConfigurationReference = 85BD24F0FE61360665667A2D /* Pods-商城模板.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3B9779VWJ6;
+				DEVELOPMENT_TEAM = 25MJECS72H;
 				INFOPLIST_FILE = "商城模板/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

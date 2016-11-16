@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DCHTabBar;
 
 @interface DCHTabBarViewController : UITabBarController
+@property (nonatomic, strong) DCHTabBar *myTabbar;
 
 @end

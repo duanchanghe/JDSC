@@ -692,6 +692,7 @@
 {
     NSString *token;
     
+    token = @"46504168e4794b30bb3bd8f3a8bd14e6";
     
     if ([token isEqualToString:@""]) {
         

@@ -10,4 +10,11 @@
 
 @interface ThirdViewController : UIViewController
 
+@property (nonatomic, copy) NSMutableArray *data;
+@property (nonatomic, copy) NSString *mer_id;
+@property (nonatomic, copy) NSString *opt;
+@property (nonatomic, copy) NSString *timestamp;
+@property (nonatomic, copy) NSString *token;
+@property (nonatomic, copy) NSString *secret;
+
 @end

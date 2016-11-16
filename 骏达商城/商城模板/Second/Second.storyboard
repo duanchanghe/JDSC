@@ -177,7 +177,7 @@
                                             <outlet property="priceLabel" destination="dAo-ud-C0E" id="vIC-5L-tFx"/>
                                             <outlet property="secondLabel" destination="rgn-gO-b43" id="FWE-uk-GSh"/>
                                             <outlet property="thirdLabel" destination="iiw-gj-IWc" id="d0j-9O-5W5"/>
-                                            <segue destination="M7x-ad-7Q8" kind="show" identifier="jumpToDetail" id="W7i-Mq-Zhx"/>
+                                            <segue destination="M7x-ad-7Q8" kind="show" id="x5W-D4-PXy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -228,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="760.79999999999995" y="107.49625187406298"/>
         </scene>
-        <!--View Controller-->
+        <!--Goods Detail Controller-->
         <scene sceneID="bNk-CZ-9hn">
             <objects>
-                <viewController id="M7x-ad-7Q8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JDGoodsDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M7x-ad-7Q8" customClass="JDGoodsDetailController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yOO-tJ-9Te"/>
                         <viewControllerLayoutGuide type="bottom" id="tL0-ul-QBW"/>
@@ -242,10 +242,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vj0-gd-d4I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkA-Cv-Vx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="107"/>
+            <point key="canvasLocation" x="1569" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ao-gl-qdw">

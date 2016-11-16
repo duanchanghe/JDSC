@@ -12,14 +12,13 @@
 
 @interface DCHTabBarViewController ()<DCHtabBarDelegate,UITabBarDelegate>
 
-@property (nonatomic, strong) DCHTabBar *myTabbar;
-
 @end
 
 @implementation DCHTabBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setValue:self.myTabbar forKey:@"tabBar"];
     
 }
