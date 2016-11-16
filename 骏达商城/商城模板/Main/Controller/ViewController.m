@@ -18,6 +18,11 @@
 {
     [super viewDidLoad];
     
+    
+    
+    NSLog(@"我都不知道我要写一些什么东西");
+    
+    
 }
 
 
