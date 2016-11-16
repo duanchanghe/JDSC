@@ -15,11 +15,6 @@
 @implementation FourthViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    
-    
-    NSLog(@"ddddddd");
-    
-    
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.941 blue:0.961 alpha:1.00];
 }
