@@ -1,0 +1,35 @@
+//
+//  DCHTabBarViewController.m
+//  商城模板
+//
+//  Created by jundanuantong on 16/11/8.
+//  Copyright © 2016年 jundanuantong. All rights reserved.
+//
+
+#import "DCHTabBarViewController.h"
+#import "DCHTabBar.h"
+
+
+@interface DCHTabBarViewController ()<DCHtabBarDelegate,UITabBarDelegate>
+
+@end
+
+@implementation DCHTabBarViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    DCHTabBar *myTabbar = [[DCHTabBar alloc]init];
+    myTabbar.tabBarDelegate = self;
+    [self setValue:myTabbar forKey:@"tabBar"];
+}
+
+
+
+- (void)addButtonClick:(DCHTabBar *)tabBar
+{
+    NSLog(@"点击了 button");
+}
+
+
+@end

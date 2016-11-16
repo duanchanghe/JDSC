@@ -1,0 +1,154 @@
+//
+//  UIViewController+Request.m
+//  商城模板
+//
+//  Created by 段昌鹤 on 2016/11/14.
+//  Copyright © 2016年 jundanuantong. All rights reserved.
+//
+
+#import "UIViewController+Request.h"
+#import<CommonCrypto/CommonDigest.h>
+
+
+@implementation UIViewController (Request)
+
+// 修改用户手机号
+- (void)changePhoneUserID:(NSString *)user_id
+              PhoneNumber:(NSString *)phone
+              Sms_captcha:(NSString *)sms_captcha
+                    Block:(void (^)(NSMutableDictionary *))block
+{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObject:user_id      forKey:@"user_id"];
+    [dic setObject:phone        forKey:@"phone"];
+    [dic setObject:sms_captcha  forKey:@"sms_captcha"];
+    [self getParmar:dic Block:^(NSMutableDictionary *temp) {
+        block(temp);
+    }];
+}
+
+//
+
+// 首页
+- (void)homeMerID:(NSString *)mer_id
+          OrderBy:(NSString *)order_by
+            Block:(void(^)(NSMutableDictionary*))block
+{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObject:@"Page/Home"     forKey:@"opt"];
+    [dic setObject:mer_id           forKey:@"mer_id"];
+    [dic setObject:order_by         forKey:@"order_by"];
+    [self getParmar:dic Block:^(NSMutableDictionary *temp) {
+        block(temp);
+    }];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-(void)getParmar:(NSMutableDictionary*)parmar
+            Block:(void(^)(NSMutableDictionary*))block;
+{
+    NSDate *senddate = [NSDate date];
+    NSString *date2 = [NSString stringWithFormat:@"%ld", (long)[senddate timeIntervalSince1970]];
+
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    [session.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-os"];
+    [session.requestSerializer setValue:@"8.0.0" forHTTPHeaderField:@"client-os-ver"];
+    [session.requestSerializer setValue:@"1.0.0" forHTTPHeaderField:@"client-ver"];
+    [session.requestSerializer setValue:@"V1" forHTTPHeaderField:@"api-ver"];
+    [session.requestSerializer setValue:date2 forHTTPHeaderField:@"timestamp"];
+    
+    [parmar setObject:date2 forKey:@"timestamp"];
+    
+    NSArray *allKeys = [parmar allKeys];
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc]initWithKey:nil ascending:YES];
+    NSArray *sortArray = [NSArray arrayWithObjects:descriptor,nil];
+    NSArray *sortedArray = [allKeys sortedArrayUsingDescriptors:sortArray];
+    NSString* str = @"";
+    for (int i = 0; i < sortedArray.count; i ++) {
+        NSString*sf = [sortedArray objectAtIndex:i];
+        NSString *sfg = [sortedArray objectAtIndex:i];
+        str = [str stringByAppendingString:sfg];
+        NSString*sktt = (NSString*)[parmar objectForKey:sf];
+        str = [str stringByAppendingString:@"="];
+        str = [str stringByAppendingString:sktt];
+        str = [str stringByAppendingString:@"&"];
+    }
+    
+    str = [str stringByAppendingString:@"secret=junda_signature_key"];
+    const char *cStr = [str UTF8String];
+    unsigned char digest[CC_MD5_DIGEST_LENGTH];
+    CC_MD5( cStr, (int)strlen(cStr), digest ); // This is the md5 call
+    
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+    {
+        [output appendFormat:@"%02x", digest[i]];
+    }
+
+    [session.requestSerializer setValue:output forHTTPHeaderField:@"signature"];
+    [session POST:URI parameters:parmar progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSMutableDictionary * dic = (NSMutableDictionary*) responseObject;
+        
+        
+        if ([dic[@"code"] integerValue]) {
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                            message:dic[@"msg"]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"取消"
+                                                  otherButtonTitles:@"确定", nil];
+            [alert show];
+            
+        }
+        
+        block(dic);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:[NSString stringWithFormat:@"%@",error]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"取消"
+                                              otherButtonTitles:@"确定", nil];
+        [alert show];
+        
+    }];
+    
+}
+
+- (NSString *) md5:(NSString *) input {
+    const char *cStr = [input UTF8String];
+    unsigned char digest[CC_MD5_DIGEST_LENGTH];
+    CC_MD5( cStr, (int)strlen(cStr), digest );
+    
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    
+    return  output;
+}
+
+
+
+
+
+@end
