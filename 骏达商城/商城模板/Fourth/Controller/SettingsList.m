@@ -30,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%f",self.view.frame.size.height);
+    NSLog(@"%f",SCREN_HEIGHT);
     // Do any additional setup after loading the view.
 }
 

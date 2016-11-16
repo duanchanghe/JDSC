@@ -33,6 +33,11 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

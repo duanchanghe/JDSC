@@ -18,10 +18,6 @@
 		90D532D01DD1C1D2007A7768 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532CF1DD1C1D2007A7768 /* SecondViewController.m */; };
 		90D532D31DD1C1DF007A7768 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532D21DD1C1DF007A7768 /* ThirdViewController.m */; };
 		90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532D81DD1C210007A7768 /* PlusViewController.m */; };
-		90D532DB1DD1C23B007A7768 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D532DA1DD1C23B007A7768 /* First.storyboard */; };
-		90D532DD1DD1C253007A7768 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D532DC1DD1C253007A7768 /* Second.storyboard */; };
-		90D532DF1DD1C264007A7768 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D532DE1DD1C264007A7768 /* Third.storyboard */; };
-		90D532E11DD1C274007A7768 /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D532E01DD1C274007A7768 /* Fourth.storyboard */; };
 		90D532E71DD1C46C007A7768 /* DCHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E61DD1C46C007A7768 /* DCHTabBarViewController.m */; };
 		90D532EA1DD1C657007A7768 /* DCHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E91DD1C657007A7768 /* DCHTabBar.m */; };
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
@@ -64,10 +60,6 @@
 		90D532D21DD1C1DF007A7768 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		90D532D71DD1C210007A7768 /* PlusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusViewController.h; sourceTree = "<group>"; };
 		90D532D81DD1C210007A7768 /* PlusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlusViewController.m; sourceTree = "<group>"; };
-		90D532DA1DD1C23B007A7768 /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
-		90D532DC1DD1C253007A7768 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
-		90D532DE1DD1C264007A7768 /* Third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
-		90D532E01DD1C274007A7768 /* Fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fourth.storyboard; sourceTree = "<group>"; };
 		90D532E51DD1C46C007A7768 /* DCHTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHTabBarViewController.h; sourceTree = "<group>"; };
 		90D532E61DD1C46C007A7768 /* DCHTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHTabBarViewController.m; sourceTree = "<group>"; };
 		90D532E81DD1C657007A7768 /* DCHTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHTabBar.h; sourceTree = "<group>"; };
@@ -179,7 +171,6 @@
 		90D532AD1DD1C0D2007A7768 /* Fourth */ = {
 			isa = PBXGroup;
 			children = (
-				90D532E01DD1C274007A7768 /* Fourth.storyboard */,
 				90D532AE1DD1C0D2007A7768 /* Controller */,
 				90D532AF1DD1C0D2007A7768 /* Model */,
 				90D532B01DD1C0D2007A7768 /* View */,
@@ -221,7 +212,6 @@
 		90D532B11DD1C0D2007A7768 /* Frist */ = {
 			isa = PBXGroup;
 			children = (
-				90D532DA1DD1C23B007A7768 /* First.storyboard */,
 				90D532B21DD1C0D2007A7768 /* Controller */,
 				90D532B31DD1C0D2007A7768 /* Model */,
 				90D532B41DD1C0D2007A7768 /* View */,
@@ -331,7 +321,6 @@
 		90D532C11DD1C0D2007A7768 /* Second */ = {
 			isa = PBXGroup;
 			children = (
-				90D532DC1DD1C253007A7768 /* Second.storyboard */,
 				90D532C21DD1C0D2007A7768 /* Controller */,
 				90D532C31DD1C0D2007A7768 /* Model */,
 				90D532C41DD1C0D2007A7768 /* View */,
@@ -369,7 +358,6 @@
 		90D532C51DD1C0D2007A7768 /* Third */ = {
 			isa = PBXGroup;
 			children = (
-				90D532DE1DD1C264007A7768 /* Third.storyboard */,
 				90D532C61DD1C0D2007A7768 /* Controller */,
 				90D532C71DD1C0D2007A7768 /* Model */,
 				90D532C81DD1C0D2007A7768 /* View */,
@@ -525,10 +513,6 @@
 				900534BB1DD1ADD4000E089C /* LaunchScreen.storyboard in Resources */,
 				900534B81DD1ADD4000E089C /* Assets.xcassets in Resources */,
 				900534B31DD1ADD4000E089C /* Main.storyboard in Resources */,
-				90D532E11DD1C274007A7768 /* Fourth.storyboard in Resources */,
-				90D532DD1DD1C253007A7768 /* Second.storyboard in Resources */,
-				90D532DF1DD1C264007A7768 /* Third.storyboard in Resources */,
-				90D532DB1DD1C23B007A7768 /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
