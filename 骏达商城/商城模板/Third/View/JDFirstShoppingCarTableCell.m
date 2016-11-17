@@ -81,7 +81,7 @@
     _goods_name = dataDict[@"goods_name"];
     _qty = dataDict[@"qty"];
     _price = dataDict[@"price"];
-    _sub_total = dataDict[@"sub_tatal"];
+    _sub_total = dataDict[@"sub_total"];
     _icon = dataDict[@"icon"];
     _need_update = dataDict[@"need_update"];
     
