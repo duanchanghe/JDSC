@@ -30,12 +30,12 @@
 @property (nonatomic, copy) NSString *icon;
 @property (nonatomic, assign) BOOL need_update;
 
-
 @end
 
 @implementation JDFirstShoppingCarTableCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
     [self fitFont:_detailLabel.font];
     [self fitFont:_priceLabel.font];
@@ -44,14 +44,12 @@
     [self fitFont:_addBtton.titleLabel.font];
     [self fitFont:_minusButton.titleLabel.font];
     [self fitFont:_numberText.font];
-    // Initialization code
 }
 
 - (void)fitFont:(UIFont *)font
 {
     CGFloat size = font.pointSize;
     font = [UIFont systemFontOfSize:size * ([UIScreen mainScreen].bounds.size.width)/414.0];
-    
 }
 
 - (IBAction)minusButton:(UIButton *)sender
@@ -64,7 +62,6 @@
         _numberText.text = [NSString stringWithFormat:@"%ld",--number];
     }
     //  加减操作后  需要跟新购物车
-    
 }
 
 - (IBAction)addButton:(UIButton *)sender
@@ -97,11 +94,5 @@
     
 }
 
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

@@ -17,7 +17,7 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSMutableArray *dataArray;
-
+@property (weak, nonatomic) IBOutlet UILabel *allDetailLabel;
 
 @end
 
@@ -33,11 +33,6 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
-
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -66,18 +61,10 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
                            animated:YES
                          completion:nil];
     }else{
-        [self  cartListToken:_token
-                       MerID:_mer_id
-                       Block:^(NSMutableDictionary *data) {
-                           
-                           NSArray *rows = data[@"data"][@"rows"];
-                           [self.dataArray removeAllObjects];
-                           [self.dataArray addObjectsFromArray:rows];
-                           [_tableView reloadData];
-                       }];
+
+        [self requestData];
     }
 }
-
 
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -93,9 +80,16 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0];
     cell.dataDict = self.dataArray[indexPath.row];
-    [cell.deleteButton addTarget:self action:@selector(updataProduct:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.addBtton addTarget:self action:@selector(addProduct:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.minusButton addTarget:self action:@selector(minusProduct:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [cell.deleteButton addTarget:self
+                          action:@selector(updataProduct:)
+                forControlEvents:UIControlEventTouchUpInside];
+    [cell.addBtton addTarget:self
+                      action:@selector(addProduct:)
+            forControlEvents:UIControlEventTouchUpInside];
+    [cell.minusButton addTarget:self
+                         action:@selector(minusProduct:)
+               forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -103,9 +97,7 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    return 160;
-    
+    return 120;
 }
 
 - (void)minusProduct:(UIButton *)sender
@@ -115,32 +107,22 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     NSInteger qt = [dict[@"qty"] integerValue];
     if (qt <= 1) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"已经是最少了！" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
-        UIAlertAction *canelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定"
+                                                             style:UIAlertActionStyleDefault
+                                                           handler:nil];
+        UIAlertAction *canelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                              style:UIAlertActionStyleCancel
+                                                            handler:nil];
         [alert addAction:sureAction];
         [alert addAction:canelAction];
-        [self presentViewController:alert animated:YES completion:nil];
+        [self presentViewController:alert
+                           animated:YES
+                         completion:nil];
     }else{
         NSString *qty = [NSString stringWithFormat:@"%ld",qt-1];
-        
-        [self cartUpdateToken:_token
-                        MerID:_mer_id
-                      GoodsID:ID
-                     GoodsQty:qty
-                        Block:^(NSMutableDictionary *data) {
-                            NSArray *rows = data[@"data"][@"rows"];
-                            [self.dataArray removeAllObjects];
-                            [self.dataArray addObjectsFromArray:rows];
-                            [_tableView reloadData];
-                            
-                        }];
-        
-        
-
+        [self updataRequest:ID Qty:qty];
     }
 }
-
-
 
 - (void)addProduct:(UIButton *)sender
 {
@@ -148,45 +130,34 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     NSString *ID = dict[@"id"];
     NSInteger qt = [dict[@"qty"] integerValue];
     NSString *qty = [NSString stringWithFormat:@"%ld",qt+1];
-    [self cartUpdateToken:_token
-                    MerID:_mer_id
-                  GoodsID:ID
-                 GoodsQty:qty
-                    Block:^(NSMutableDictionary *data) {
-                        NSArray *rows = data[@"data"][@"rows"];
-                        [self.dataArray removeAllObjects];
-                        [self.dataArray addObjectsFromArray:rows];
-                        [_tableView reloadData];
-                    }];
-    
+    [self updataRequest:ID Qty:qty];
     // 更新购物车
 }
 
 // 删除商品
 - (void)updataProduct:(UIButton *)sender
 {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否要删除 ？" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
+                                                                   message:@"是否要删除 ？"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
         
         NSDictionary *dict = [self updataGetDictionary:sender];
         NSString *ID = dict[@"id"];
-        [self cartUpdateToken:_token
-                        MerID:_mer_id
-                      GoodsID:ID
-                     GoodsQty:@"0"
-                        Block:^(NSMutableDictionary *data) {
-                            NSArray *rows = data[@"data"][@"rows"];
-                            [self.dataArray removeAllObjects];
-                            [self.dataArray addObjectsFromArray:rows];
-                            [_tableView reloadData];
-                            
-                        }];
+        [self updataRequest:ID Qty:@"0"];
     }];
-    UIAlertAction *canelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *canelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                          style:UIAlertActionStyleCancel
+                                                        handler:nil];
     [alert addAction:sureAction];
     [alert addAction:canelAction];
-    [self presentViewController:alert animated:YES completion:nil];
+    [self presentViewController:alert
+                       animated:YES
+                     completion:nil];
 }
+
 
 - (NSDictionary *)getDictionary:(UIButton *)button
 {
@@ -201,16 +172,43 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
 }
 
 
+- (void)requestData
+{
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self cartListToken:_token
+                  MerID:_mer_id
+                  Block:^(NSMutableDictionary *dataDic) {
+                      NSDictionary *data = dataDic[@"data"];
+                      NSArray *rows = data[@"rows"];
+                      NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"total_item"]];
+                      NSString *total_amount = [NSString stringWithFormat:@"￥%@", data[@"total_amount" ]];
+                      NSString *total = [NSString stringWithFormat:@"共计%@件商品 合计：%@",total_item,total_amount];
+                      
+                      NSRange range = [total rangeOfString:total_amount];
+                      NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor lightGrayColor],NSForegroundColorAttributeName,nil];
+                      NSMutableAttributedString *totalAttributes = [[NSMutableAttributedString alloc] initWithString:total attributes:attributes];
+                      NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor redColor],NSForegroundColorAttributeName,nil];
+                      [totalAttributes addAttributes:attributes1 range:NSMakeRange(2, total_item.length)];
+                      [totalAttributes addAttributes:attributes1 range:range];
+                      
+                      self.allDetailLabel.attributedText = totalAttributes;
+                      
+                      [self.dataArray removeAllObjects];
+                      [self.dataArray addObjectsFromArray:rows];
+                      [self.tableView reloadData];
+                  }];
 }
-*/
+
+- (void)updataRequest:(NSString *)goods_id Qty:(NSString *)qty
+{
+    [self cartUpdateToken:_token
+                    MerID:_mer_id
+                  GoodsID:goods_id
+                 GoodsQty:qty
+                    Block:^(NSMutableDictionary *dataDic) {
+                        [self requestData];
+                    }];
+}
+
 
 @end
