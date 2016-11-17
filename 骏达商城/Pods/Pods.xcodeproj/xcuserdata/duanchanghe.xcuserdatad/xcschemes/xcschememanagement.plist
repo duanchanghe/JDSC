@@ -24,10 +24,30 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>UMengUShare.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>00A1AFD8BBFEDC809875E3EF054BCFEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>035CEAAF84D8F382CEA3CBC1ABDC9E1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26F4FB8BCEDB83B7BFCFF41B7C456AC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,7 +57,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>647FF80DE2AB4E321B808D09F1BA31F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>70BC44266C6FFE30D2C57129458E070B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>84E39C6B87566008018B1DD76F91E539</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,7 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8F7265B67DAD31243BB7F0D206F36F77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA9014E592563C9EDF0CA2CB67FA9100</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +97,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B6C2AB493F56A16D7E28F8672279BB10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6C10AF18650072C4BFBC29EBD07FA8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>ED83BAB16DAEA44038661507742ABFB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3764D8E74A3AF53F87C3273FC718E5E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8A7F7C90128438745D8687D595713B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

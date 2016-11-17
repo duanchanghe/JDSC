@@ -42,16 +42,13 @@
             Username:(NSString *)username
                Block:(void(^)(NSMutableDictionary *))block;
 
-
 // 用户登入
 //opt=Auth/Login
 - (void)loginPassword:(NSString *)pwd
-        RegistrationID:(NSString *)regustration_id
-                  Type:(NSString *)type
-              UserInfo:(NSString *)user_info
-                 Block:(void(^)(NSMutableDictionary *))block;
-
-
+       RegistrationID:(NSString *)regustration_id
+                 Type:(NSString *)type
+             UserInfo:(NSString *)user_info
+                Block:(void(^)(NSMutableDictionary *))block;
 
 // 用户注册
 //opt=Auth/Register&phone=sys_admin&pwd=123456&registration_id=&sms_captcha=
@@ -65,14 +62,11 @@
 //opt=Auth/SendCaptcha&phone=
 - (void)SendCaptchaPhoneNumber:(NSString *)phone;
 
-
-
 // 商品分类
 //mer_id=1&opt=Goods/Catalog&&type=
 - (void)catalogMerID:(NSString *)mer_id
                 Type:(NSString *)type
                Block:(void(^)(NSMutableDictionary *))block;
-
 
 // 商品详情
 //goods_id=1&mer_id=1&opt=Goods/Detail
@@ -106,14 +100,12 @@
              Order:(NSString *)order
              Block:(void(^)(NSMutableDictionary *))block;
 
-
 // 商品搜索
 //catalog=&keyword=&mer_id=1&opt=Goods/Search
 - (void)searchMerID:(NSString *)mer_id
             Catalog:(NSString *)catalog
             Keyword:(NSString *)keyword
               Block:(void(^)(NSMutableDictionary *))block;
-
 
 // 获取限时促销商品
 //mer_id=1&opt=Goods/TimeSale&order_by=created_at desc

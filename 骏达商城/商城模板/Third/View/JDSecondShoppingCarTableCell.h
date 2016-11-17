@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface JDSecondShoppingCarTableCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "JDSortedCollectionCell.h"
-#import "UIKit+AFNetworking.h"
 
 @interface JDSortedCollectionCell()
 
