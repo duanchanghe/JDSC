@@ -57,9 +57,9 @@
     NSString *str = _numberText.text;
     NSUInteger number = [str integerValue];
     if (number <= 1) {
-        _numberText.text = [NSString stringWithFormat:@"%ld",number];
+        _numberText.text = [NSString stringWithFormat:@"%ld",(unsigned long)number];
     }else{
-        _numberText.text = [NSString stringWithFormat:@"%ld",--number];
+        _numberText.text = [NSString stringWithFormat:@"%ld",(unsigned long)--number];
     }
     //  加减操作后  需要跟新购物车
 }
@@ -68,7 +68,7 @@
 {
     NSString *str = _numberText.text;
     NSUInteger number = [str integerValue];
-    _numberText.text = [NSString stringWithFormat:@"%ld",++number];
+    _numberText.text = [NSString stringWithFormat:@"%ld",(unsigned long)++number];
 }
 
 - (void)setDataDict:(NSDictionary *)dataDict
@@ -83,7 +83,7 @@
     _price = dataDict[@"price"];
     _sub_total = dataDict[@"sub_total"];
     _icon = dataDict[@"icon"];
-    _need_update = dataDict[@"need_update"];
+    _need_update = [dataDict[@"need_update"] boolValue];
     
     _numberText.text = _qty;
     _priceLabel.text = _sub_total;

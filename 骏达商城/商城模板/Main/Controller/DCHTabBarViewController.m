@@ -9,18 +9,25 @@
 #import "DCHTabBarViewController.h"
 #import "DCHTabBar.h"
 
-
 @interface DCHTabBarViewController ()<DCHtabBarDelegate,UITabBarDelegate>
 
 @end
 
 @implementation DCHTabBarViewController
 
+{
+    
+    SEL JF;
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setValue:self.myTabbar forKey:@"tabBar"];
     
+    [self performSelector:@selector(JF) withObject:nil afterDelay:5];
 }
 
 - (void)viewWillLayoutSubviews
@@ -53,7 +60,9 @@
         _myTabbar = [[DCHTabBar alloc]init];
         _myTabbar.barTintColor = RGBA(55, 84, 98, 1);
         _myTabbar.tintColor = [UIColor redColor];
-        _myTabbar.unselectedItemTintColor = [UIColor grayColor];
+        
+        // 真机9.4的系统上不能用
+//        _myTabbar.unselectedItemTintColor = [UIColor grayColor];
         _myTabbar.tabBarDelegate = self;
     }
     return _myTabbar;
@@ -66,36 +75,43 @@
     _view1.backgroundColor = [UIColor colorWithRed:0.200 green:0.200 blue:0.200 alpha:0.0];
     UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, SCREN_HEIGHT - SCREEN_WIDTH, SCREEN_WIDTH, SCREEN_WIDTH)];
     control.backgroundColor = RGBA(50, 50, 50, 0.7);
-    
     [_view1 addSubview:control];
+    
     CGFloat W = 100;
     CGFloat Margin = (SCREEN_WIDTH - 200)/3.0;
     
-    UIButton*but1 = [[UIButton alloc]initWithFrame:CGRectMake(Margin, Margin, W, W)];
-    [but1 setImage:[UIImage imageNamed:@"朋友圈1"] forState:UIControlStateNormal];
-    [but1 setTitle:@"分享沃克家" forState:UIControlStateNormal];
-    [self initButton:but1];
-    [but1 addTarget:self action:@selector(ShareWKJ) forControlEvents:UIControlEventTouchUpInside];
+//    JDButton *but1 = [[JDButton alloc]initWithFrame:CGRectMake(Margin, Margin, W, W)];
+    
+    
+    JDButton *but1 =  [[[NSBundle mainBundle] loadNibNamed:@"JDButton" owner:nil options:nil] lastObject];
+    but1.frame = CGRectMake(Margin, Margin, W, W);
+    [but1.imageView setImage:[UIImage imageNamed:@"推"]];
+    but1.textLabel.text = @"分享沃克家";
+    
+//    [but1 setImage:[UIImage imageNamed:@"朋友圈1"] forState:UIControlStateNormal];
+//    [but1 setTitle:@"分享沃克家" forState:UIControlStateNormal];
+//    [self initButton:but1];
+    [but1.control addTarget:self action:@selector(ShareWKJ) forControlEvents:UIControlEventTouchUpInside];
     [control addSubview:but1];
     
-    UIButton*but2 = [[UIButton alloc]initWithFrame:CGRectMake(2*Margin + W, Margin, W, W)];
+    JDButton *but2 = [[JDButton alloc]initWithFrame:CGRectMake(2*Margin + W, Margin, W, W)];
     [but2 setImage:[UIImage imageNamed:@"推广账户1"] forState:UIControlStateNormal];
     [but2 setTitle:@"推广账户" forState:UIControlStateNormal];
-    [self initButton:but2];
+//    [self initButton:but2];
     [but2 addTarget:self action:@selector(SHareMY) forControlEvents:UIControlEventTouchUpInside];
     [control addSubview:but2];
     
-    UIButton*but3 = [[UIButton alloc]initWithFrame:CGRectMake(Margin, 2*Margin + W, W, W)];
+    JDButton *but3 = [[JDButton alloc]initWithFrame:CGRectMake(Margin, 2*Margin + W, W, W)];
     [but3 setImage:[UIImage imageNamed:@"我的积分"] forState:UIControlStateNormal];
     [but3 setTitle:@"积分兑换" forState:UIControlStateNormal];
-    [self initButton:but3];
+//    [self initButton:but3];
     [but3 addTarget:self action:@selector(JF) forControlEvents:UIControlEventTouchUpInside];
     [control addSubview:but3];
     
-    UIButton*but4 = [[UIButton alloc]initWithFrame:CGRectMake(2*Margin + W, 2*Margin + W, W, W)];
+    JDButton *but4 = [[JDButton alloc]initWithFrame:CGRectMake(2*Margin + W, 2*Margin + W, W, W)];
     [but4 setImage:[UIImage imageNamed:@"我的佣金"] forState:UIControlStateNormal];
     [but4 setTitle:@"我的佣金" forState:UIControlStateNormal];
-    [self initButton:but4];
+//    [self initButton:but4];
     [but4 addTarget:self action:@selector(YJ) forControlEvents:UIControlEventTouchUpInside];
     [control addSubview:but4];
     
@@ -106,12 +122,12 @@
 }
 
 
--(void)initButton:(UIButton*)btn{
-    btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
-    [btn setTitleEdgeInsets:UIEdgeInsetsMake(btn.imageView.frame.size.height + 50 ,-btn.imageView.frame.size.width, 0.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
-    [btn setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0,0.0, -btn.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
-    btn.backgroundColor = [UIColor redColor];
-}
+//-(void)initButton:(UIButton*)btn{
+//    btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
+//    [btn setTitleEdgeInsets:UIEdgeInsetsMake(btn.imageView.frame.size.height + 50 ,-btn.imageView.frame.size.width, 0.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
+//    [btn setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0,0.0, -btn.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
+//    btn.backgroundColor = [UIColor redColor];
+//}
 
 -(void)ViewFire{
     [_view1 removeFromSuperview];
@@ -124,15 +140,38 @@
 }
 
 -(void)JF{
-    
+    NSLog(@"uuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
 }
 -(void)SHareMY{
     
 }
 -(void)ShareWKJ{
-
+    
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:@"来自沃克家的分享" descr:@"沃克家" thumImage:[UIImage imageNamed:@"收藏"]];
     
     
+    
+    shareObject.webpageUrl = @"http://wkj.miliwudao.com/wap/index/index";
+    messageObject.shareObject = shareObject;
+    
+    
+    [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_WechatTimeLine messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        NSString *message = nil;
+        if (!error) {
+            message = [NSString stringWithFormat:@"分享成功"];
+        } else {
+            message = [NSString stringWithFormat:@"失败原因Code: %d\n",(int)error.code];
+            
+        }
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"成功"
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
 }
 
 

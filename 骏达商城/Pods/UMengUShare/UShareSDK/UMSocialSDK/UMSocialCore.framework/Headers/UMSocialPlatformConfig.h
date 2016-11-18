@@ -152,7 +152,7 @@ typedef void (^UMSocialRequestCompletionHandler)(id result,NSError *error);
 /**
  *  授权，分享，UserProfile等操作的回调
  *
- *  @param result 表示回调的结果
+ *  @param shareResponse 表示回调的结果
  *  @param error  表示回调的错误码
  */
 typedef void (^UMSocialShareCompletionHandler)(id shareResponse,NSError *error);

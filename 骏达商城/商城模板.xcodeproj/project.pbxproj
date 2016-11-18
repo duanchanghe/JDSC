@@ -21,6 +21,8 @@
 		90D532EA1DD1C657007A7768 /* DCHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E91DD1C657007A7768 /* DCHTabBar.m */; };
 		B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */; };
 		B70A5D921DDDAFF1002AFE8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D911DDDAFF1002AFE8B /* AppDelegate.m */; };
+		B72CB1BC1DDEF3F5003EE6D1 /* JDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B72CB1BB1DDEF3F5003EE6D1 /* JDButton.m */; };
+		B72CB1BE1DDEF409003EE6D1 /* JDButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B72CB1BD1DDEF409003EE6D1 /* JDButton.xib */; };
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
 		B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2E1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m */; };
 		B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E311DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m */; };
@@ -68,6 +70,9 @@
 		B70A5D8B1DDD6D8A002AFE8B /* JDShoppingCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShoppingCollectionCell.h; sourceTree = "<group>"; };
 		B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShoppingCollectionCell.m; sourceTree = "<group>"; };
 		B70A5D911DDDAFF1002AFE8B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B72CB1BA1DDEF3F5003EE6D1 /* JDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDButton.h; sourceTree = "<group>"; };
+		B72CB1BB1DDEF3F5003EE6D1 /* JDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDButton.m; sourceTree = "<group>"; };
+		B72CB1BD1DDEF409003EE6D1 /* JDButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JDButton.xib; sourceTree = "<group>"; };
 		B7413E2A1DDC0836006BFB12 /* JDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNavigationController.h; sourceTree = "<group>"; };
 		B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDNavigationController.m; sourceTree = "<group>"; };
 		B7413E2D1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFirstShoppingCarTableCell.h; sourceTree = "<group>"; };
@@ -284,6 +289,9 @@
 			children = (
 				90D532E81DD1C657007A7768 /* DCHTabBar.h */,
 				90D532E91DD1C657007A7768 /* DCHTabBar.m */,
+				B72CB1BA1DDEF3F5003EE6D1 /* JDButton.h */,
+				B72CB1BB1DDEF3F5003EE6D1 /* JDButton.m */,
+				B72CB1BD1DDEF409003EE6D1 /* JDButton.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -518,6 +526,7 @@
 				900534BB1DD1ADD4000E089C /* LaunchScreen.storyboard in Resources */,
 				900534B81DD1ADD4000E089C /* Assets.xcassets in Resources */,
 				900534B31DD1ADD4000E089C /* Main.storyboard in Resources */,
+				B72CB1BE1DDEF409003EE6D1 /* JDButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +602,7 @@
 				B76D0F1E1DD9B07500EEF537 /* UIViewController+Request.m in Sources */,
 				B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */,
 				CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */,
+				B72CB1BC1DDEF3F5003EE6D1 /* JDButton.m in Sources */,
 				90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */,
 				B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */,
 				B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */,

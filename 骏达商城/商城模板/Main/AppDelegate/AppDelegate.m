@@ -18,15 +18,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-//    [[UMSocialManager defaultManager] openLog:YES];
-//    
-//    [[UMSocialManager defaultManager] setUmSocialAppkey:@"58097c68717c196f76002c13"];
-//    // 获取友盟social版本号
-//    
-//    //设置微信的appKey和appSecret
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx70eabd25dae34d6b" appSecret:@"f3a5f956f835af65f04248eba6be08a0" redirectURL:@"http://mobile.umeng.com/social"];
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1105084924"  appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"528141039"  appSecret:@"fbc81249c320f902767ff3b10c398968" redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+    [[UMSocialManager defaultManager] openLog:NO];
+    
+    [[UMSocialManager defaultManager] setUmSocialAppkey:@"58097c68717c196f76002c13"];
+    // 获取友盟social版本号
+    
+    //设置微信的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx70eabd25dae34d6b" appSecret:@"f3a5f956f835af65f04248eba6be08a0" redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1105084924"  appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"528141039"  appSecret:@"fbc81249c320f902767ff3b10c398968" redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
     
     // Override point for customization after application launch.
     return YES;

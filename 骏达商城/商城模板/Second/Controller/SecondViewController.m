@@ -75,7 +75,7 @@ static NSString *detailController = @"JDGoodsDetailController";
 {
     _collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [self.collectionView.mj_footer beginRefreshing];
-        _page_size = [NSString stringWithFormat:@"%ld",[_page_size integerValue] + 6];
+        _page_size = [NSString stringWithFormat:@"%ld",([_page_size integerValue] + 6)];
         [self loadData];
     }];
 }

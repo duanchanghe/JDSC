@@ -119,7 +119,7 @@
     
     [_imageView setImageWithURL:[NSURL URLWithString:_icon]];
     NSString *temStr = _price_market;
-    NSString *str = [NSString stringWithFormat:@"¥ %.0ld",[temStr integerValue]];
+    NSString *str = [NSString stringWithFormat:@"¥ %.0ld",(long)[temStr integerValue]];
     NSDictionary *attrbuted = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15],NSFontAttributeName,[UIColor redColor],NSForegroundColorAttributeName, nil];
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:str attributes: attrbuted];
     [attString setAttributes:@{[UIFont systemFontOfSize:15]:NSFontAttributeName} range:NSMakeRange(0, 1)];

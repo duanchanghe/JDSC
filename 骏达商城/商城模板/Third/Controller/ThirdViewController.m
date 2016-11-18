@@ -178,7 +178,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
                            animated:YES
                          completion:nil];
     }else{
-        NSString *qty = [NSString stringWithFormat:@"%ld",qt-1];
+        NSString *qty = [NSString stringWithFormat:@"%ld",(long)(qt-1)];
         [self updataRequest:ID Qty:qty];
     }
 }
@@ -189,7 +189,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     NSDictionary *dict = [self getDictionary:sender];
     NSString *ID = dict[@"id"];
     NSInteger qt = [dict[@"qty"] integerValue];
-    NSString *qty = [NSString stringWithFormat:@"%ld",qt+1];
+    NSString *qty = [NSString stringWithFormat:@"%ld",(long)(qt+1)];
     [self updataRequest:ID Qty:qty];
     // 更新购物车
 }

@@ -18,8 +18,7 @@
 #import "UIKit+AFNetworking.h"
 #import "POP.h"
 #import <UMSocialCore/UMSocialCore.h>
-
-
+#import "JDButton.h"
 
 
 #endif /* PrefixHeader_pch */
