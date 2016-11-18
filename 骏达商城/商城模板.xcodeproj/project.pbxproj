@@ -20,7 +20,6 @@
 		90D532E71DD1C46C007A7768 /* DCHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E61DD1C46C007A7768 /* DCHTabBarViewController.m */; };
 		90D532EA1DD1C657007A7768 /* DCHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E91DD1C657007A7768 /* DCHTabBar.m */; };
 		B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */; };
-		B70A5D921DDDAFF1002AFE8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D911DDDAFF1002AFE8B /* AppDelegate.m */; };
 		B72CB1BC1DDEF3F5003EE6D1 /* JDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B72CB1BB1DDEF3F5003EE6D1 /* JDButton.m */; };
 		B72CB1BE1DDEF409003EE6D1 /* JDButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B72CB1BD1DDEF409003EE6D1 /* JDButton.xib */; };
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
@@ -30,6 +29,7 @@
 		B76D0F1E1DD9B07500EEF537 /* UIViewController+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F1D1DD9B07500EEF537 /* UIViewController+Request.m */; };
 		B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F291DDB030700EEF537 /* JDSortedCollectionCell.m */; };
 		B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2DC421DD95F9900428D66 /* UIView+Category.m */; };
+		B7E7AA0D1DDFCBF100005857 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA0C1DDFCBF100005857 /* AppDelegate.m */; };
 		CCCA5BC21DDC33A300F6FC1C /* SettingsList.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC11DDC33A300F6FC1C /* SettingsList.m */; };
 		CCCA5BC51DDC33B200F6FC1C /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC41DDC33B200F6FC1C /* FourthViewController.m */; };
 		CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC71DDC33BD00F6FC1C /* FootprintModel.m */; };
@@ -69,7 +69,6 @@
 		AEEC42748AAE312B44F8D680 /* libPods-商城模板.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-商城模板.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70A5D8B1DDD6D8A002AFE8B /* JDShoppingCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShoppingCollectionCell.h; sourceTree = "<group>"; };
 		B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShoppingCollectionCell.m; sourceTree = "<group>"; };
-		B70A5D911DDDAFF1002AFE8B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B72CB1BA1DDEF3F5003EE6D1 /* JDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDButton.h; sourceTree = "<group>"; };
 		B72CB1BB1DDEF3F5003EE6D1 /* JDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDButton.m; sourceTree = "<group>"; };
 		B72CB1BD1DDEF409003EE6D1 /* JDButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JDButton.xib; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 		B7C2DC401DD94EB600428D66 /* TabBarMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarMacros.h; sourceTree = "<group>"; };
 		B7C2DC411DD95F9900428D66 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		B7C2DC421DD95F9900428D66 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		B7E7AA0C1DDFCBF100005857 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "商城模板/Main/AppDelegate/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
 		CCCA5BC01DDC33A300F6FC1C /* SettingsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsList.h; sourceTree = "<group>"; };
 		CCCA5BC11DDC33A300F6FC1C /* SettingsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsList.m; sourceTree = "<group>"; };
 		CCCA5BC31DDC33B200F6FC1C /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				90D532B71DD1C0D2007A7768 /* AppDelegate.h */,
-				B70A5D911DDDAFF1002AFE8B /* AppDelegate.m */,
+				B7E7AA0C1DDFCBF100005857 /* AppDelegate.m */,
 			);
 			name = AppDelegate;
 			path = Appdelegate;
@@ -605,8 +605,8 @@
 				B72CB1BC1DDEF3F5003EE6D1 /* JDButton.m in Sources */,
 				90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */,
 				B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */,
+				B7E7AA0D1DDFCBF100005857 /* AppDelegate.m in Sources */,
 				B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */,
-				B70A5D921DDDAFF1002AFE8B /* AppDelegate.m in Sources */,
 				90D532D31DD1C1DF007A7768 /* ThirdViewController.m in Sources */,
 				CCCA5BD21DDC341F00F6FC1C /* Footprint.m in Sources */,
 				B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */,
