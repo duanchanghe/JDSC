@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00A1AFD8BBFEDC809875E3EF054BCFEE"
+               BlueprintIdentifier = "AA9014E592563C9EDF0CA2CB67FA9100"
                BuildableName = "libPods-&#x5546;&#x57ce;&#x6a21;&#x677f;.a"
                BlueprintName = "Pods-&#x5546;&#x57ce;&#x6a21;&#x677f;"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00A1AFD8BBFEDC809875E3EF054BCFEE"
+            BlueprintIdentifier = "AA9014E592563C9EDF0CA2CB67FA9100"
             BuildableName = "libPods-&#x5546;&#x57ce;&#x6a21;&#x677f;.a"
             BlueprintName = "Pods-&#x5546;&#x57ce;&#x6a21;&#x677f;"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00A1AFD8BBFEDC809875E3EF054BCFEE"
+            BlueprintIdentifier = "AA9014E592563C9EDF0CA2CB67FA9100"
             BuildableName = "libPods-&#x5546;&#x57ce;&#x6a21;&#x677f;.a"
             BlueprintName = "Pods-&#x5546;&#x57ce;&#x6a21;&#x677f;"
             ReferencedContainer = "container:Pods.xcodeproj">

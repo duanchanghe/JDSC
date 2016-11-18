@@ -317,7 +317,7 @@ typedef NS_ENUM(NSInteger,UMSocialPlatformType)
 
 /**
  *
- *  @param platformType @see UMSocialPlatformType
+ *  platformType @see UMSocialPlatformType
  *
  *  @return 平台名称
  */
@@ -325,7 +325,7 @@ typedef NS_ENUM(NSInteger,UMSocialPlatformType)
 
 /**
  *
- *  @param platformType @see UMSocialPlatformType
+ *  platformType @see UMSocialPlatformType
  *
  *  @return 平台handler
  */
@@ -333,8 +333,8 @@ typedef NS_ENUM(NSInteger,UMSocialPlatformType)
 
 /**
  *
- *  @param errorType @see UMSocialPlatformErrorType
- *  @param userInfo  @see 错误信息
+ *  errorType @see UMSocialPlatformErrorType
+ *  userInfo  @see 错误信息
  *
  *  @return 如果平台有效就返回YES，否则返回NO
  */

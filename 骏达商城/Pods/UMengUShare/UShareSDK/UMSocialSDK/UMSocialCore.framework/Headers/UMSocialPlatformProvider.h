@@ -83,9 +83,9 @@
 /**
  *  取消授权
  *
- *  @param userInfo          用户的授权的自定义数据
- *  @param completionHandler 授权后的回调
- *  @discuss userInfo在有些平台可以带入，如果没有就传入nil.
+ *  userInfo          用户的授权的自定义数据
+ *  completionHandler 授权后的回调
+ *  userInfo在有些平台可以带入，如果没有就传入nil.
  */
 -(void)umSocial_cancelAuthWithCompletionHandler:(UMSocialRequestCompletionHandler)completionHandler;
 
@@ -125,14 +125,14 @@
 /**
  *  平台的特性
  *
- *  @return @see
+ *
  */
 -(UMSocialPlatformFeature)umSocial_SupportedFeatures;
 
 /**
  *  平台的版本
  *
- *  @return 当前平台sdk的version
+ *  当前平台sdk的version
  */
 -(NSString *)umSocial_PlatformSDKVersion;
 
