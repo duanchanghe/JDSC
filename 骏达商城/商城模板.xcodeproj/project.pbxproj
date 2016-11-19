@@ -30,6 +30,10 @@
 		B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F291DDB030700EEF537 /* JDSortedCollectionCell.m */; };
 		B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2DC421DD95F9900428D66 /* UIView+Category.m */; };
 		B7E7AA0D1DDFCBF100005857 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA0C1DDFCBF100005857 /* AppDelegate.m */; };
+		B7E7AA141DDFCD2B00005857 /* JDAddressTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA0F1DDFCD2B00005857 /* JDAddressTableCell.m */; };
+		B7E7AA151DDFCD2C00005857 /* JDGoodsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA111DDFCD2B00005857 /* JDGoodsTableCell.m */; };
+		B7E7AA161DDFCD2C00005857 /* JDPayTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA131DDFCD2B00005857 /* JDPayTableCell.m */; };
+		B7E7AA191DDFCDC200005857 /* JDCreateOrdeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA181DDFCDC200005857 /* JDCreateOrdeController.m */; };
 		CCCA5BC21DDC33A300F6FC1C /* SettingsList.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC11DDC33A300F6FC1C /* SettingsList.m */; };
 		CCCA5BC51DDC33B200F6FC1C /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC41DDC33B200F6FC1C /* FourthViewController.m */; };
 		CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC71DDC33BD00F6FC1C /* FootprintModel.m */; };
@@ -88,6 +92,14 @@
 		B7C2DC411DD95F9900428D66 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		B7C2DC421DD95F9900428D66 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		B7E7AA0C1DDFCBF100005857 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "商城模板/Main/AppDelegate/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		B7E7AA0E1DDFCD2B00005857 /* JDAddressTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddressTableCell.h; sourceTree = "<group>"; };
+		B7E7AA0F1DDFCD2B00005857 /* JDAddressTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddressTableCell.m; sourceTree = "<group>"; };
+		B7E7AA101DDFCD2B00005857 /* JDGoodsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDGoodsTableCell.h; sourceTree = "<group>"; };
+		B7E7AA111DDFCD2B00005857 /* JDGoodsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDGoodsTableCell.m; sourceTree = "<group>"; };
+		B7E7AA121DDFCD2B00005857 /* JDPayTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPayTableCell.h; sourceTree = "<group>"; };
+		B7E7AA131DDFCD2B00005857 /* JDPayTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPayTableCell.m; sourceTree = "<group>"; };
+		B7E7AA171DDFCDC200005857 /* JDCreateOrdeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDCreateOrdeController.h; sourceTree = "<group>"; };
+		B7E7AA181DDFCDC200005857 /* JDCreateOrdeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDCreateOrdeController.m; sourceTree = "<group>"; };
 		CCCA5BC01DDC33A300F6FC1C /* SettingsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsList.h; sourceTree = "<group>"; };
 		CCCA5BC11DDC33A300F6FC1C /* SettingsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsList.m; sourceTree = "<group>"; };
 		CCCA5BC31DDC33B200F6FC1C /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
@@ -381,6 +393,8 @@
 			children = (
 				90D532D11DD1C1DF007A7768 /* ThirdViewController.h */,
 				90D532D21DD1C1DF007A7768 /* ThirdViewController.m */,
+				B7E7AA171DDFCDC200005857 /* JDCreateOrdeController.h */,
+				B7E7AA181DDFCDC200005857 /* JDCreateOrdeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -401,6 +415,12 @@
 				B7413E311DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m */,
 				B70A5D8B1DDD6D8A002AFE8B /* JDShoppingCollectionCell.h */,
 				B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */,
+				B7E7AA0E1DDFCD2B00005857 /* JDAddressTableCell.h */,
+				B7E7AA0F1DDFCD2B00005857 /* JDAddressTableCell.m */,
+				B7E7AA101DDFCD2B00005857 /* JDGoodsTableCell.h */,
+				B7E7AA111DDFCD2B00005857 /* JDGoodsTableCell.m */,
+				B7E7AA121DDFCD2B00005857 /* JDPayTableCell.h */,
+				B7E7AA131DDFCD2B00005857 /* JDPayTableCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -586,8 +606,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D532D01DD1C1D2007A7768 /* SecondViewController.m in Sources */,
+				B7E7AA151DDFCD2C00005857 /* JDGoodsTableCell.m in Sources */,
 				B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */,
 				B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */,
+				B7E7AA141DDFCD2B00005857 /* JDAddressTableCell.m in Sources */,
 				B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */,
 				900534B61DD1ADD4000E089C /* ____.xcdatamodeld in Sources */,
 				90D532CD1DD1C1B2007A7768 /* FirstViewController.m in Sources */,
@@ -603,9 +625,11 @@
 				B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */,
 				CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */,
 				B72CB1BC1DDEF3F5003EE6D1 /* JDButton.m in Sources */,
+				B7E7AA191DDFCDC200005857 /* JDCreateOrdeController.m in Sources */,
 				90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */,
 				B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */,
 				B7E7AA0D1DDFCBF100005857 /* AppDelegate.m in Sources */,
+				B7E7AA161DDFCD2C00005857 /* JDPayTableCell.m in Sources */,
 				B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */,
 				90D532D31DD1C1DF007A7768 /* ThirdViewController.m in Sources */,
 				CCCA5BD21DDC341F00F6FC1C /* Footprint.m in Sources */,
