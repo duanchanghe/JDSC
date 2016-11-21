@@ -25,8 +25,6 @@
     [super viewWillLayoutSubviews];
     [self revolveView:self.myTabbar.addButton];
     
-
-    
 }
 
 // 视图旋转动画
@@ -65,7 +63,7 @@
     _view1  = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , SCREN_HEIGHT)];
     _view1.backgroundColor = [UIColor colorWithRed:0.200 green:0.200 blue:0.200 alpha:0.0];
     UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, SCREN_HEIGHT - SCREEN_WIDTH, SCREEN_WIDTH, SCREEN_WIDTH)];
-    control.backgroundColor = RGBA(50, 50, 50, 0.7);
+    control.backgroundColor = RGBA(50, 50, 50, 0.9);
     [_view1 addSubview:control];
     NSArray *array = @[@[@"我的积分",@"测试图片"]
                        ,@[@"我的积分",@"测试图片"]
@@ -87,8 +85,10 @@
              lastObject];
             button.width = W;
             button.height = W;
+            
             button.centerX = x*j;
             button.centerY = y*i;
+            
             button.phoneView.image = [UIImage imageNamed:array[m][0]];
             button.textLabel.text = array[m][1];
             [control addSubview:button];

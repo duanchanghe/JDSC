@@ -134,6 +134,7 @@
            GoodsQty:(NSString *)qty
               Block:(void(^)(NSMutableDictionary *data))block;
 
+
 // 首页
 - (void)homeOrderBy:(NSString *)order_by
               Block:(void(^)(NSMutableDictionary *data))block;
@@ -205,7 +206,6 @@
                  Number:(NSString *)num
                   Block:(void(^)(NSMutableDictionary *data))block;
 
-
 // 创建用户地址
 //address=&area_id=2260&name=&opt=UserAddress/Create&phone=&postcode=
 - (void)addressCreateName:(NSString *)name
@@ -215,8 +215,6 @@
                  Postcode:(NSString *)psotcode
                     Bolck:(void(^)(NSMutableDictionary *data))block;
 
-
-
 // 删除用户地址
 //id=&opt=UserAddress/Destroy
 - (void)addressDestroyAddressID:(NSString *)ID
@@ -224,7 +222,6 @@
 // 获取用户收货地址
 //opt=UserAddress/List
 - (void)addressListBlock:(void(^)(NSMutableDictionary *data))block;
-
 
 // 修改用户收货地址
 //address=&area_id=&id=&is_default=0&name=&opt=UserAddress/Update&phone=&postcode=
@@ -234,12 +231,9 @@
                       Postcode:(NSString *)postcode
                          Block:(void(^)(NSMutableDictionary *data))block;
 
-
-
 // 清空收货地址
 //mer_id=1&opt=UserCart/Destroy
 - (void)cartDestroyBlock:(void(^)(NSMutableDictionary *data))block;
-
 
 // 添加到购物车
 //goods=[{"id":"","qty":""}]&mer_id=1&opt=UserCart/Insert
@@ -251,20 +245,16 @@
 //mer_id=1&opt=UserCart/List
 - (void)cartListBlock:(void(^)(NSMutableDictionary *data))block;
 
-
 // 更新购物车
 //data=[{"id":"","qty":""}]&mer_id=1&opt=UserCart/Update
 - (void)cartUpdateGoodsID:(NSString *)ID
                  GoodsQty:(NSString *)qty
                     Block:(void(^)(NSMutableDictionary *))block;
 
-
 // 获取 token
 - (NSString *)getToken;
 
 // 获取 mer_id
 - (NSString *)getMerID;
-
-
 
 @end

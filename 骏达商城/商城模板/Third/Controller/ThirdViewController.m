@@ -20,6 +20,7 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSMutableArray *dataArray;
 @property (weak, nonatomic) IBOutlet UILabel *allDetailLabel;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
 
 @property (nonatomic, copy) NSMutableArray *collectionArray;
 
@@ -52,7 +53,6 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
     [super viewWillAppear:YES];
     // 初始化 初始值
     [self setInitialValue];
-    
 }
 
 
@@ -103,7 +103,6 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        
         JDFirstShoppingCarTableCell  *cell = [tableView dequeueReusableCellWithIdentifier:firstTableViewCell];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0];
@@ -126,9 +125,6 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
 //        预留的猜你喜欢的 cell
 
         JDSecondShoppingCarTableCell *cell = [tableView dequeueReusableCellWithIdentifier:secondTableViewCell];
-        
-        
-        
         [self listPage:@"1"
               Pagesize:@"4"
                KeyWord:@""
@@ -144,6 +140,21 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
                   }];
         return cell;
     }
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    JDGoodsDetailController *vc = StoryboardIdentifier(@"JDGoodsDetailController");
+    NSDictionary *dic = nil;
+    if (indexPath.section == 0) {
+        dic = self.dataArray[indexPath.row];
+    } else {
+        dic = self.collectionArray[indexPath.row];
+    }
+    vc.goods_id = dic[@"id"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 // 设置 tableViewCell 高度
@@ -285,7 +296,15 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     return size;
 }
 
+// collectionCell 选中跳转 传值
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
 
+    JDGoodsDetailController *vc = StoryboardIdentifier(@"JDGoodsDetailController");
+    NSDictionary *dic = self.collectionArray[indexPath.row];
+    vc.goods_id = dic[@"id"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 // 获取购物车清单
@@ -294,6 +313,13 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     [self cartListBlock:^(NSMutableDictionary *dataDic) {
         NSDictionary *data = dataDic[@"data"];
         NSArray *rows = data[@"rows"];
+// 没有商品隐藏底部 view
+        if (!rows.count) {
+            self.bottomView.hidden = YES;
+        }else{
+            self.bottomView.hidden = NO;
+        }
+        
         NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"total_item"]];
         NSString *total_amount = [NSString stringWithFormat:@"￥%@", data[@"total_amount" ]];
         NSString *total = [NSString stringWithFormat:@"共计%@件商品 合计：%@",total_item,total_amount];
@@ -322,6 +348,5 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
                           [self requestData];
                       }];
 }
-
 
 @end

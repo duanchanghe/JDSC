@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface JDGoodsDetailController : UIViewController
-
+@property (copy, nonatomic) NSString *goods_id;
 @end

@@ -19,5 +19,6 @@
 #import "POP.h"
 #import <UMSocialCore/UMSocialCore.h>
 #import "MyButton.h"
+#import "JDGoodsDetailController.h"
 
 #endif /* PrefixHeader_pch */

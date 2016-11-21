@@ -32,6 +32,7 @@ static NSString *detailController = @"JDGoodsDetailController";
 @end
 
 @implementation SecondViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -68,6 +69,16 @@ static NSString *detailController = @"JDGoodsDetailController";
 {
     CGSize size = CGSizeMake(SCREEN_WIDTH/2.0 - 4, SCREEN_WIDTH/2.0 + 40);
     return size;
+}
+// cell 选中跳转 并传值
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    JDGoodsDetailController *vc = StoryboardIdentifier(@"JDGoodsDetailController");
+    NSDictionary *dic = self.dataArray[indexPath.row];
+    NSLog(@"%@",dic);
+    vc.goods_id = dic[@"id"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 // 集合视图分段加载

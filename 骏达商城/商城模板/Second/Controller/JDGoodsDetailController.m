@@ -9,19 +9,33 @@
 #import "JDGoodsDetailController.h"
 
 @interface JDGoodsDetailController ()
-
+@property (nonatomic, copy)NSMutableArray *dataArray;
 @end
 
 @implementation JDGoodsDetailController
 
+- (NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        
+        _dataArray = [NSMutableArray array];
+  
+    }
+    return _dataArray;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+
+    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    self.tabBarController.tabBar.hidden = YES;
-//    
-//    self.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREN_HEIGHT);
-    
-    // Do any additional setup after loading the view.
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,9 +44,9 @@
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender {
 
-    
 //    self.tabBarController.tabBar.hidden = NO;
 
     

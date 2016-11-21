@@ -57,5 +57,7 @@
 #define URI                                     @"http://wkj.miliwudao.com/api"
 
 
+#define StoryboardIdentifier(indentifier)        [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:indentifier]
+
 
 #endif /* Macros_h */
