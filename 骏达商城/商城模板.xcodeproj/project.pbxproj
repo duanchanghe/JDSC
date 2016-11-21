@@ -20,12 +20,12 @@
 		90D532E71DD1C46C007A7768 /* DCHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E61DD1C46C007A7768 /* DCHTabBarViewController.m */; };
 		90D532EA1DD1C657007A7768 /* DCHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E91DD1C657007A7768 /* DCHTabBar.m */; };
 		B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */; };
-		B72CB1BC1DDEF3F5003EE6D1 /* JDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B72CB1BB1DDEF3F5003EE6D1 /* JDButton.m */; };
-		B72CB1BE1DDEF409003EE6D1 /* JDButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B72CB1BD1DDEF409003EE6D1 /* JDButton.xib */; };
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
 		B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2E1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m */; };
 		B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E311DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m */; };
 		B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E341DDC51AA006BFB12 /* JDGoodsDetailController.m */; };
+		B755A7A51DE187380009E8D1 /* MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B755A7A31DE187380009E8D1 /* MyButton.m */; };
+		B755A7A61DE187380009E8D1 /* MyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B755A7A41DE187380009E8D1 /* MyButton.xib */; };
 		B76D0F1E1DD9B07500EEF537 /* UIViewController+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F1D1DD9B07500EEF537 /* UIViewController+Request.m */; };
 		B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F291DDB030700EEF537 /* JDSortedCollectionCell.m */; };
 		B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2DC421DD95F9900428D66 /* UIView+Category.m */; };
@@ -73,9 +73,6 @@
 		AEEC42748AAE312B44F8D680 /* libPods-商城模板.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-商城模板.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70A5D8B1DDD6D8A002AFE8B /* JDShoppingCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShoppingCollectionCell.h; sourceTree = "<group>"; };
 		B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShoppingCollectionCell.m; sourceTree = "<group>"; };
-		B72CB1BA1DDEF3F5003EE6D1 /* JDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDButton.h; sourceTree = "<group>"; };
-		B72CB1BB1DDEF3F5003EE6D1 /* JDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDButton.m; sourceTree = "<group>"; };
-		B72CB1BD1DDEF409003EE6D1 /* JDButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JDButton.xib; sourceTree = "<group>"; };
 		B7413E2A1DDC0836006BFB12 /* JDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNavigationController.h; sourceTree = "<group>"; };
 		B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDNavigationController.m; sourceTree = "<group>"; };
 		B7413E2D1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFirstShoppingCarTableCell.h; sourceTree = "<group>"; };
@@ -84,6 +81,9 @@
 		B7413E311DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDSecondShoppingCarTableCell.m; sourceTree = "<group>"; };
 		B7413E331DDC51AA006BFB12 /* JDGoodsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDGoodsDetailController.h; sourceTree = "<group>"; };
 		B7413E341DDC51AA006BFB12 /* JDGoodsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDGoodsDetailController.m; sourceTree = "<group>"; };
+		B755A7A21DE187380009E8D1 /* MyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyButton.h; sourceTree = "<group>"; };
+		B755A7A31DE187380009E8D1 /* MyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyButton.m; sourceTree = "<group>"; };
+		B755A7A41DE187380009E8D1 /* MyButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyButton.xib; sourceTree = "<group>"; };
 		B76D0F1C1DD9B07500EEF537 /* UIViewController+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Request.h"; sourceTree = "<group>"; };
 		B76D0F1D1DD9B07500EEF537 /* UIViewController+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Request.m"; sourceTree = "<group>"; };
 		B76D0F281DDB030700EEF537 /* JDSortedCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDSortedCollectionCell.h; sourceTree = "<group>"; };
@@ -301,9 +301,9 @@
 			children = (
 				90D532E81DD1C657007A7768 /* DCHTabBar.h */,
 				90D532E91DD1C657007A7768 /* DCHTabBar.m */,
-				B72CB1BA1DDEF3F5003EE6D1 /* JDButton.h */,
-				B72CB1BB1DDEF3F5003EE6D1 /* JDButton.m */,
-				B72CB1BD1DDEF409003EE6D1 /* JDButton.xib */,
+				B755A7A21DE187380009E8D1 /* MyButton.h */,
+				B755A7A31DE187380009E8D1 /* MyButton.m */,
+				B755A7A41DE187380009E8D1 /* MyButton.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,9 +544,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				900534BB1DD1ADD4000E089C /* LaunchScreen.storyboard in Resources */,
+				B755A7A61DE187380009E8D1 /* MyButton.xib in Resources */,
 				900534B81DD1ADD4000E089C /* Assets.xcassets in Resources */,
 				900534B31DD1ADD4000E089C /* Main.storyboard in Resources */,
-				B72CB1BE1DDEF409003EE6D1 /* JDButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +614,7 @@
 				900534B61DD1ADD4000E089C /* ____.xcdatamodeld in Sources */,
 				90D532CD1DD1C1B2007A7768 /* FirstViewController.m in Sources */,
 				CCCA5BC51DDC33B200F6FC1C /* FourthViewController.m in Sources */,
+				B755A7A51DE187380009E8D1 /* MyButton.m in Sources */,
 				CCCA5BCD1DDC33C500F6FC1C /* FourthCell.m in Sources */,
 				90D532E71DD1C46C007A7768 /* DCHTabBarViewController.m in Sources */,
 				90D532EA1DD1C657007A7768 /* DCHTabBar.m in Sources */,
@@ -624,7 +625,6 @@
 				B76D0F1E1DD9B07500EEF537 /* UIViewController+Request.m in Sources */,
 				B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */,
 				CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */,
-				B72CB1BC1DDEF3F5003EE6D1 /* JDButton.m in Sources */,
 				B7E7AA191DDFCDC200005857 /* JDCreateOrdeController.m in Sources */,
 				90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */,
 				B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */,
