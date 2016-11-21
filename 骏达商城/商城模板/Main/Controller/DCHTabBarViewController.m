@@ -63,6 +63,7 @@
     _view1  = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , SCREN_HEIGHT)];
     _view1.backgroundColor = [UIColor colorWithRed:0.200 green:0.200 blue:0.200 alpha:0.0];
     UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, SCREN_HEIGHT - SCREEN_WIDTH, SCREEN_WIDTH, SCREEN_WIDTH)];
+    
     control.backgroundColor = RGBA(50, 50, 50, 0.9);
     [_view1 addSubview:control];
     NSArray *array = @[@[@"我的积分",@"测试图片"]
@@ -85,9 +86,17 @@
              lastObject];
             button.width = W;
             button.height = W;
+            button.centerX = SCREEN_WIDTH/2.0;
+            button.centerY = control.frame.size.height + 100;
+// 设置 button 弹出动画
+            POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+            spring.fromValue = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH/2.0, control.frame.size.height + 100)];
+            spring.toValue = [NSValue valueWithCGPoint:CGPointMake(x*j, y*i)];
+            spring.beginTime = CACurrentMediaTime();
+            spring.springBounciness = 10.0f;
+            spring.springSpeed = 1.0f;
+            [button pop_addAnimation:spring forKey:@"position"];
             
-            button.centerX = x*j;
-            button.centerY = y*i;
             
             button.phoneView.image = [UIImage imageNamed:array[m][0]];
             button.textLabel.text = array[m][1];
@@ -111,7 +120,7 @@
 
 - (void)Buttonclick:(UIControl *)sender
 {
-    NSLog(@"%ld",(long)sender.tag);
+
     switch (sender.tag) {
         case 0:
         {
