@@ -16,7 +16,7 @@
 - (void)changePhoneUserID:(NSString *)user_id
               PhoneNumber:(NSString *)phone
               Sms_captcha:(NSString *)sms_captcha
-                    Block:(void (^)(NSMutableDictionary *))block
+                    Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:user_id      forKey:@"user_id"];
@@ -36,7 +36,7 @@
              PasswordConfirm:(NSString *)pwd_confirm
                  PhoneNumber:(NSString *)phone
                   SmsCaptcha:(NSString *)sms_captcha
-                       Block:(void(^)(NSMutableDictionary *))block
+                       Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Auth/ChangePwd"        forKey:@"opt"];
@@ -60,7 +60,7 @@
               PasswordConfirm:(NSString *)pwd_confirm
                   PhoneNumber:(NSString *)phone
                    SmsCaptcha:(NSString *)sms_captcha
-                        Block:(void(^)(NSMutableDictionary *))block
+                        Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Auth/GetBackPwd"     forKey:@"opt"];
@@ -83,7 +83,7 @@
       RegistrationID:(NSString *)regustration_id
                UmUid:(NSString *)um_uid
             Username:(NSString *)username
-               Block:(void(^)(NSMutableDictionary *))block
+               Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Auth/LoginSNS"     forKey:@"opt"];
@@ -106,7 +106,7 @@
        RegistrationID:(NSString *)regustration_id
                  Type:(NSString *)type
              UserInfo:(NSString *)user_info
-                Block:(void(^)(NSMutableDictionary *))block
+                Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Auth/Login"     forKey:@"opt"];
@@ -127,7 +127,7 @@
                    Password:(NSString *)pwd
              RegsitrationID:(NSString *)registration_id
                  SmaCaptcha:(NSString *)sms_captcha
-                      Block:(void(^)(NSMutableDictionary *))block
+                      Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Auth/Register"         forKey:@"opt"];
@@ -156,14 +156,13 @@
 
 // 商品分类
 //mer_id=1&opt=Goods/Catalog&&type=
-- (void)catalogMerID:(NSString *)mer_id
-                Type:(NSString *)type
-               Block:(void(^)(NSMutableDictionary *))block
+- (void)catalogType:(NSString *)type
+              Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"opt=Goods/Catalog"     forKey:@"opt"];
-    [dic setObject:mer_id           forKey:@"mer_id"];
-    [dic setObject:type             forKey:@"type"];
+    [dic setObject:[self getMerID]          forKey:@"mer_id"];
+    [dic setObject:type                     forKey:@"type"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -172,14 +171,13 @@
 
 // 商品详情
 //goods_id=1&mer_id=1&opt=Goods/Detail
-- (void)detailMerID:(NSString *)mer_id
-            GoodsID:(NSString *)goods_id
-              Block:(void(^)(NSMutableDictionary *))block
+- (void)detailGoodsID:(NSString *)goods_id
+                Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"Goods/Detail"     forKey:@"opt"];
-    [dic setObject:mer_id           forKey:@"mer_id"];
-    [dic setObject:goods_id         forKey:@"goods_id"];
+    [dic setObject:@"Goods/Detail"      forKey:@"opt"];
+    [dic setObject:[self getMerID]      forKey:@"mer_id"];
+    [dic setObject:goods_id             forKey:@"goods_id"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -190,14 +188,13 @@
 
 // 商品添加/取消收藏
 //goods_id=&opt=Goods/Favorites
-- (void)favoritesToken:(NSString *)token
-               GoodsID:(NSString *)goods_id
-                 Block:(void(^)(NSMutableDictionary *))block
+- (void)favoritesGoodsID:(NSString *)goods_id
+                   Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"Goods/Favorites"     forKey:@"opt"];
-    [dic setObject:token           forKey:@"token"];
-    [dic setObject:goods_id         forKey:@"goods_id"];
+    [dic setObject:@"Goods/Favorites"       forKey:@"opt"];
+    [dic setObject:[self getToken]          forKey:@"token"];
+    [dic setObject:goods_id                 forKey:@"goods_id"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -205,19 +202,18 @@
 
 // 商品列表
 //catalog=&currency=cny&keyword=&mer_id=1&opt=Goods/List&order=ASC&page=1&page_size=6&sort=sort
-- (void)listMerID:(NSString *)mer_id
-             Page:(NSString *)page
-         Pagesize:(NSString *)page_size
-          KeyWord:(NSString *)keyword
-          Catalog:(NSString *)catalog
-         Currency:(NSString *)currency
-             Sort:(NSString *)sort
-            Order:(NSString *)order
-            Block:(void(^)(NSMutableDictionary *))block
+- (void)listPage:(NSString *)page
+        Pagesize:(NSString *)page_size
+         KeyWord:(NSString *)keyword
+         Catalog:(NSString *)catalog
+        Currency:(NSString *)currency
+            Sort:(NSString *)sort
+           Order:(NSString *)order
+           Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Goods/List"        forKey:@"opt"];
-    [dic setObject:mer_id               forKey:@"mer_id"];
+    [dic setObject:[self getMerID]      forKey:@"mer_id"];
     [dic setObject:page                 forKey:@"page"];
     [dic setObject:page_size            forKey:@"page_size"];
     [dic setObject:keyword              forKey:@"keyword"];
@@ -236,7 +232,7 @@
           Pagesize:(NSString *)page_size
               Sort:(NSString *)sort
              Order:(NSString *)order
-             Block:(void(^)(NSMutableDictionary *))block
+             Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Goods/Points"      forKey:@"opt"];
@@ -252,14 +248,13 @@
 
 // 商品搜索
 //catalog=&keyword=&mer_id=1&opt=Goods/Search
-- (void)searchMerID:(NSString *)mer_id
-            Catalog:(NSString *)catalog
-            Keyword:(NSString *)keyword
-              Block:(void(^)(NSMutableDictionary *))block
+- (void)searchCatalog:(NSString *)catalog
+              Keyword:(NSString *)keyword
+                Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"Goods/Search"       forKey:@"opt"];
-    [dic setObject:mer_id                   forKey:@"mer_id"];
+    [dic setObject:@"Goods/Search"          forKey:@"opt"];
+    [dic setObject:[self getMerID]          forKey:@"mer_id"];
     [dic setObject:catalog                  forKey:@"catalog"];
     [dic setObject:keyword                  forKey:@"keyword"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
@@ -270,13 +265,12 @@
 
 // 获取限时促销商品
 //mer_id=1&opt=Goods/TimeSale&order_by=created_at desc
-- (void)timeSaleMerID:(NSString *)mer_id
-              OrderBy:(NSString *)order_by
-                Block:(void(^)(NSMutableDictionary *))block
+- (void)timeSaleOrderBy:(NSString *)order_by
+                  Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Goods/TimeSale"        forKey:@"opt"];
-    [dic setObject:mer_id                   forKey:@"mer_id"];
+    [dic setObject:[self getMerID]          forKey:@"mer_id"];
     [dic setObject:order_by                 forKey:@"order_by"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
@@ -288,28 +282,26 @@
 
 // 生成订单
 //address_id=&bucks=0&coupon_id=0&currency=cny&goods=[{"id":"","qty":""}]&mer_id=1&opt=Order/Create&pay_channel=alipay&type=goods&user_remark=
-- (void)createToken:(NSString *)token
-               Type:(NSString *)type
-           Currency:(NSString *)currency
-         PayChannel:(NSString *)pay_channel
-          AddressID:(NSString *)address_id
-              MerID:(NSString *)mer_id
-           CouponID:(NSString *)coipon_id
-              Bucks:(NSString *)bucks
-         UserRemark:(NSString *)user_remark
-            GoodsID:(NSString *)ID
-           GoodsQty:(NSString *)qty
-              Block:(void(^)(NSMutableDictionary *))block
+- (void)createType:(NSString *)type
+          Currency:(NSString *)currency
+        PayChannel:(NSString *)pay_channel
+         AddressID:(NSString *)address_id
+          CouponID:(NSString *)coipon_id
+             Bucks:(NSString *)bucks
+        UserRemark:(NSString *)user_remark
+           GoodsID:(NSString *)ID
+          GoodsQty:(NSString *)qty
+             Block:(void(^)(NSMutableDictionary *data))block
 {
     NSString *data = [NSString stringWithFormat:@"[{\"id\":%@,\"qty\":%@}]",ID,qty];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Order/Create"      forKey:@"opt"];
-    [dic setObject:token                forKey:@"token"];
+    [dic setObject:[self getToken]      forKey:@"token"];
     [dic setObject:type                 forKey:@"type"];
     [dic setObject:currency             forKey:@"currency"];
     [dic setObject:pay_channel          forKey:@"pay_channel"];
     [dic setObject:address_id           forKey:@"address_id"];
-    [dic setObject:mer_id               forKey:@"mer_id"];
+    [dic setObject:[self getMerID]      forKey:@"mer_id"];
     [dic setObject:coipon_id            forKey:@"coipon_id"];
     [dic setObject:bucks                forKey:@"bucks"];
     [dic setObject:user_remark          forKey:@"user_remark"];
@@ -321,15 +313,13 @@
 
 // 获取订单支付 charge
 //mer_id=1&opt=Order/GetCharge&order_id=
-- (void)getChangeToken:(NSString *)token
-                 MerID:(NSString *)mer_id
-               OrderID:(NSString *)order_id
-                 Block:(void(^)(NSMutableDictionary *))block
+- (void)getChangeOrderID:(NSString *)order_id
+                   Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"Order/GetCharge"     forKey:@"opt"];
-    [dic setObject:mer_id           forKey:@"mer_id"];
-    [dic setObject:order_id         forKey:@"order_id"];
+    [dic setObject:@"Order/GetCharge"       forKey:@"opt"];
+    [dic setObject:[self getMerID]          forKey:@"mer_id"];
+    [dic setObject:order_id                 forKey:@"order_id"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -338,36 +328,33 @@
 
 // 订单准备
 //currency=cny&goods=[{"id":"","qty":""}]&mer_id=1&opt=Order/Prepare&type=goods
-- (void)prepareToken:(NSString *)token
-               MerID:(NSString *)mer_id
-                Type:(NSString *)type
-            Currency:(NSString *)currency
-             GoodsID:(NSString *)ID
-            GoodsQty:(NSString *)qty
-               Block:(void(^)(NSMutableDictionary *))block
+- (void)prepareType:(NSString *)type
+           Currency:(NSString *)currency
+            GoodsID:(NSString *)ID
+           GoodsQty:(NSString *)qty
+              Block:(void(^)(NSMutableDictionary *data))block
 {
     NSString *data = [NSString stringWithFormat:@"[{\"id\":%@,\"qty\":%@}]",ID,qty];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Order/Prepare"     forKey:@"opt"];
-    [dic setObject:mer_id           forKey:@"mer_id"];
-    [dic setObject:token         forKey:@"token"];
-    [dic setObject:type           forKey:@"type"];
-    [dic setObject:currency         forKey:@"currency"];
-    [dic setObject:data         forKey:@"data"];
+    [dic setObject:[self getMerID]      forKey:@"mer_id"];
+    [dic setObject:[self getToken]      forKey:@"token"];
+    [dic setObject:type                 forKey:@"type"];
+    [dic setObject:currency             forKey:@"currency"];
+    [dic setObject:data                 forKey:@"data"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
 }
 
 // 首页
-- (void)homeMerID:(NSString *)mer_id
-          OrderBy:(NSString *)order_by
-            Block:(void(^)(NSMutableDictionary*))block
+- (void)homeOrderBy:(NSString *)order_by
+              Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"Page/Home"     forKey:@"opt"];
-    [dic setObject:mer_id           forKey:@"mer_id"];
-    [dic setObject:order_by         forKey:@"order_by"];
+    [dic setObject:@"Page/Home"         forKey:@"opt"];
+    [dic setObject:[self getMerID]      forKey:@"mer_id"];
+    [dic setObject:order_by             forKey:@"order_by"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -376,7 +363,7 @@
 // 系统区域
 //opt=System/Area&pid=0
 - (void)areaPid:(NSString *)pid
-          Block:(void(^)(NSMutableDictionary *))block
+          Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"System/Area"     forKey:@"opt"];
@@ -392,7 +379,7 @@
 - (void)fileUploadFileData:(NSData *)file_data
                       Type:(NSString *)type
                       Path:(NSString *)path
-                     Block:(void(^)(NSMutableDictionary *))block
+                     Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"System/FileUpload"     forKey:@"opt"];
@@ -406,7 +393,7 @@
 
 // 系统信息
 //opt=System/Info
-- (void)infoBlock:(void(^)(NSMutableDictionary *))block
+- (void)infoBlock:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"System/Info"    forKey:@"opt"];
@@ -418,16 +405,15 @@
 
 // 查询用户收藏
 //opt=User/Favorites&type=goods&user_id=
-- (void)userFavoritesToken:(NSString *)token
-                    UserID:(NSString *)user_id
-                      Type:(NSString *)type
-                     Block:(void (^)(NSMutableDictionary *))block
+- (void)userFavoritesUserID:(NSString *)user_id
+                       Type:(NSString *)type
+                      Block:(void (^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"User/Favorites"    forKey:@"opt"];
-    [dic setObject:token                    forKey:@"token"];
-    [dic setObject:user_id                     forKey:@"user_id"];
-    [dic setObject:type                    forKey:@"type"];
+    [dic setObject:@"User/Favorites"            forKey:@"opt"];
+    [dic setObject:[self getToken]              forKey:@"token"];
+    [dic setObject:user_id                      forKey:@"user_id"];
+    [dic setObject:type                         forKey:@"type"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -437,7 +423,7 @@
 // 获取足迹
 //opt=User/HistoryList&user_id=
 - (void)userHistoryListUserID:(NSString *)user_id
-                        Block:(void (^)(NSMutableDictionary *))block
+                        Block:(void (^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"User/HistoryList"    forKey:@"opt"];
@@ -451,7 +437,7 @@
 //goods_id=&opt=User/History
 - (void)userHistoryUserID:(NSString *)user_id
                   GoodsID:(NSString *)goods_id
-                    Block:(void (^)(NSMutableDictionary *))block
+                    Block:(void (^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"User/History"      forKey:@"opt"];
@@ -464,16 +450,15 @@
 
 // 读取或修改用户信息
 //key=icon&opt=User/Info
-- (void)UserInfoToken:(NSString *)token
-                  Key:(NSString *)key
-                Value:(NSString *)value
-                Block:(void (^)(NSMutableDictionary *))block
+- (void)UserInfoKey:(NSString *)key
+              Value:(NSString *)value
+              Block:(void (^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"User/Info"    forKey:@"opt"];
-    [dic setObject:token                    forKey:@"token"];
-    [dic setObject:key                     forKey:@"key"];
-    [dic setObject:value                    forKey:@"value"];
+    [dic setObject:@"User/Info"         forKey:@"opt"];
+    [dic setObject:[self getToken]      forKey:@"token"];
+    [dic setObject:key                  forKey:@"key"];
+    [dic setObject:value                forKey:@"value"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -482,7 +467,7 @@
 // 用户佣金
 //opt=User/List&timestamp=1479129078&user_id=
 - (void)userListUserID:(NSString *)user_id
-                 Block:(void(^)(NSMutableDictionary *))block
+                 Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"User/List"     forKey:@"opt"];
@@ -496,7 +481,7 @@
 // 通过用户随机码获取订单
 //opt=User/OrderByCode&ran_code=
 - (void)OrderByCodeRanCode:(NSString *)ran_code
-                     Block:(void(^)(NSMutableDictionary *))block
+                     Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"User/OrderByCode"      forKey:@"opt"];
@@ -508,18 +493,16 @@
 
 // 用户订单
 //mer_id=1&opt=User/Order&page=1&page_size=6&status=0
-- (void)userOrderToken:(NSString *)token
-                Status:(NSString *)status
-                 MerID:(NSString *)mer_id
-                  Page:(NSString *)page
-              PageSize:(NSString *)page_size
-                 Block:(void(^)(NSMutableDictionary *))block
+- (void)userOrderStatus:(NSString *)status
+                   Page:(NSString *)page
+               PageSize:(NSString *)page_size
+                  Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"User/Order"        forKey:@"opt"];
-    [dic setObject:token                forKey:@"token"];
+    [dic setObject:[self getToken]      forKey:@"token"];
     [dic setObject:status               forKey:@"status"];
-    [dic setObject:mer_id               forKey:@"mer_id"];
+    [dic setObject:[self getMerID]      forKey:@"mer_id"];
     [dic setObject:page                 forKey:@"page"];
     [dic setObject:page_size            forKey:@"page_size"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
@@ -532,7 +515,7 @@
 //num=0&opt=User/Point
 - (void)userPointUserID:(NSString *)user_id
                  Number:(NSString *)num
-                  Block:(void(^)(NSMutableDictionary *))block
+                  Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"User/Point"            forKey:@"opt"];
@@ -545,17 +528,16 @@
 
 // 创建用户地址
 //address=&area_id=2260&name=&opt=UserAddress/Create&phone=&postcode=
-- (void)addressCreateToken:(NSString *)token
-                      Name:(NSString *)name
-                     Phone:(NSString *)phone
-                    AreaID:(NSString *)area_id
-                   Address:(NSString *)address
-                  Postcode:(NSString *)psotcode
-                     Bolck:(void(^)(NSMutableDictionary *))block
+- (void)addressCreateName:(NSString *)name
+                    Phone:(NSString *)phone
+                   AreaID:(NSString *)area_id
+                  Address:(NSString *)address
+                 Postcode:(NSString *)psotcode
+                    Bolck:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"UserAddress/Create"    forKey:@"opt"];
-    [dic setObject:token                    forKey:@"token"];
+    [dic setObject:[self getToken]          forKey:@"token"];
     [dic setObject:name                     forKey:@"name"];
     [dic setObject:phone                    forKey:@"phone"];
     [dic setObject:area_id                  forKey:@"area_id"];
@@ -568,13 +550,12 @@
 
 // 删除用户地址
 //id=&opt=UserAddress/Destroy
-- (void)addressDestroyToken:(NSString *)token
-                  AddressID:(NSString *)ID
-                      Bolck:(void(^)(NSMutableDictionary *))block
+- (void)addressDestroyAddressID:(NSString *)ID
+                          Bolck:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"UserAddress/Destroy"    forKey:@"opt"];
-    [dic setObject:token                     forKey:@"token"];
+    [dic setObject:[self getToken]           forKey:@"token"];
     [dic setObject:ID                        forKey:@"id"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
@@ -583,12 +564,11 @@
 
 // 获取用户收货地址
 //opt=UserAddress/List
-- (void)addressListToken:(NSString *)token
-                   Block:(void(^)(NSMutableDictionary *))block
+- (void)addressListBlock:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"UserAddress/List"    forKey:@"opt"];
-    [dic setObject:token                  forKey:@"token"];
+    [dic setObject:[self getToken]        forKey:@"token"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -596,15 +576,15 @@
 
 // 修改用户收货地址
 //address=&area_id=&id=&is_default=0&name=&opt=UserAddress/Update&phone=&postcode=
-- (void)addressUpdateToken:(NSString *)token
-                 AddressID:(NSString *)ID
-                 IsDefault:(NSString *)is_default
-                   address:(NSString *)address
-                  Postcode:(NSString *)postcode
-                     Block:(void(^)(NSMutableDictionary *))block
+- (void)addressUpdateAddressID:(NSString *)ID
+                     IsDefault:(NSString *)is_default
+                       address:(NSString *)address
+                      Postcode:(NSString *)postcode
+                         Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"UserAddress/Update"    forKey:@"opt"];
+    [dic setObject:[self getToken]          forKey:@"token"];
     [dic setObject:ID                       forKey:@"id"];
     [dic setObject:is_default               forKey:@"is_default"];
     [dic setObject:address                  forKey:@"address"];
@@ -617,14 +597,12 @@
 
 // 清空收货地址
 //mer_id=1&opt=UserCart/Destroy
-- (void)cartDestroyToken:(NSString *)token
-                   MerID:(NSString *)mer_id
-                   Block:(void(^)(NSMutableDictionary *))block
+- (void)cartDestroyBlock:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"UserCart/Destroy"    forKey:@"opt"];
-    [dic setObject:token                  forKey:@"token"];
-    [dic setObject:mer_id                 forKey:@"mer_id"];
+    [dic setObject:[self getToken]        forKey:@"token"];
+    [dic setObject:[self getMerID]        forKey:@"mer_id"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -634,17 +612,15 @@
 
 // 添加到购物车
 //goods=[{"id":"","qty":""}]&mer_id=1&opt=UserCart/Insert
-- (void)cartInsertToken:(NSString *)token
-                  MerID:(NSString *)mer_id
-                GoodsID:(NSString *)ID
-               GoodsQty:(NSString *)qty
-                  Block:(void(^)(NSMutableDictionary *))block
+- (void)cartInsertGoodsID:(NSString *)ID
+                 GoodsQty:(NSString *)qty
+                    Block:(void(^)(NSMutableDictionary *data))block
 {
     NSString *data = [NSString stringWithFormat:@"[{\"id\":%@,\"qty\":%@}]",ID,qty];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"UserCart/Insert"     forKey:@"opt"];
-    [dic setObject:token                  forKey:@"token"];
-    [dic setObject:mer_id                 forKey:@"mer_id"];
+    [dic setObject:[self getToken]        forKey:@"token"];
+    [dic setObject:[self getMerID]        forKey:@"mer_id"];
     [dic setObject:data                   forKey:@"data"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
@@ -654,14 +630,12 @@
 
 // 获取购物车
 //mer_id=1&opt=UserCart/List
-- (void)cartListToken:(NSString *)token
-                MerID:(NSString *)mer_id
-                Block:(void(^)(NSMutableDictionary *))block
+- (void)cartListBlock:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"UserCart/List"     forKey:@"opt"];
-    [dic setObject:token                forKey:@"token"];
-    [dic setObject:mer_id               forKey:@"mer_id"];
+    [dic setObject:[self getToken]      forKey:@"token"];
+    [dic setObject:[self getMerID]      forKey:@"mer_id"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -669,18 +643,16 @@
 
 // 更新购物车
 //data=[{"id":"","qty":""}]&mer_id=1&opt=UserCart/Update
-- (void)cartUpdateToken:(NSString *)token
-                  MerID:(NSString *)mer_id
-                GoodsID:(NSString *)ID
-               GoodsQty:(NSString *)qty
-                  Block:(void(^)(NSMutableDictionary *))block
+- (void)cartUpdateGoodsID:(NSString *)ID
+                 GoodsQty:(NSString *)qty
+                    Block:(void(^)(NSMutableDictionary *))block
 {
     
     NSString *data = [NSString stringWithFormat:@"[{\"id\":%@,\"qty\":%@}]",ID,qty];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"UserCart/Update"     forKey:@"opt"];
-    [dic setObject:mer_id                 forKey:@"mer_id"];
-    [dic setObject:token                  forKey:@"token"];
+    [dic setObject:[self getMerID]        forKey:@"mer_id"];
+    [dic setObject:[self getToken]        forKey:@"token"];
     [dic setObject:data                   forKey:@"data"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
@@ -692,26 +664,24 @@
 {
     NSString *token;
     
-    token = @"7658478017b7cdda42b73775df124285";
-    
-    if ([token isEqualToString:@""]) {
-        
-        
-        
-        
-    }
-    
+    token = @"46504168e4794b30bb3bd8f3a8bd14e6";
     
     return token;
 }
 
-
-
+// 获取 mer_id
+- (NSString *)getMerID
+{
+    NSString *mer_id;
+    mer_id = @"1";
+    
+    return mer_id;
+}
 
 
 
 -(void)getParmar:(NSMutableDictionary*)parmar
-            Block:(void(^)(NSMutableDictionary*))block;
+            Block:(void(^)(NSMutableDictionary*temp))block;
 {
     NSDate *senddate = [NSDate date];
     NSString *date2 = [NSString stringWithFormat:@"%ld", (long)[senddate timeIntervalSince1970]];

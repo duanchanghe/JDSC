@@ -29,14 +29,23 @@ static NSString *payTableCell = @"JDPayTableCell";
 {
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
-        
         [_dataArray addObjectsFromArray:@[@[@"1"],@[@"1",@"1"],@[@"1"]]];
-        
-        
     }
     return _dataArray;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    
+//    [self cartInsertToken:<#(NSString *)#>
+//                    MerID:<#(NSString *)#>
+//                  GoodsID:<#(NSString *)#>
+//                 GoodsQty:<#(NSString *)#>
+//                    Block:<#^(NSMutableDictionary *)block#>]
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,32 +66,34 @@ static NSString *payTableCell = @"JDPayTableCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell = nil;
     if (indexPath.section == 0)
     {
-        JDAddressTableCell *cell = [tableView dequeueReusableCellWithIdentifier:addressTableCell];
-        
+        cell = (JDAddressTableCell *)[tableView dequeueReusableCellWithIdentifier:addressTableCell];
         cell.textLabel.text = @"ddddddd";
         cell.detailTextLabel.text = @" ccccccc";
-        
-        return cell;
 
     }else
         
     if (indexPath.section == 1) {
         
-        JDGoodsTableCell *cell = [tableView dequeueReusableCellWithIdentifier:goodsTableCell];
+        cell = (JDGoodsTableCell *)[tableView dequeueReusableCellWithIdentifier:goodsTableCell];
         cell.textLabel.text = @"ddddddd";
         cell.detailTextLabel.text = @" ccccccc";
         
-        return cell;
         
     }else
     {
-        JDPayTableCell *cell = [tableView dequeueReusableCellWithIdentifier:payTableCell];
+        cell = (JDPayTableCell *)[tableView dequeueReusableCellWithIdentifier:payTableCell];
         
         
-        return cell;
     }
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 5)];
+    view.backgroundColor = [UIColor lightGrayColor];
+    [cell.contentView addSubview: view];
+    
+    return cell;
     
 }
 
@@ -110,9 +121,6 @@ titleForHeaderInSection:(NSInteger)section
             
             return @"请选择支付方式";
         }
-    
-    
-    
 }
 
 @end

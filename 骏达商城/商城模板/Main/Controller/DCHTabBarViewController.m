@@ -15,25 +15,18 @@
 
 @implementation DCHTabBarViewController
 
-{
-    
-    SEL JF;
-    
-}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setValue:self.myTabbar forKey:@"tabBar"];
-    
-    [self performSelector:@selector(JF) withObject:nil afterDelay:5];
 }
 
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
     [self revolveView:self.myTabbar.addButton];
+    
+
+    
 }
 
 // 视图旋转动画
@@ -49,8 +42,6 @@
 }
 
 // 弹出动画
-
-
 
 
 
@@ -76,26 +67,19 @@
     UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, SCREN_HEIGHT - SCREEN_WIDTH, SCREEN_WIDTH, SCREEN_WIDTH)];
     control.backgroundColor = RGBA(50, 50, 50, 0.7);
     [_view1 addSubview:control];
-    
-    
     NSArray *array = @[@[@"我的积分",@"测试图片"]
                        ,@[@"我的积分",@"测试图片"]
                        ,@[@"我的积分",@"测试图片"]
                        ,@[@"我的积分",@"测试图片"]];
     
-    
     int r = 3;
     int l = 3;
-    
     CGFloat W = 100;
-
     CGFloat x = control.frame.size.width / (CGFloat)r;
     CGFloat y = control.frame.size.width / (CGFloat)l;
-
+    int m = 0;
     for (int i = 1; i < r; i++) {
-        
         for (int j = 1; j < l; j++) {
-            int m = 0;
             MyButton *button =
             [[[NSBundle mainBundle] loadNibNamed:@"MyButton"
                                            owner:nil
@@ -103,8 +87,8 @@
              lastObject];
             button.width = W;
             button.height = W;
-            button.centerX = x*i;
-            button.centerY = y*j;
+            button.centerX = x*j;
+            button.centerY = y*i;
             button.phoneView.image = [UIImage imageNamed:array[m][0]];
             button.textLabel.text = array[m][1];
             [control addSubview:button];
@@ -116,33 +100,37 @@
         }
     }
     [self.view addSubview:_view1];
-    [control addTarget:self action:@selector(ViewFire) forControlEvents:UIControlEventTouchDown];
-    [_view1 addTarget:self action:@selector(ViewFire) forControlEvents:UIControlEventTouchDown];
-    
+    [control addTarget:self
+                action:@selector(ViewFire)
+      forControlEvents:UIControlEventTouchDown];
+    [_view1 addTarget:self
+               action:@selector(ViewFire)
+     forControlEvents:UIControlEventTouchDown];
 }
 
 
 - (void)Buttonclick:(UIControl *)sender
 {
+    NSLog(@"%ld",(long)sender.tag);
     switch (sender.tag) {
         case 0:
         {
-//            [self ]
+            [self ShareWKJ];
         }
             break;
         case 1:
         {
-            
+            [self SHareMY];
         }
             break;
         case 2:
         {
-            
+            [self JF];
         }
             break;
         case 3:
         {
-            
+            [self YJ];
         }
             break;
         default:
@@ -151,23 +139,20 @@
 }
 
 
--(void)ViewFire{
-    [_view1 removeFromSuperview];
-    _view1 = nil;
-    
+
+-(void)YJ
+{
 }
 
--(void)YJ{
+-(void)JF
+{
+}
+-(void)SHareMY
+{
     
 }
-
--(void)JF{
-    NSLog(@"uuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
-}
--(void)SHareMY{
-    
-}
--(void)ShareWKJ{
+-(void)ShareWKJ
+{
     
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
@@ -193,7 +178,9 @@
     }];
 }
 
-
-
+-(void)ViewFire{
+    [_view1 removeFromSuperview];
+    _view1 = nil;
+}
 
 @end

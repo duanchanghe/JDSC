@@ -129,19 +129,18 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
         
         
         
-        [self listMerID:_mer_id
-                   Page:@"1"
-               Pagesize:@"4"
-                KeyWord:@""
-                Catalog:@""
-               Currency:@"cny"
-                   Sort:@"sort"
-                  Order:@"ASC"
-                  Block:^(NSMutableDictionary *data) {
-                      NSArray *rows = data[@"data"][@"rows"];
-                      [self.collectionArray removeAllObjects];
-                      [self.collectionArray addObjectsFromArray:rows];
-                      [cell.collectionView reloadData];
+        [self listPage:@"1"
+              Pagesize:@"4"
+               KeyWord:@""
+               Catalog:@""
+              Currency:@"cny"
+                  Sort:@"sort"
+                 Order:@"ASC"
+                 Block:^(NSMutableDictionary *data) {
+                     NSArray *rows = data[@"data"][@"rows"];
+                     [self.collectionArray removeAllObjects];
+                     [self.collectionArray addObjectsFromArray:rows];
+                     [cell.collectionView reloadData];
                   }];
         return cell;
     }
@@ -292,40 +291,36 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
 // 获取购物车清单
 - (void)requestData
 {
-    [self cartListToken:_token
-                  MerID:_mer_id
-                  Block:^(NSMutableDictionary *dataDic) {
-                      NSDictionary *data = dataDic[@"data"];
-                      NSArray *rows = data[@"rows"];
-                      NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"total_item"]];
-                      NSString *total_amount = [NSString stringWithFormat:@"￥%@", data[@"total_amount" ]];
-                      NSString *total = [NSString stringWithFormat:@"共计%@件商品 合计：%@",total_item,total_amount];
-                      
-// 给底部视图的 label 写入属性字符串
-                      NSRange range = [total rangeOfString:total_amount];
-                      NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor lightGrayColor],NSForegroundColorAttributeName,nil];
-                      NSMutableAttributedString *totalAttributes = [[NSMutableAttributedString alloc] initWithString:total attributes:attributes];
-                      NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor redColor],NSForegroundColorAttributeName,nil];
-                      [totalAttributes addAttributes:attributes1 range:NSMakeRange(2, total_item.length)];
-                      [totalAttributes addAttributes:attributes1 range:range];
-                      self.allDetailLabel.attributedText = totalAttributes;
-                      
-                      [self.dataArray removeAllObjects];
-                      [self.dataArray addObjectsFromArray:rows];
-                      [self.tableView reloadData];
-                  }];
+    [self cartListBlock:^(NSMutableDictionary *dataDic) {
+        NSDictionary *data = dataDic[@"data"];
+        NSArray *rows = data[@"rows"];
+        NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"total_item"]];
+        NSString *total_amount = [NSString stringWithFormat:@"￥%@", data[@"total_amount" ]];
+        NSString *total = [NSString stringWithFormat:@"共计%@件商品 合计：%@",total_item,total_amount];
+        
+        // 给底部视图的 label 写入属性字符串
+        NSRange range = [total rangeOfString:total_amount];
+        NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor lightGrayColor],NSForegroundColorAttributeName,nil];
+        NSMutableAttributedString *totalAttributes = [[NSMutableAttributedString alloc] initWithString:total attributes:attributes];
+        NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor redColor],NSForegroundColorAttributeName,nil];
+        [totalAttributes addAttributes:attributes1 range:NSMakeRange(2, total_item.length)];
+        [totalAttributes addAttributes:attributes1 range:range];
+        self.allDetailLabel.attributedText = totalAttributes;
+        
+        [self.dataArray removeAllObjects];
+        [self.dataArray addObjectsFromArray:rows];
+        [self.tableView reloadData];
+    }];
 }
 
 // 更新商品数量
 - (void)updataRequest:(NSString *)goods_id Qty:(NSString *)qty
 {
-    [self cartUpdateToken:_token
-                    MerID:_mer_id
-                  GoodsID:goods_id
-                 GoodsQty:qty
-                    Block:^(NSMutableDictionary *dataDic) {
-                        [self requestData];
-                    }];
+    [self cartUpdateGoodsID:goods_id
+                   GoodsQty:qty
+                      Block:^(NSMutableDictionary *dataDic) {
+                          [self requestData];
+                      }];
 }
 
 

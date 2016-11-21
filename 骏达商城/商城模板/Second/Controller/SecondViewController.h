@@ -10,6 +10,4 @@
 
 @interface SecondViewController : UIViewController
 
-@property (nonatomic, copy) NSString *mer_id;
-
 @end

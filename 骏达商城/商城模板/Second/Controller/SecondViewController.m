@@ -84,7 +84,6 @@ static NSString *detailController = @"JDGoodsDetailController";
 // 数据请求设置初始值
 - (void)setInitialValue
 {
-    _mer_id = @"1";
     _page_size  = @"6";
     _page = @"1";
     _catalog = @"";
@@ -146,30 +145,29 @@ static NSString *detailController = @"JDGoodsDetailController";
 // 加载数据
 - (void)loadData
 {
-    [self listMerID:_mer_id
-               Page:_page
-           Pagesize:_page_size
-            KeyWord:_keyword
-            Catalog:_catalog
-           Currency:_currency
-               Sort:_sort
-              Order:_order
-              Block:^(NSMutableDictionary *data) {
-                  NSArray *rows = data[@"data"][@"rows"];
-                  [self.dataArray removeAllObjects];
-                  [self.dataArray addObjectsFromArray:rows];
-                  [_collectionView reloadData];
-                  
-                  // 分段加载判断是否加载完
-                  if ([_page_size integerValue] >= self.dataArray.count + 6)
-                  {
-                      [self.collectionView.mj_footer endRefreshingWithNoMoreData];
-                  }
-                  else
-                  {
-                      [self.collectionView.mj_footer endRefreshing];
-                  }
-              }];
+    [self listPage:_page
+          Pagesize:_page_size
+           KeyWord:_keyword
+           Catalog:_catalog
+          Currency:_currency
+              Sort:_sort
+             Order:_order
+             Block:^(NSMutableDictionary *data) {
+                 NSArray *rows = data[@"data"][@"rows"];
+                 [self.dataArray removeAllObjects];
+                 [self.dataArray addObjectsFromArray:rows];
+                 [_collectionView reloadData];
+                 
+                 // 分段加载判断是否加载完
+                 if ([_page_size integerValue] >= self.dataArray.count + 6)
+                 {
+                     [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+                 }
+                 else
+                 {
+                     [self.collectionView.mj_footer endRefreshing];
+                 }
+             }];
 }
 
 // 点击搜索

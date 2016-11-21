@@ -395,7 +395,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3yl-B8-deW" id="38u-VB-1SE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6f8-nG-S44">
@@ -435,7 +435,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥49.00        " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-JI-ybu">
-                                                            <rect key="frame" x="293" y="87" width="74" height="30"/>
+                                                            <rect key="frame" x="292.5" y="87" width="74.5" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -523,7 +523,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小计:￥" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL1-FT-Cep">
-                                                            <rect key="frame" x="217" y="87" width="75" height="30"/>
+                                                            <rect key="frame" x="217" y="87" width="74.5" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -586,7 +586,7 @@
                                         <rect key="frame" x="0.0" y="172" width="375" height="221"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kyq-tu-Y2s" id="A89-Q5-bT0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="221"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXb-bc-FyM">
@@ -802,22 +802,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sfT-mL-VON">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="108" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="sfT-mL-VON">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="separatorColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="JDAddressTableCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="JDAddressTableCell" textLabel="jFk-O6-s5S" detailTextLabel="sMJ-7Z-r1L" imageView="B8A-gb-Mfs" rowHeight="108" style="IBUITableViewCellStyleSubtitle" id="kK0-kI-65j" customClass="JDAddressTableCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="108"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kK0-kI-65j" id="qyg-fJ-PcL">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Nl-6q-VnC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jFk-O6-s5S">
                                                     <rect key="frame" x="88" y="36" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -840,17 +836,12 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="JDGoodsTableCell" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="JDGoodsTableCell" textLabel="0iI-yJ-ikr" detailTextLabel="yJL-OF-F7X" imageView="Ft9-kQ-MmY" rowHeight="142" style="IBUITableViewCellStyleSubtitle" id="y23-sb-Eaz" customClass="JDGoodsTableCell">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="142"/>
+                                        <rect key="frame" x="0.0" y="164" width="375" height="142"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y23-sb-Eaz" id="Xju-jx-3bd">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ei4-OT-RvW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0iI-yJ-ikr">
                                                     <rect key="frame" x="88" y="53" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -873,10 +864,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="JDPayTableCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="JDPayTableCell" rowHeight="105" id="W3a-bY-nty" customClass="JDPayTableCell">
-                                        <rect key="frame" x="0.0" y="278" width="375" height="105"/>
+                                        <rect key="frame" x="0.0" y="306" width="375" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W3a-bY-nty" id="eAT-ub-dij">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vof-5K-JF2">
@@ -891,7 +882,7 @@
                                                                         <constraint firstAttribute="width" secondItem="kHS-zk-mUo" secondAttribute="height" multiplier="1:1" id="Z1P-PT-Aye"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-5x-4Zh">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信支付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-5x-4Zh">
                                                                     <rect key="frame" x="46.5" y="0.0" width="270.5" height="42.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -902,7 +893,6 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="d7J-b2-Bxr" secondAttribute="height" multiplier="1:1" id="4DX-P6-eHL"/>
                                                                     </constraints>
-                                                                    <state key="normal" title="Button"/>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -933,9 +923,8 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="G8U-kr-8TN" secondAttribute="height" multiplier="1:1" id="6Vz-Wf-rsl"/>
                                                                     </constraints>
-                                                                    <state key="normal" title="Button"/>
                                                                 </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buj-GZ-WGa">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付宝支付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buj-GZ-WGa">
                                                                     <rect key="frame" x="46.5" y="0.0" width="270.5" height="42"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -979,6 +968,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="WHa-f9-ZjQ" id="2zQ-I7-pA7"/>
                                     <outlet property="delegate" destination="WHa-f9-ZjQ" id="hEi-8h-6FT"/>
@@ -989,7 +979,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="sfT-mL-VON" secondAttribute="bottom" id="3ca-Vw-1Z8"/>
                             <constraint firstItem="sfT-mL-VON" firstAttribute="leading" secondItem="dB9-NX-G9D" secondAttribute="leading" id="7Qh-jU-Khs"/>
-                            <constraint firstItem="sfT-mL-VON" firstAttribute="top" secondItem="X2Q-8i-HPI" secondAttribute="bottom" id="Coh-6y-0lu"/>
+                            <constraint firstItem="sfT-mL-VON" firstAttribute="top" secondItem="X2Q-8i-HPI" secondAttribute="bottom" constant="-64" id="Coh-6y-0lu"/>
                             <constraint firstAttribute="trailing" secondItem="sfT-mL-VON" secondAttribute="trailing" id="pQo-UV-83s"/>
                         </constraints>
                     </view>
