@@ -24,7 +24,6 @@
 {
     [super viewWillLayoutSubviews];
     [self revolveView:self.myTabbar.addButton];
-    
 }
 
 // 视图旋转动画
@@ -39,9 +38,6 @@
     [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
 
-// 弹出动画
-
-
 
 - (DCHTabBar *)myTabbar
 {
@@ -50,7 +46,7 @@
         _myTabbar.barTintColor = RGBA(55, 84, 98, 1);
         _myTabbar.tintColor = [UIColor redColor];
         
-        // 真机9.4的系统上不能用
+//        真机9.4的系统上不能用
 //        _myTabbar.unselectedItemTintColor = [UIColor grayColor];
         _myTabbar.tabBarDelegate = self;
     }
@@ -62,9 +58,17 @@
 {
     _view1  = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , SCREN_HEIGHT)];
     _view1.backgroundColor = [UIColor colorWithRed:0.200 green:0.200 blue:0.200 alpha:0.0];
-    UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, SCREN_HEIGHT - SCREEN_WIDTH, SCREEN_WIDTH, SCREEN_WIDTH)];
-    
+    UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, SCREN_HEIGHT, SCREEN_WIDTH, SCREEN_WIDTH)];
     control.backgroundColor = RGBA(50, 50, 50, 0.9);
+    
+//    control弹出动画
+    POPSpringAnimation *controlSpring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    controlSpring.toValue = @(SCREN_HEIGHT - SCREEN_WIDTH*0.5);
+    controlSpring.beginTime = CACurrentMediaTime();
+    controlSpring.springBounciness = 1.0f;
+    controlSpring.springSpeed = 5.0f;
+    [control pop_addAnimation:controlSpring forKey:@"position"];
+    
     [_view1 addSubview:control];
     NSArray *array = @[@[@"我的积分",@"测试图片"]
                        ,@[@"我的积分",@"测试图片"]
@@ -93,7 +97,7 @@
             spring.fromValue = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH/2.0, control.frame.size.height + 100)];
             spring.toValue = [NSValue valueWithCGPoint:CGPointMake(x*j, y*i)];
             spring.beginTime = CACurrentMediaTime();
-            spring.springBounciness = 10.0f;
+            spring.springBounciness = 5.0f;
             spring.springSpeed = 1.0f;
             [button pop_addAnimation:spring forKey:@"position"];
             
@@ -162,11 +166,8 @@
 }
 -(void)ShareWKJ
 {
-    
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
-    
     UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:@"来自沃克家的分享" descr:@"沃克家" thumImage:[UIImage imageNamed:@"收藏"]];
-    
     shareObject.webpageUrl = @"http://wkj.miliwudao.com/wap/index/index";
     messageObject.shareObject = shareObject;
     
@@ -176,7 +177,6 @@
             message = [NSString stringWithFormat:@"分享成功"];
         } else {
             message = [NSString stringWithFormat:@"失败原因Code: %d\n",(int)error.code];
-            
         }
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"成功"
                                                         message:message
@@ -188,8 +188,16 @@
 }
 
 -(void)ViewFire{
-    [_view1 removeFromSuperview];
-    _view1 = nil;
+    
+    POPSpringAnimation *controlSpring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    controlSpring.toValue = @(2*SCREN_HEIGHT);
+    controlSpring.beginTime = CACurrentMediaTime();
+    controlSpring.springBounciness = 1.0f;
+    controlSpring.springSpeed = 5.0f;
+    [_view1 pop_addAnimation:controlSpring forKey:@"position"];
+    
+//    [_view1 removeFromSuperview];
+//    _view1 = nil;
 }
 
 @end
