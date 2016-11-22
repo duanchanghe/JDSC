@@ -21,6 +21,7 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
 @property (nonatomic, copy) NSMutableArray *dataArray;
 @property (weak, nonatomic) IBOutlet UILabel *allDetailLabel;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UIButton *goButton;
 
 @property (nonatomic, copy) NSMutableArray *collectionArray;
 
@@ -51,6 +52,10 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    
+    _goButton.layer.masksToBounds = YES;
+    _goButton.layer.cornerRadius = 5;
+    
     // 初始化 初始值
     [self setInitialValue];
 }
@@ -346,5 +351,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
                           [self requestData];
                       }];
 }
+
+
+
+
 
 @end

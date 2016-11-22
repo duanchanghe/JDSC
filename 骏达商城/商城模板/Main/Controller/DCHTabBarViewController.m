@@ -196,8 +196,11 @@
     controlSpring.springSpeed = 5.0f;
     [_view1 pop_addAnimation:controlSpring forKey:@"position"];
     
-//    [_view1 removeFromSuperview];
-//    _view1 = nil;
 }
 
+
+- (void)dealloc
+{
+    [_view1 pop_removeAllAnimations];
+}
 @end

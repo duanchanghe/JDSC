@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="引导图" translatesAutoresizingMaskIntoConstraints="NO" id="mif-qI-WX5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="引导图" translatesAutoresizingMaskIntoConstraints="NO" id="mif-qI-WX5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mif-qI-WX5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9d8-eq-Zc4"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="mif-qI-WX5" secondAttribute="bottom" id="EEL-BQ-ir7"/>
-                            <constraint firstItem="mif-qI-WX5" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="WRL-1i-5ql"/>
-                            <constraint firstAttribute="trailing" secondItem="mif-qI-WX5" secondAttribute="trailing" id="q2o-ga-1za"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="mif-qI-WX5" secondAttribute="bottom" id="GCy-gB-OQr"/>
+                            <constraint firstItem="mif-qI-WX5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="OrA-Ws-Ac4"/>
+                            <constraint firstAttribute="trailing" secondItem="mif-qI-WX5" secondAttribute="trailing" id="S7c-ag-RbL"/>
+                            <constraint firstItem="mif-qI-WX5" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dUT-Sz-j7t"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>

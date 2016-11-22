@@ -9,7 +9,11 @@
 #import "JDGoodsDetailController.h"
 
 @interface JDGoodsDetailController ()
+
+@property (nonatomic, copy)NSMutableDictionary *dataDic;
+
 @property (nonatomic, copy)NSMutableArray *dataArray;
+
 @end
 
 @implementation JDGoodsDetailController
@@ -27,8 +31,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    NSLog(@"%@",_goods_id);
     
+    [self detailGoodsID:_goods_id
+                  Block:^(NSMutableDictionary *data) {
+                      
+
+                      
+                      
+                  }];
     
 }
 

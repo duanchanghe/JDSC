@@ -10,4 +10,8 @@
 
 @interface JDPayTableCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *weChatButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *payButton;
+
 @end

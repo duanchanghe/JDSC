@@ -10,4 +10,6 @@
 
 @interface JDAddressTableCell : UITableViewCell
 
+@property (nonatomic, copy) NSDictionary *dataDict;
+
 @end

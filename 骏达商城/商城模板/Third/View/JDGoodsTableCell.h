@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface JDGoodsTableCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *messageText;
+@property (nonatomic, copy) NSDictionary *dataDict;
+
 
 @end
