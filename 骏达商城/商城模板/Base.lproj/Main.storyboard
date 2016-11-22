@@ -797,7 +797,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货人：某某某" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KN-M9-UiC">
-                                                            <rect key="frame" x="45" y="8" width="140" height="21"/>
+                                                            <rect key="frame" x="45" y="8" width="93.5" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="C46-bt-iJJ"/>
                                                             </constraints>
@@ -824,7 +824,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15959595959" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOc-Vz-yNH">
-                                                            <rect key="frame" x="190" y="8" width="140" height="21"/>
+                                                            <rect key="frame" x="143.5" y="8" width="186.5" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -853,7 +853,7 @@
                                                         <constraint firstItem="pOc-Vz-yNH" firstAttribute="bottom" secondItem="9KN-M9-UiC" secondAttribute="bottom" id="pX9-ga-V5g"/>
                                                         <constraint firstItem="cgD-72-NZq" firstAttribute="top" secondItem="vph-mz-UcJ" secondAttribute="top" id="rdN-dT-bqD"/>
                                                         <constraint firstItem="cgD-72-NZq" firstAttribute="leading" secondItem="RRB-yq-CZN" secondAttribute="trailing" constant="5" id="tdU-HN-wD2"/>
-                                                        <constraint firstItem="pOc-Vz-yNH" firstAttribute="width" secondItem="9KN-M9-UiC" secondAttribute="width" id="uyj-NP-A2v"/>
+                                                        <constraint firstItem="pOc-Vz-yNH" firstAttribute="width" secondItem="9KN-M9-UiC" secondAttribute="width" multiplier="2:1" id="uyj-NP-A2v"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

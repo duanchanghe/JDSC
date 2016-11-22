@@ -128,7 +128,6 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
      
     } else {
 //        预留的猜你喜欢的 cell
-
         JDSecondShoppingCarTableCell *cell = [tableView dequeueReusableCellWithIdentifier:secondTableViewCell];
         [self listPage:@"1"
               Pagesize:@"4"
