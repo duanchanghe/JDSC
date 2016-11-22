@@ -27,7 +27,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-
+    NSLog(@"%@",_goods_id);
     
     
 }

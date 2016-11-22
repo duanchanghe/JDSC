@@ -75,7 +75,6 @@ static NSString *detailController = @"JDGoodsDetailController";
 {
     JDGoodsDetailController *vc = StoryboardIdentifier(@"JDGoodsDetailController");
     NSDictionary *dic = self.dataArray[indexPath.row];
-    NSLog(@"%@",dic);
     vc.goods_id = dic[@"id"];
     [self.navigationController pushViewController:vc animated:YES];
     

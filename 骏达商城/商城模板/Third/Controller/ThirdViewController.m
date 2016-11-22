@@ -149,10 +149,8 @@ static NSString *secondTableViewCell = @"JDSecondShoppingCarTableCell";
     NSDictionary *dic = nil;
     if (indexPath.section == 0) {
         dic = self.dataArray[indexPath.row];
-    } else {
-        dic = self.collectionArray[indexPath.row];
+        vc.goods_id = dic[@"goods_id"];
     }
-    vc.goods_id = dic[@"id"];
     [self.navigationController pushViewController:vc animated:YES];
     
 }
