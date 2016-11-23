@@ -10,6 +10,7 @@
 #import "JDAddressTableCell.h"
 #import "JDGoodsTableCell.h"
 #import "JDPayTableCell.h"
+#import "JDAddressController.h"
 
 static NSString *addressTableCell = @"JDAddressTableCell";
 static NSString *goodsTableCell = @"JDGoodsTableCell";
@@ -32,7 +33,7 @@ static NSString *payTableCell = @"JDPayTableCell";
     if (!_dataArray) {
         
         _dataArray = [NSMutableArray array];
-        // 获取地址
+//         获取地址
         [self addressListBlock:^(NSMutableDictionary *dataDic) {
             NSDictionary *data = dataDic[@"data"];
             NSArray *rows = data[@"rows"];
@@ -45,7 +46,7 @@ static NSString *payTableCell = @"JDPayTableCell";
             }
             [_dataArray insertObject:arr atIndex:0];
             
-            // 获取购物车清单
+//             获取购物车清单
             [self cartListBlock:^(NSMutableDictionary *dataDic) {
                 NSDictionary *data = dataDic[@"data"];
                 NSArray *rows = data[@"rows"];
@@ -55,7 +56,7 @@ static NSString *payTableCell = @"JDPayTableCell";
                 NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"total_item"]];
                 NSString *total_amount = [NSString stringWithFormat:@"￥%@", data[@"total_amount" ]];
                 NSString *total = [NSString stringWithFormat:@"共计%@件商品 合计：%@",total_item,total_amount];
-                // 给底部视图的 label 写入属性字符串
+//                 给底部视图的 label 写入属性字符串
                 NSRange range = [total rangeOfString:total_amount];
                 NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor lightGrayColor],NSForegroundColorAttributeName,nil];
                 NSMutableAttributedString *totalAttributes = [[NSMutableAttributedString alloc] initWithString:total attributes:attributes];
@@ -130,13 +131,37 @@ static NSString *payTableCell = @"JDPayTableCell";
     if (indexPath.section == 0)
     {
         return 108;
-    }else
-    if (indexPath.section == 1) {
+    }else if (indexPath.section == 1)
+    {
         return 170;
     }else
     {
         return 137;
     }
 }
+
+// cell 点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 0)
+    {
+        JDAddressController *vc = StoryboardIdentifier(@"JDAddressController");
+        [self.navigationController pushViewController:vc animated:YES];
+
+    }else if (indexPath.section == 1)
+    {
+        JDGoodsDetailController *vc = StoryboardIdentifier(@"JDGoodsDetailController");
+        NSDictionary *dic = self.dataArray[indexPath.section][indexPath.row];
+        vc.goods_id = dic[@"goods_id"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+    
+    
+    
+}
+
+
 
 @end

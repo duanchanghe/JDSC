@@ -10,6 +10,7 @@
 #import "JDFirstShoppingCarTableCell.h"
 #import "JDSecondShoppingCarTableCell.h"
 #import "JDShoppingCollectionCell.h"
+#import "JDCreateOrdeController.h"
 
 static NSString *collectionCell = @"JDShoppingCollectionCell";
 static NSString *firstTableViewCell = @"JDFirstShoppingCarTableCell";
@@ -245,6 +246,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     return cell.dataDict;
 }
 
+// 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     
@@ -317,9 +319,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
         NSArray *rows = data[@"rows"];
 // 没有商品隐藏底部 view
         if (!rows.count) {
-            self.bottomView.hidden = YES;
+//            self.bottomView.hidden = YES;
         }else{
-            self.bottomView.hidden = NO;
+//            self.bottomView.hidden = NO;
         }
         
         NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"total_item"]];
@@ -350,6 +352,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
                           [self requestData];
                       }];
 }
+
 
 
 

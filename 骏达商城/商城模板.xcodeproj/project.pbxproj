@@ -19,6 +19,8 @@
 		90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532D81DD1C210007A7768 /* PlusViewController.m */; };
 		90D532E71DD1C46C007A7768 /* DCHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E61DD1C46C007A7768 /* DCHTabBarViewController.m */; };
 		90D532EA1DD1C657007A7768 /* DCHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E91DD1C657007A7768 /* DCHTabBar.m */; };
+		B7079A571DE52F04004DFCB3 /* JDAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A561DE52F04004DFCB3 /* JDAddressController.m */; };
+		B7079A5A1DE5358E004DFCB3 /* JDAddressDetailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A591DE5358E004DFCB3 /* JDAddressDetailTableCell.m */; };
 		B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */; };
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
 		B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2E1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m */; };
@@ -71,6 +73,10 @@
 		90D532E81DD1C657007A7768 /* DCHTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHTabBar.h; sourceTree = "<group>"; };
 		90D532E91DD1C657007A7768 /* DCHTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHTabBar.m; sourceTree = "<group>"; };
 		AEEC42748AAE312B44F8D680 /* libPods-商城模板.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-商城模板.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7079A551DE52F03004DFCB3 /* JDAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddressController.h; sourceTree = "<group>"; };
+		B7079A561DE52F04004DFCB3 /* JDAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddressController.m; sourceTree = "<group>"; };
+		B7079A581DE5358E004DFCB3 /* JDAddressDetailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddressDetailTableCell.h; sourceTree = "<group>"; };
+		B7079A591DE5358E004DFCB3 /* JDAddressDetailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddressDetailTableCell.m; sourceTree = "<group>"; };
 		B70A5D8B1DDD6D8A002AFE8B /* JDShoppingCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShoppingCollectionCell.h; sourceTree = "<group>"; };
 		B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShoppingCollectionCell.m; sourceTree = "<group>"; };
 		B7413E2A1DDC0836006BFB12 /* JDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNavigationController.h; sourceTree = "<group>"; };
@@ -395,6 +401,8 @@
 				90D532D21DD1C1DF007A7768 /* ThirdViewController.m */,
 				B7E7AA171DDFCDC200005857 /* JDCreateOrdeController.h */,
 				B7E7AA181DDFCDC200005857 /* JDCreateOrdeController.m */,
+				B7079A551DE52F03004DFCB3 /* JDAddressController.h */,
+				B7079A561DE52F04004DFCB3 /* JDAddressController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,6 +429,8 @@
 				B7E7AA111DDFCD2B00005857 /* JDGoodsTableCell.m */,
 				B7E7AA121DDFCD2B00005857 /* JDPayTableCell.h */,
 				B7E7AA131DDFCD2B00005857 /* JDPayTableCell.m */,
+				B7079A581DE5358E004DFCB3 /* JDAddressDetailTableCell.h */,
+				B7079A591DE5358E004DFCB3 /* JDAddressDetailTableCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -510,6 +520,7 @@
 		9005349D1DD1ADD4000E089C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JD;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = jundanuantong;
 				TargetAttributes = {
@@ -607,6 +618,7 @@
 			files = (
 				90D532D01DD1C1D2007A7768 /* SecondViewController.m in Sources */,
 				B7E7AA151DDFCD2C00005857 /* JDGoodsTableCell.m in Sources */,
+				B7079A571DE52F04004DFCB3 /* JDAddressController.m in Sources */,
 				B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */,
 				B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */,
 				B7E7AA141DDFCD2B00005857 /* JDAddressTableCell.m in Sources */,
@@ -634,6 +646,7 @@
 				90D532D31DD1C1DF007A7768 /* ThirdViewController.m in Sources */,
 				CCCA5BD21DDC341F00F6FC1C /* Footprint.m in Sources */,
 				B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */,
+				B7079A5A1DE5358E004DFCB3 /* JDAddressDetailTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
