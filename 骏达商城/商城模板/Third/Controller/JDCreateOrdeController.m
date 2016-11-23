@@ -124,15 +124,13 @@ static NSString *payTableCell = @"JDPayTableCell";
     }
 }
 
-
+// 设置cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     if (indexPath.section == 0)
     {
         return 108;
     }else
-        
     if (indexPath.section == 1) {
         return 170;
     }else
