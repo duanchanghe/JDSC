@@ -7,26 +7,64 @@
 //
 
 #import "AppDelegate.h"
-
+#import <AlipaySDK/AlipaySDK.h>
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+{
+    if ([url.host isEqualToString:@"safepay"]) {
+        // 支付跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+        
+        // 授权跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processAuth_V2Result:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+            // 解析 auth code
+            NSString *result = resultDic[@"result"];
+            NSString *authCode = nil;
+            if (result.length>0) {
+                NSArray *resultArr = [result componentsSeparatedByString:@"&"];
+                for (NSString *subResult in resultArr) {
+                    if (subResult.length > 10 && [subResult hasPrefix:@"auth_code="]) {
+                        authCode = [subResult substringFromIndex:10];
+                        break;
+                    }
+                }
+            }
+            NSLog(@"授权结果 authCode = %@", authCode?:@"");
+        }];
+        
+        if ([url.host isEqualToString:@"platformapi"]){//支付宝钱包快登授权返回authCode
+            [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
+                //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
+                NSLog(@"platformapi  result = %@",resultDic);
+            }
+             ];};
+    }
+    return YES;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-//    [[UMSocialManager defaultManager] openLog:NO];
-//    
-//    [[UMSocialManager defaultManager] setUmSocialAppkey:@"58097c68717c196f76002c13"];
-//    // 获取友盟social版本号
+    [[UMSocialManager defaultManager] openLog:NO];
+//     获取友盟social版本号
+    [[UMSocialManager defaultManager] setUmSocialAppkey:@"58097c68717c196f76002c13"];
     
-//    //设置微信的appKey和appSecret
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx70eabd25dae34d6b" appSecret:@"f3a5f956f835af65f04248eba6be08a0" redirectURL:@"http://mobile.umeng.com/social"];
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1105084924"  appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"528141039"  appSecret:@"fbc81249c320f902767ff3b10c398968" redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+    //设置微信的appKey和appSecret
+//    微信  appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx70eabd25dae34d6b" appSecret:@"f3a5f956f835af65f04248eba6be08a0" redirectURL:@"http://mobile.umeng.com/social"];
+//    QQ    appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1105084924"  appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];
+//    新浪    appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"528141039"  appSecret:@"fbc81249c320f902767ff3b10c398968" redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
     
     // Override point for customization after application launch.
     return YES;
