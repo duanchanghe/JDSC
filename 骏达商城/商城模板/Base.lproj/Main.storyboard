@@ -709,6 +709,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="6f8-nG-S44" firstAttribute="leading" secondItem="38u-VB-1SE" secondAttribute="leading" id="MR2-6A-7mW"/>
                                                 <constraint firstAttribute="bottom" secondItem="6f8-nG-S44" secondAttribute="bottom" id="T59-29-xIA"/>

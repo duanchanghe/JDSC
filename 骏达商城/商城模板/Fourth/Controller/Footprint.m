@@ -10,17 +10,67 @@
 
 @interface Footprint ()
 
+{
+    FootprintModel * model;
+}
+
 @end
 
 @implementation Footprint
 
 - (void)viewWillAppear:(BOOL)animated {
     self.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.941 blue:0.961 alpha:1.00];
+    self.navigationItem.title = @"我的足迹";
+    
+    [self setTableView:_tableView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _imageArray = [[NSMutableArray alloc]init];
+    _nameArray = [[NSMutableArray alloc]init];
+    _priceArray = [[NSMutableArray alloc]init];
+}
+
+- (void)setTableView:(UITableView *)tableView {
+    tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    self.view = tableView;
+    
+    UIView * view = [[UIView alloc]init];
+    tableView.tableFooterView = view;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _nameArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return SCREEN_WIDTH * 80/320;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * identifier = @"MyFootprintCell";
+    MyFootprintCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MyFootprintCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+   
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+
 }
 
 - (void)didReceiveMemoryWarning {

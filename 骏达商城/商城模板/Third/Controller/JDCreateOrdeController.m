@@ -47,7 +47,15 @@ static NSString *payTableCell = @"JDPayTableCell";
 
                             NSArray *arr1 = data[@"data"][@"address"];
                             NSArray *arr2 = data[@"data"][@"goods"][@"rows"];
-                            [_dataArray insertObject:arr1 atIndex:0];
+                            
+                            NSMutableArray *arr = [NSMutableArray array];
+                            for (int i = 0; i < arr1.count; i++) {
+                                NSDictionary *dic = arr1[i];
+                                if ([dic[@"is_default"] boolValue]) {
+                                    [arr addObject:arr1[i]];
+                                }
+                            }
+                            [_dataArray insertObject:arr atIndex:0];
                             [_dataArray insertObject:arr2 atIndex:1];
                             [_dataArray insertObject:@[@" "]  atIndex:2];
                             NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"data"][@"goods"][@"total_item"]];
@@ -152,9 +160,6 @@ static NSString *payTableCell = @"JDPayTableCell";
         vc.goods_id = dic[@"goods_id"];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    
-    
-    
     
 }
 

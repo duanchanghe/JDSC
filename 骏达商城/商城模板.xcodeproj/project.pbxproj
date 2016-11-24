@@ -13,7 +13,6 @@
 		900534B81DD1ADD4000E089C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900534B71DD1ADD4000E089C /* Assets.xcassets */; };
 		900534BB1DD1ADD4000E089C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900534B91DD1ADD4000E089C /* LaunchScreen.storyboard */; };
 		90D532CA1DD1C0D2007A7768 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532BB1DD1C0D2007A7768 /* ViewController.m */; };
-		90D532CD1DD1C1B2007A7768 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532CC1DD1C1B2007A7768 /* FirstViewController.m */; };
 		90D532D01DD1C1D2007A7768 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532CF1DD1C1D2007A7768 /* SecondViewController.m */; };
 		90D532D31DD1C1DF007A7768 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532D21DD1C1DF007A7768 /* ThirdViewController.m */; };
 		90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532D81DD1C210007A7768 /* PlusViewController.m */; };
@@ -30,6 +29,38 @@
 		B7079A981DE67672004DFCB3 /* JDGoodsTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A971DE67672004DFCB3 /* JDGoodsTableModel.m */; };
 		B7079A9B1DE67693004DFCB3 /* JDPayTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A9A1DE67693004DFCB3 /* JDPayTableModel.m */; };
 		B7079A9E1DE676AE004DFCB3 /* JDAddressDetailTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A9D1DE676AE004DFCB3 /* JDAddressDetailTableModel.m */; };
+		B7079AE41DE69206004DFCB3 /* ChangesPassWord.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AA21DE69206004DFCB3 /* ChangesPassWord.m */; };
+		B7079AE51DE69206004DFCB3 /* EditingAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AA41DE69206004DFCB3 /* EditingAddress.m */; };
+		B7079AE61DE69206004DFCB3 /* EnterTheNewNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AA61DE69206004DFCB3 /* EnterTheNewNumber.m */; };
+		B7079AE71DE69206004DFCB3 /* Footprint.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AA81DE69206004DFCB3 /* Footprint.m */; };
+		B7079AE81DE69206004DFCB3 /* ForgotPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AAA1DE69206004DFCB3 /* ForgotPassword.m */; };
+		B7079AE91DE69206004DFCB3 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AAC1DE69206004DFCB3 /* FourthViewController.m */; };
+		B7079AEA1DE69206004DFCB3 /* GetVerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AAE1DE69206004DFCB3 /* GetVerificationCode.m */; };
+		B7079AEB1DE69206004DFCB3 /* MyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AB01DE69206004DFCB3 /* MyCollection.m */; };
+		B7079AEC1DE69206004DFCB3 /* Registered.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AB21DE69206004DFCB3 /* Registered.m */; };
+		B7079AED1DE69206004DFCB3 /* RegisteredTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AB41DE69206004DFCB3 /* RegisteredTwo.m */; };
+		B7079AEE1DE69206004DFCB3 /* SettingsList.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AB61DE69206004DFCB3 /* SettingsList.m */; };
+		B7079AEF1DE69206004DFCB3 /* ShippingAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AB81DE69206004DFCB3 /* ShippingAddressVC.m */; };
+		B7079AF01DE69206004DFCB3 /* TheLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079ABA1DE69206004DFCB3 /* TheLoginVC.m */; };
+		B7079AF11DE69206004DFCB3 /* ToViewTheOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079ABC1DE69206004DFCB3 /* ToViewTheOrder.m */; };
+		B7079AF21DE69206004DFCB3 /* FootprintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079ABF1DE69206004DFCB3 /* FootprintModel.m */; };
+		B7079AF31DE69206004DFCB3 /* AllOrdersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AC21DE69206004DFCB3 /* AllOrdersCell.m */; };
+		B7079AF41DE69206004DFCB3 /* AllOrdersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7079AC31DE69206004DFCB3 /* AllOrdersCell.xib */; };
+		B7079AF51DE69206004DFCB3 /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AC51DE69206004DFCB3 /* FootprintCell.m */; };
+		B7079AF61DE69206004DFCB3 /* FourthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AC71DE69206004DFCB3 /* FourthCell.m */; };
+		B7079AF71DE69206004DFCB3 /* MyFootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AC91DE69206004DFCB3 /* MyFootprintCell.m */; };
+		B7079AF81DE69206004DFCB3 /* ShippingAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079ACB1DE69206004DFCB3 /* ShippingAddressCell.m */; };
+		B7079AF91DE69206004DFCB3 /* CitysSelectedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079ACF1DE69206004DFCB3 /* CitysSelectedVC.m */; };
+		B7079AFA1DE69206004DFCB3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AD11DE69206004DFCB3 /* FirstViewController.m */; };
+		B7079AFB1DE69206004DFCB3 /* headerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AD51DE69206004DFCB3 /* headerView.m */; };
+		B7079AFC1DE69206004DFCB3 /* IndexOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AD71DE69206004DFCB3 /* IndexOneCell.m */; };
+		B7079AFD1DE69206004DFCB3 /* IndexOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7079AD81DE69206004DFCB3 /* IndexOneCell.xib */; };
+		B7079AFE1DE69206004DFCB3 /* IndexZeroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079ADA1DE69206004DFCB3 /* IndexZeroCell.m */; };
+		B7079AFF1DE69206004DFCB3 /* SelectBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079ADC1DE69206004DFCB3 /* SelectBtnView.m */; };
+		B7079B001DE69206004DFCB3 /* ShopHomeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079ADE1DE69206004DFCB3 /* ShopHomeItem.m */; };
+		B7079B011DE69206004DFCB3 /* ShopHomeItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7079ADF1DE69206004DFCB3 /* ShopHomeItem.xib */; };
+		B7079B021DE69206004DFCB3 /* ShopHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AE11DE69206004DFCB3 /* ShopHomeVC.m */; };
+		B7079B031DE69206004DFCB3 /* XLPlainFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079AE31DE69206004DFCB3 /* XLPlainFlowLayout.m */; };
 		B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */; };
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
 		B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2E1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m */; };
@@ -45,12 +76,6 @@
 		B7E7AA151DDFCD2C00005857 /* JDGoodsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA111DDFCD2B00005857 /* JDGoodsTableCell.m */; };
 		B7E7AA161DDFCD2C00005857 /* JDPayTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA131DDFCD2B00005857 /* JDPayTableCell.m */; };
 		B7E7AA191DDFCDC200005857 /* JDCreateOrdeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA181DDFCDC200005857 /* JDCreateOrdeController.m */; };
-		CCCA5BC21DDC33A300F6FC1C /* SettingsList.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC11DDC33A300F6FC1C /* SettingsList.m */; };
-		CCCA5BC51DDC33B200F6FC1C /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC41DDC33B200F6FC1C /* FourthViewController.m */; };
-		CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BC71DDC33BD00F6FC1C /* FootprintModel.m */; };
-		CCCA5BCD1DDC33C500F6FC1C /* FourthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BCA1DDC33C500F6FC1C /* FourthCell.m */; };
-		CCCA5BCE1DDC33C500F6FC1C /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BCC1DDC33C500F6FC1C /* FootprintCell.m */; };
-		CCCA5BD21DDC341F00F6FC1C /* Footprint.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCA5BD11DDC341F00F6FC1C /* Footprint.m */; };
 		E4D9AFF8A5AB19808AF4000A /* libPods-商城模板.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEC42748AAE312B44F8D680 /* libPods-商城模板.a */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +94,6 @@
 		90D532B71DD1C0D2007A7768 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90D532BA1DD1C0D2007A7768 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		90D532BB1DD1C0D2007A7768 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		90D532CB1DD1C1B2007A7768 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		90D532CC1DD1C1B2007A7768 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		90D532CE1DD1C1D2007A7768 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		90D532CF1DD1C1D2007A7768 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		90D532D11DD1C1DF007A7768 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
@@ -104,6 +127,67 @@
 		B7079A9A1DE67693004DFCB3 /* JDPayTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPayTableModel.m; sourceTree = "<group>"; };
 		B7079A9C1DE676AE004DFCB3 /* JDAddressDetailTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddressDetailTableModel.h; sourceTree = "<group>"; };
 		B7079A9D1DE676AE004DFCB3 /* JDAddressDetailTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddressDetailTableModel.m; sourceTree = "<group>"; };
+		B7079AA11DE69206004DFCB3 /* ChangesPassWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangesPassWord.h; sourceTree = "<group>"; };
+		B7079AA21DE69206004DFCB3 /* ChangesPassWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangesPassWord.m; sourceTree = "<group>"; };
+		B7079AA31DE69206004DFCB3 /* EditingAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingAddress.h; sourceTree = "<group>"; };
+		B7079AA41DE69206004DFCB3 /* EditingAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingAddress.m; sourceTree = "<group>"; };
+		B7079AA51DE69206004DFCB3 /* EnterTheNewNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterTheNewNumber.h; sourceTree = "<group>"; };
+		B7079AA61DE69206004DFCB3 /* EnterTheNewNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterTheNewNumber.m; sourceTree = "<group>"; };
+		B7079AA71DE69206004DFCB3 /* Footprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Footprint.h; sourceTree = "<group>"; };
+		B7079AA81DE69206004DFCB3 /* Footprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Footprint.m; sourceTree = "<group>"; };
+		B7079AA91DE69206004DFCB3 /* ForgotPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPassword.h; sourceTree = "<group>"; };
+		B7079AAA1DE69206004DFCB3 /* ForgotPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPassword.m; sourceTree = "<group>"; };
+		B7079AAB1DE69206004DFCB3 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		B7079AAC1DE69206004DFCB3 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		B7079AAD1DE69206004DFCB3 /* GetVerificationCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetVerificationCode.h; sourceTree = "<group>"; };
+		B7079AAE1DE69206004DFCB3 /* GetVerificationCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetVerificationCode.m; sourceTree = "<group>"; };
+		B7079AAF1DE69206004DFCB3 /* MyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollection.h; sourceTree = "<group>"; };
+		B7079AB01DE69206004DFCB3 /* MyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollection.m; sourceTree = "<group>"; };
+		B7079AB11DE69206004DFCB3 /* Registered.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registered.h; sourceTree = "<group>"; };
+		B7079AB21DE69206004DFCB3 /* Registered.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registered.m; sourceTree = "<group>"; };
+		B7079AB31DE69206004DFCB3 /* RegisteredTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredTwo.h; sourceTree = "<group>"; };
+		B7079AB41DE69206004DFCB3 /* RegisteredTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredTwo.m; sourceTree = "<group>"; };
+		B7079AB51DE69206004DFCB3 /* SettingsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsList.h; sourceTree = "<group>"; };
+		B7079AB61DE69206004DFCB3 /* SettingsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsList.m; sourceTree = "<group>"; };
+		B7079AB71DE69206004DFCB3 /* ShippingAddressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingAddressVC.h; sourceTree = "<group>"; };
+		B7079AB81DE69206004DFCB3 /* ShippingAddressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingAddressVC.m; sourceTree = "<group>"; };
+		B7079AB91DE69206004DFCB3 /* TheLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheLoginVC.h; sourceTree = "<group>"; };
+		B7079ABA1DE69206004DFCB3 /* TheLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheLoginVC.m; sourceTree = "<group>"; };
+		B7079ABB1DE69206004DFCB3 /* ToViewTheOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToViewTheOrder.h; sourceTree = "<group>"; };
+		B7079ABC1DE69206004DFCB3 /* ToViewTheOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToViewTheOrder.m; sourceTree = "<group>"; };
+		B7079ABE1DE69206004DFCB3 /* FootprintModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintModel.h; sourceTree = "<group>"; };
+		B7079ABF1DE69206004DFCB3 /* FootprintModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintModel.m; sourceTree = "<group>"; };
+		B7079AC11DE69206004DFCB3 /* AllOrdersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrdersCell.h; sourceTree = "<group>"; };
+		B7079AC21DE69206004DFCB3 /* AllOrdersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersCell.m; sourceTree = "<group>"; };
+		B7079AC31DE69206004DFCB3 /* AllOrdersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllOrdersCell.xib; sourceTree = "<group>"; };
+		B7079AC41DE69206004DFCB3 /* FootprintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintCell.h; sourceTree = "<group>"; };
+		B7079AC51DE69206004DFCB3 /* FootprintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintCell.m; sourceTree = "<group>"; };
+		B7079AC61DE69206004DFCB3 /* FourthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthCell.h; sourceTree = "<group>"; };
+		B7079AC71DE69206004DFCB3 /* FourthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthCell.m; sourceTree = "<group>"; };
+		B7079AC81DE69206004DFCB3 /* MyFootprintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFootprintCell.h; sourceTree = "<group>"; };
+		B7079AC91DE69206004DFCB3 /* MyFootprintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFootprintCell.m; sourceTree = "<group>"; };
+		B7079ACA1DE69206004DFCB3 /* ShippingAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingAddressCell.h; sourceTree = "<group>"; };
+		B7079ACB1DE69206004DFCB3 /* ShippingAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingAddressCell.m; sourceTree = "<group>"; };
+		B7079ACE1DE69206004DFCB3 /* CitysSelectedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitysSelectedVC.h; sourceTree = "<group>"; };
+		B7079ACF1DE69206004DFCB3 /* CitysSelectedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitysSelectedVC.m; sourceTree = "<group>"; };
+		B7079AD01DE69206004DFCB3 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		B7079AD11DE69206004DFCB3 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		B7079AD41DE69206004DFCB3 /* headerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headerView.h; sourceTree = "<group>"; };
+		B7079AD51DE69206004DFCB3 /* headerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = headerView.m; sourceTree = "<group>"; };
+		B7079AD61DE69206004DFCB3 /* IndexOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexOneCell.h; sourceTree = "<group>"; };
+		B7079AD71DE69206004DFCB3 /* IndexOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexOneCell.m; sourceTree = "<group>"; };
+		B7079AD81DE69206004DFCB3 /* IndexOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexOneCell.xib; sourceTree = "<group>"; };
+		B7079AD91DE69206004DFCB3 /* IndexZeroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexZeroCell.h; sourceTree = "<group>"; };
+		B7079ADA1DE69206004DFCB3 /* IndexZeroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexZeroCell.m; sourceTree = "<group>"; };
+		B7079ADB1DE69206004DFCB3 /* SelectBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectBtnView.h; sourceTree = "<group>"; };
+		B7079ADC1DE69206004DFCB3 /* SelectBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectBtnView.m; sourceTree = "<group>"; };
+		B7079ADD1DE69206004DFCB3 /* ShopHomeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopHomeItem.h; sourceTree = "<group>"; };
+		B7079ADE1DE69206004DFCB3 /* ShopHomeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopHomeItem.m; sourceTree = "<group>"; };
+		B7079ADF1DE69206004DFCB3 /* ShopHomeItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopHomeItem.xib; sourceTree = "<group>"; };
+		B7079AE01DE69206004DFCB3 /* ShopHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopHomeVC.h; sourceTree = "<group>"; };
+		B7079AE11DE69206004DFCB3 /* ShopHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopHomeVC.m; sourceTree = "<group>"; };
+		B7079AE21DE69206004DFCB3 /* XLPlainFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPlainFlowLayout.h; sourceTree = "<group>"; };
+		B7079AE31DE69206004DFCB3 /* XLPlainFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPlainFlowLayout.m; sourceTree = "<group>"; };
 		B70A5D8B1DDD6D8A002AFE8B /* JDShoppingCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShoppingCollectionCell.h; sourceTree = "<group>"; };
 		B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShoppingCollectionCell.m; sourceTree = "<group>"; };
 		B7413E2A1DDC0836006BFB12 /* JDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNavigationController.h; sourceTree = "<group>"; };
@@ -133,18 +217,6 @@
 		B7E7AA131DDFCD2B00005857 /* JDPayTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPayTableCell.m; sourceTree = "<group>"; };
 		B7E7AA171DDFCDC200005857 /* JDCreateOrdeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDCreateOrdeController.h; sourceTree = "<group>"; };
 		B7E7AA181DDFCDC200005857 /* JDCreateOrdeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDCreateOrdeController.m; sourceTree = "<group>"; };
-		CCCA5BC01DDC33A300F6FC1C /* SettingsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsList.h; sourceTree = "<group>"; };
-		CCCA5BC11DDC33A300F6FC1C /* SettingsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsList.m; sourceTree = "<group>"; };
-		CCCA5BC31DDC33B200F6FC1C /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
-		CCCA5BC41DDC33B200F6FC1C /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
-		CCCA5BC61DDC33BD00F6FC1C /* FootprintModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintModel.h; sourceTree = "<group>"; };
-		CCCA5BC71DDC33BD00F6FC1C /* FootprintModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintModel.m; sourceTree = "<group>"; };
-		CCCA5BC91DDC33C500F6FC1C /* FourthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthCell.h; sourceTree = "<group>"; };
-		CCCA5BCA1DDC33C500F6FC1C /* FourthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthCell.m; sourceTree = "<group>"; };
-		CCCA5BCB1DDC33C500F6FC1C /* FootprintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintCell.h; sourceTree = "<group>"; };
-		CCCA5BCC1DDC33C500F6FC1C /* FootprintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintCell.m; sourceTree = "<group>"; };
-		CCCA5BD01DDC341F00F6FC1C /* Footprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Footprint.h; sourceTree = "<group>"; };
-		CCCA5BD11DDC341F00F6FC1C /* Footprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Footprint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,10 +270,10 @@
 			isa = PBXGroup;
 			children = (
 				90D532B51DD1C0D2007A7768 /* Main */,
-				90D532B11DD1C0D2007A7768 /* Frist */,
+				B7079ACC1DE69206004DFCB3 /* Frist */,
 				90D532C11DD1C0D2007A7768 /* Second */,
 				90D532C51DD1C0D2007A7768 /* Third */,
-				90D532AD1DD1C0D2007A7768 /* Fourth */,
+				B7079A9F1DE69206004DFCB3 /* Fourth */,
 				90D532BD1DD1C0D2007A7768 /* Plus */,
 				90D532EB1DD1C7F8007A7768 /* Library */,
 				900534A81DD1ADD4000E089C /* Supporting Files */,
@@ -219,80 +291,6 @@
 				900534A91DD1ADD4000E089C /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		90D532AD1DD1C0D2007A7768 /* Fourth */ = {
-			isa = PBXGroup;
-			children = (
-				90D532AE1DD1C0D2007A7768 /* Controller */,
-				90D532AF1DD1C0D2007A7768 /* Model */,
-				90D532B01DD1C0D2007A7768 /* View */,
-			);
-			path = Fourth;
-			sourceTree = "<group>";
-		};
-		90D532AE1DD1C0D2007A7768 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CCCA5BC31DDC33B200F6FC1C /* FourthViewController.h */,
-				CCCA5BC41DDC33B200F6FC1C /* FourthViewController.m */,
-				CCCA5BBF1DDC339200F6FC1C /* Settings */,
-				CCCA5BCF1DDC33E400F6FC1C /* Others */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		90D532AF1DD1C0D2007A7768 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CCCA5BC61DDC33BD00F6FC1C /* FootprintModel.h */,
-				CCCA5BC71DDC33BD00F6FC1C /* FootprintModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		90D532B01DD1C0D2007A7768 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CCCA5BC91DDC33C500F6FC1C /* FourthCell.h */,
-				CCCA5BCA1DDC33C500F6FC1C /* FourthCell.m */,
-				CCCA5BCB1DDC33C500F6FC1C /* FootprintCell.h */,
-				CCCA5BCC1DDC33C500F6FC1C /* FootprintCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		90D532B11DD1C0D2007A7768 /* Frist */ = {
-			isa = PBXGroup;
-			children = (
-				90D532B21DD1C0D2007A7768 /* Controller */,
-				90D532B31DD1C0D2007A7768 /* Model */,
-				90D532B41DD1C0D2007A7768 /* View */,
-			);
-			path = Frist;
-			sourceTree = "<group>";
-		};
-		90D532B21DD1C0D2007A7768 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				90D532CB1DD1C1B2007A7768 /* FirstViewController.h */,
-				90D532CC1DD1C1B2007A7768 /* FirstViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		90D532B31DD1C0D2007A7768 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		90D532B41DD1C0D2007A7768 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		90D532B51DD1C0D2007A7768 /* Main */ = {
@@ -518,22 +516,127 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		CCCA5BBF1DDC339200F6FC1C /* Settings */ = {
+		B7079A9F1DE69206004DFCB3 /* Fourth */ = {
 			isa = PBXGroup;
 			children = (
-				CCCA5BC01DDC33A300F6FC1C /* SettingsList.h */,
-				CCCA5BC11DDC33A300F6FC1C /* SettingsList.m */,
+				B7079AA01DE69206004DFCB3 /* Controller */,
+				B7079ABD1DE69206004DFCB3 /* Model */,
+				B7079AC01DE69206004DFCB3 /* View */,
 			);
-			name = Settings;
+			path = Fourth;
 			sourceTree = "<group>";
 		};
-		CCCA5BCF1DDC33E400F6FC1C /* Others */ = {
+		B7079AA01DE69206004DFCB3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CCCA5BD01DDC341F00F6FC1C /* Footprint.h */,
-				CCCA5BD11DDC341F00F6FC1C /* Footprint.m */,
+				B7079AA11DE69206004DFCB3 /* ChangesPassWord.h */,
+				B7079AA21DE69206004DFCB3 /* ChangesPassWord.m */,
+				B7079AA31DE69206004DFCB3 /* EditingAddress.h */,
+				B7079AA41DE69206004DFCB3 /* EditingAddress.m */,
+				B7079AA51DE69206004DFCB3 /* EnterTheNewNumber.h */,
+				B7079AA61DE69206004DFCB3 /* EnterTheNewNumber.m */,
+				B7079AA71DE69206004DFCB3 /* Footprint.h */,
+				B7079AA81DE69206004DFCB3 /* Footprint.m */,
+				B7079AA91DE69206004DFCB3 /* ForgotPassword.h */,
+				B7079AAA1DE69206004DFCB3 /* ForgotPassword.m */,
+				B7079AAB1DE69206004DFCB3 /* FourthViewController.h */,
+				B7079AAC1DE69206004DFCB3 /* FourthViewController.m */,
+				B7079AAD1DE69206004DFCB3 /* GetVerificationCode.h */,
+				B7079AAE1DE69206004DFCB3 /* GetVerificationCode.m */,
+				B7079AAF1DE69206004DFCB3 /* MyCollection.h */,
+				B7079AB01DE69206004DFCB3 /* MyCollection.m */,
+				B7079AB11DE69206004DFCB3 /* Registered.h */,
+				B7079AB21DE69206004DFCB3 /* Registered.m */,
+				B7079AB31DE69206004DFCB3 /* RegisteredTwo.h */,
+				B7079AB41DE69206004DFCB3 /* RegisteredTwo.m */,
+				B7079AB51DE69206004DFCB3 /* SettingsList.h */,
+				B7079AB61DE69206004DFCB3 /* SettingsList.m */,
+				B7079AB71DE69206004DFCB3 /* ShippingAddressVC.h */,
+				B7079AB81DE69206004DFCB3 /* ShippingAddressVC.m */,
+				B7079AB91DE69206004DFCB3 /* TheLoginVC.h */,
+				B7079ABA1DE69206004DFCB3 /* TheLoginVC.m */,
+				B7079ABB1DE69206004DFCB3 /* ToViewTheOrder.h */,
+				B7079ABC1DE69206004DFCB3 /* ToViewTheOrder.m */,
 			);
-			name = Others;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7079ABD1DE69206004DFCB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7079ABE1DE69206004DFCB3 /* FootprintModel.h */,
+				B7079ABF1DE69206004DFCB3 /* FootprintModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7079AC01DE69206004DFCB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7079AC11DE69206004DFCB3 /* AllOrdersCell.h */,
+				B7079AC21DE69206004DFCB3 /* AllOrdersCell.m */,
+				B7079AC31DE69206004DFCB3 /* AllOrdersCell.xib */,
+				B7079AC41DE69206004DFCB3 /* FootprintCell.h */,
+				B7079AC51DE69206004DFCB3 /* FootprintCell.m */,
+				B7079AC61DE69206004DFCB3 /* FourthCell.h */,
+				B7079AC71DE69206004DFCB3 /* FourthCell.m */,
+				B7079AC81DE69206004DFCB3 /* MyFootprintCell.h */,
+				B7079AC91DE69206004DFCB3 /* MyFootprintCell.m */,
+				B7079ACA1DE69206004DFCB3 /* ShippingAddressCell.h */,
+				B7079ACB1DE69206004DFCB3 /* ShippingAddressCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7079ACC1DE69206004DFCB3 /* Frist */ = {
+			isa = PBXGroup;
+			children = (
+				B7079ACD1DE69206004DFCB3 /* Controller */,
+				B7079AD21DE69206004DFCB3 /* Model */,
+				B7079AD31DE69206004DFCB3 /* View */,
+			);
+			path = Frist;
+			sourceTree = "<group>";
+		};
+		B7079ACD1DE69206004DFCB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7079ACE1DE69206004DFCB3 /* CitysSelectedVC.h */,
+				B7079ACF1DE69206004DFCB3 /* CitysSelectedVC.m */,
+				B7079AD01DE69206004DFCB3 /* FirstViewController.h */,
+				B7079AD11DE69206004DFCB3 /* FirstViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7079AD21DE69206004DFCB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7079AD31DE69206004DFCB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7079AD41DE69206004DFCB3 /* headerView.h */,
+				B7079AD51DE69206004DFCB3 /* headerView.m */,
+				B7079AD61DE69206004DFCB3 /* IndexOneCell.h */,
+				B7079AD71DE69206004DFCB3 /* IndexOneCell.m */,
+				B7079AD81DE69206004DFCB3 /* IndexOneCell.xib */,
+				B7079AD91DE69206004DFCB3 /* IndexZeroCell.h */,
+				B7079ADA1DE69206004DFCB3 /* IndexZeroCell.m */,
+				B7079ADB1DE69206004DFCB3 /* SelectBtnView.h */,
+				B7079ADC1DE69206004DFCB3 /* SelectBtnView.m */,
+				B7079ADD1DE69206004DFCB3 /* ShopHomeItem.h */,
+				B7079ADE1DE69206004DFCB3 /* ShopHomeItem.m */,
+				B7079ADF1DE69206004DFCB3 /* ShopHomeItem.xib */,
+				B7079AE01DE69206004DFCB3 /* ShopHomeVC.h */,
+				B7079AE11DE69206004DFCB3 /* ShopHomeVC.m */,
+				B7079AE21DE69206004DFCB3 /* XLPlainFlowLayout.h */,
+				B7079AE31DE69206004DFCB3 /* XLPlainFlowLayout.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -599,10 +702,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7079AF41DE69206004DFCB3 /* AllOrdersCell.xib in Resources */,
+				B7079AFD1DE69206004DFCB3 /* IndexOneCell.xib in Resources */,
 				900534BB1DD1ADD4000E089C /* LaunchScreen.storyboard in Resources */,
 				B755A7A61DE187380009E8D1 /* MyButton.xib in Resources */,
 				900534B81DD1ADD4000E089C /* Assets.xcassets in Resources */,
 				900534B31DD1ADD4000E089C /* Main.storyboard in Resources */,
+				B7079B011DE69206004DFCB3 /* ShopHomeItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,43 +769,65 @@
 			files = (
 				90D532D01DD1C1D2007A7768 /* SecondViewController.m in Sources */,
 				B7E7AA151DDFCD2C00005857 /* JDGoodsTableCell.m in Sources */,
+				B7079AEE1DE69206004DFCB3 /* SettingsList.m in Sources */,
 				B7079A9B1DE67693004DFCB3 /* JDPayTableModel.m in Sources */,
+				B7079AF91DE69206004DFCB3 /* CitysSelectedVC.m in Sources */,
+				B7079AE91DE69206004DFCB3 /* FourthViewController.m in Sources */,
 				B7079A571DE52F04004DFCB3 /* JDAddressController.m in Sources */,
 				B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */,
+				B7079AEA1DE69206004DFCB3 /* GetVerificationCode.m in Sources */,
 				B7079A891DE671E9004DFCB3 /* JDSortedCollectionModel.m in Sources */,
 				B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */,
 				B7E7AA141DDFCD2B00005857 /* JDAddressTableCell.m in Sources */,
 				B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */,
+				B7079AFF1DE69206004DFCB3 /* SelectBtnView.m in Sources */,
 				900534B61DD1ADD4000E089C /* ____.xcdatamodeld in Sources */,
 				B7079A921DE67630004DFCB3 /* JDShoppingCollectionModel.m in Sources */,
-				90D532CD1DD1C1B2007A7768 /* FirstViewController.m in Sources */,
-				CCCA5BC51DDC33B200F6FC1C /* FourthViewController.m in Sources */,
 				B755A7A51DE187380009E8D1 /* MyButton.m in Sources */,
-				CCCA5BCD1DDC33C500F6FC1C /* FourthCell.m in Sources */,
 				90D532E71DD1C46C007A7768 /* DCHTabBarViewController.m in Sources */,
+				B7079AE81DE69206004DFCB3 /* ForgotPassword.m in Sources */,
+				B7079B001DE69206004DFCB3 /* ShopHomeItem.m in Sources */,
+				B7079AED1DE69206004DFCB3 /* RegisteredTwo.m in Sources */,
 				90D532EA1DD1C657007A7768 /* DCHTabBar.m in Sources */,
 				900534AA1DD1ADD4000E089C /* main.m in Sources */,
 				90D532CA1DD1C0D2007A7768 /* ViewController.m in Sources */,
-				CCCA5BC21DDC33A300F6FC1C /* SettingsList.m in Sources */,
-				CCCA5BCE1DDC33C500F6FC1C /* FootprintCell.m in Sources */,
+				B7079AFA1DE69206004DFCB3 /* FirstViewController.m in Sources */,
 				B76D0F1E1DD9B07500EEF537 /* UIViewController+Request.m in Sources */,
+				B7079AF61DE69206004DFCB3 /* FourthCell.m in Sources */,
+				B7079AF71DE69206004DFCB3 /* MyFootprintCell.m in Sources */,
 				B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */,
 				B7079A951DE6764F004DFCB3 /* JDAddressTableModel.m in Sources */,
 				B7079A981DE67672004DFCB3 /* JDGoodsTableModel.m in Sources */,
-				CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */,
+				B7079AE61DE69206004DFCB3 /* EnterTheNewNumber.m in Sources */,
 				B7E7AA191DDFCDC200005857 /* JDCreateOrdeController.m in Sources */,
+				B7079AF81DE69206004DFCB3 /* ShippingAddressCell.m in Sources */,
+				B7079AFE1DE69206004DFCB3 /* IndexZeroCell.m in Sources */,
 				90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */,
+				B7079AFC1DE69206004DFCB3 /* IndexOneCell.m in Sources */,
+				B7079AE41DE69206004DFCB3 /* ChangesPassWord.m in Sources */,
 				B7079A8F1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.m in Sources */,
+				B7079AE51DE69206004DFCB3 /* EditingAddress.m in Sources */,
+				B7079AF51DE69206004DFCB3 /* FootprintCell.m in Sources */,
+				B7079B021DE69206004DFCB3 /* ShopHomeVC.m in Sources */,
 				B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */,
 				B7E7AA0D1DDFCBF100005857 /* AppDelegate.m in Sources */,
+				B7079AF21DE69206004DFCB3 /* FootprintModel.m in Sources */,
+				B7079AEB1DE69206004DFCB3 /* MyCollection.m in Sources */,
+				B7079B031DE69206004DFCB3 /* XLPlainFlowLayout.m in Sources */,
+				B7079AEF1DE69206004DFCB3 /* ShippingAddressVC.m in Sources */,
 				B7079A8C1DE675C4004DFCB3 /* JDFristShoppiingCarTableModel.m in Sources */,
+				B7079AFB1DE69206004DFCB3 /* headerView.m in Sources */,
+				B7079AEC1DE69206004DFCB3 /* Registered.m in Sources */,
 				B7E7AA161DDFCD2C00005857 /* JDPayTableCell.m in Sources */,
+				B7079AE71DE69206004DFCB3 /* Footprint.m in Sources */,
 				B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */,
 				90D532D31DD1C1DF007A7768 /* ThirdViewController.m in Sources */,
-				CCCA5BD21DDC341F00F6FC1C /* Footprint.m in Sources */,
+				B7079AF31DE69206004DFCB3 /* AllOrdersCell.m in Sources */,
 				B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */,
+				B7079AF01DE69206004DFCB3 /* TheLoginVC.m in Sources */,
 				B7079A5A1DE5358E004DFCB3 /* JDAddressDetailTableCell.m in Sources */,
 				B7079A9E1DE676AE004DFCB3 /* JDAddressDetailTableModel.m in Sources */,
+				B7079AF11DE69206004DFCB3 /* ToViewTheOrder.m in Sources */,
 				B7079A861DE59AA6004DFCB3 /* NSObject+Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

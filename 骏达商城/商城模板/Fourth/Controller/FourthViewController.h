@@ -11,6 +11,8 @@
 #import "FourthCell.h"
 #import "Footprint.h"
 #import "SettingsList.h"
+#import "TheLoginVC.h"
+#import "ToViewTheOrder.h"
 
 @interface FourthViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 

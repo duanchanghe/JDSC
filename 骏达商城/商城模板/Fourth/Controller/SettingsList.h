@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PrefixHeader.pch"
+#import <MJRefresh.h>
+#import "EnterTheNewNumber.h"
+#import "ShippingAddressVC.h"
+#import "ChangesPassWord.h"
 
-@interface SettingsList : UIViewController
+@interface SettingsList : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,retain) NSArray * titleArray;
+
+@property (nonatomic,strong) UITableView * tableView;
+@property (nonatomic,retain) UIImageView * headPortrait;
+@property (nonatomic,strong) UILabel * nickName;
+@property (nonatomic,strong) UITextField * nickNameInput;
+@property (nonatomic,strong) UILabel * phoneNumber;
+@property (nonatomic,strong) UITextField * phoneNumberInput;
 
 @end

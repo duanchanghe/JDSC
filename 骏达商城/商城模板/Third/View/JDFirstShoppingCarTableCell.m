@@ -19,7 +19,6 @@
 
 @property (nonatomic, strong) JDFristShoppiingCarTableModel *model;
 
-
 @end
 
 @implementation JDFirstShoppingCarTableCell
@@ -64,6 +63,7 @@
 - (void)setDataDict:(NSDictionary *)dataDict
 {
     _dataDict = dataDict;
+    
     [JDFristShoppiingCarTableModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{@"ID":@"id"};
     }];

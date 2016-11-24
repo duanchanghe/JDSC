@@ -17,6 +17,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.941 blue:0.961 alpha:1.00];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -54,7 +58,7 @@
     _headPortrait.layer.masksToBounds = YES;
     _headPortrait.layer.cornerRadius = _headPortrait.frame.size.width/2;
     [_headPortrait setImage:[UIImage imageNamed:@"headpot"] forState:UIControlStateNormal];
-    [_headPortrait addTarget:self action:@selector(HeadToChoose) forControlEvents:UIControlEventTouchUpInside];
+    [_headPortrait addTarget:self action:@selector(goLoginVC) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:_headPortrait];
     
     _nickName = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_headPortrait.frame) + SCREEN_WIDTH * 10/320, SCREEN_WIDTH *75/320, SCREEN_WIDTH * 150/320, SCREEN_WIDTH * 30/320)];
@@ -72,25 +76,18 @@
     [topView addSubview:_myBalance];
 }
 
-//设置
-- (void)goSettings {
-    [self.navigationController pushViewController:[[SettingsList alloc]init] animated:YES];
+- (void)goLoginVC {
+    //去登录界面
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:[[TheLoginVC alloc]init] animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
-//头像选取
-- (void)HeadToChoose {
-    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        //调用系统相机
-    }]];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"从相册选取" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        //调用系统相册
-    }]];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-    
-    [self presentViewController:alertController animated:YES completion:nil];
+//设置
+- (void)goSettings {
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:[[SettingsList alloc]init] animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)setDisplayView:(UIView *)displayView {
@@ -134,15 +131,10 @@
 
 - (void)setOrders:(UIView *)orders {
     orders = [[UIView alloc]init];
-    orders.frame = CGRectMake(0, SCREEN_WIDTH/2 + SCREEN_WIDTH * 50/320 + SCREEN_WIDTH * 10/320, SCREEN_WIDTH, SCREEN_WIDTH * 40/320);
+    orders.frame = CGRectMake(0, SCREEN_WIDTH * 220/320, SCREEN_WIDTH, SCREEN_WIDTH * 40/320);
     orders.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:orders];
-    
-    _checkOrders = [[UIButton alloc]initWithFrame:orders.frame];
-    _checkOrders.backgroundColor = [UIColor clearColor];
-    [_checkOrders addTarget:self action:@selector(checkMyAllOrders) forControlEvents:UIControlEventTouchUpInside];
-    [orders addSubview:_checkOrders];
-    
+
     _myOrders = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH * 100/320, SCREEN_WIDTH * 40/320)];
     _myOrders.textColor = [UIColor blackColor];
     _myOrders.textAlignment = NSTextAlignmentLeft;
@@ -156,11 +148,18 @@
     _checkMyOrders.text = @"查看全部订单 >";
     _checkMyOrders.font = [UIFont systemFontOfSize:13.0f];
     [orders addSubview:_checkMyOrders];
+    
+    _checkOrders = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH * 40/320)];
+    _checkOrders.backgroundColor = [UIColor clearColor];
+    [_checkOrders addTarget:self action:@selector(checkMyAllOrders) forControlEvents:UIControlEventTouchUpInside];
+    [orders addSubview:_checkOrders];
 }
 
 //查看全部订单
 - (void)checkMyAllOrders {
-    
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:[[ToViewTheOrder alloc]init] animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)setCollectionView:(UICollectionView *)collectionView {
@@ -214,7 +213,9 @@
     switch (indexPath.row) {
         case 0:
             
+            self.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:[[Footprint alloc]init] animated:YES];
+            self.hidesBottomBarWhenPushed = NO;
             
             break;
          

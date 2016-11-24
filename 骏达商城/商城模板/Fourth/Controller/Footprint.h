@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PrefixHeader.pch"
+#import "MyFootprintCell.h"
+#import "FootprintModel.h"
 
-@interface Footprint : UIViewController
+@interface Footprint : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong) UITableView * tableView;
+
+@property (nonatomic,retain) NSMutableArray * imageArray;
+@property (nonatomic,retain) NSMutableArray * nameArray;
+@property (nonatomic,retain) NSMutableArray * priceArray;
+
 
 @end
