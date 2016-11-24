@@ -179,9 +179,9 @@ static NSString *const CellIdentifier = @"CellIdentifier";
     if (indexPath.section == 0) {
         return CGSizeMake(RealScaleFactor*375, RealScaleFactor*227.5);
     }else if (indexPath.section == 1) {
-        return CGSizeMake(RealScaleFactor*187, RealScaleFactor*80);
+        return CGSizeMake(RealScaleFactor*186.5, RealScaleFactor*80);
     }else{
-        return CGSizeMake(RealScaleFactor*187, RealScaleFactor*187);
+        return CGSizeMake(RealScaleFactor*186.5, RealScaleFactor*186.5);
     }
 }
 
