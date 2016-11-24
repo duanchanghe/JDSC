@@ -31,44 +31,40 @@ static NSString *payTableCell = @"JDPayTableCell";
 - (NSMutableArray *)dataArray
 {
     if (!_dataArray) {
-        
         _dataArray = [NSMutableArray array];
-//         获取地址
-        [self addressListBlock:^(NSMutableDictionary *dataDic) {
-            NSDictionary *data = dataDic[@"data"];
-            NSArray *rows = data[@"rows"];
-            NSMutableArray *arr = [NSMutableArray array];
-            for (int i = 0; i < rows.count; i++) {
-                NSDictionary *dic = rows[i];
-                if ([dic[@"is_default"] boolValue]) {
-                    [arr addObject:rows[i]];
-                }
+        [self cartListBlock:^(NSMutableDictionary *data) {
+            NSMutableArray *goods = [NSMutableArray array];
+            NSArray *row = data[@"data"][@"rows"];
+            for (int i = 0; i < row.count; i++) {
+                NSDictionary *dic = row[i];
+                [goods addObject:@[dic[@"goods_id"],dic[@"qty"]]];
             }
-            [_dataArray insertObject:arr atIndex:0];
             
-//             获取购物车清单
-            [self cartListBlock:^(NSMutableDictionary *dataDic) {
-                NSDictionary *data = dataDic[@"data"];
-                NSArray *rows = data[@"rows"];
-                [_dataArray insertObject:rows atIndex:1];
-                [_dataArray insertObject:@[@" "] atIndex:2];
-                
-                NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"total_item"]];
-                NSString *total_amount = [NSString stringWithFormat:@"￥%@", data[@"total_amount" ]];
-                NSString *total = [NSString stringWithFormat:@"共计%@件商品 合计：%@",total_item,total_amount];
-//                 给底部视图的 label 写入属性字符串
-                NSRange range = [total rangeOfString:total_amount];
-                NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor lightGrayColor],NSForegroundColorAttributeName,nil];
-                NSMutableAttributedString *totalAttributes = [[NSMutableAttributedString alloc] initWithString:total attributes:attributes];
-                NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor redColor],NSForegroundColorAttributeName,nil];
-                [totalAttributes addAttributes:attributes1 range:NSMakeRange(2, total_item.length)];
-                [totalAttributes addAttributes:attributes1 range:range];
-                self.allDetailLabel.attributedText = totalAttributes;
-                
-                [_tableView reloadData];
-            }];
-        }];
+            [self prepareType:@"goods"
+                     Currency:@"cny"
+                        Goods:goods
+                        Block:^(NSMutableDictionary *data) {
 
+                            NSArray *arr1 = data[@"data"][@"address"];
+                            NSArray *arr2 = data[@"data"][@"goods"][@"rows"];
+                            [_dataArray insertObject:arr1 atIndex:0];
+                            [_dataArray insertObject:arr2 atIndex:1];
+                            [_dataArray insertObject:@[@" "]  atIndex:2];
+                            NSString *total_item =  [NSString stringWithFormat:@"%@", data[@"data"][@"goods"][@"total_item"]];
+                            NSString *total_amount = [NSString stringWithFormat:@"￥%@", data[@"data"][@"goods"][@"total_amount" ]];
+                            NSString *total = [NSString stringWithFormat:@"共计%@件商品 定金合计：%@",total_item,total_amount];
+//                    给底部视图的 label 写入属性字符串
+                            NSRange range = [total rangeOfString:total_amount];
+                            NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor lightGrayColor],NSForegroundColorAttributeName,nil];
+                            NSMutableAttributedString *totalAttributes = [[NSMutableAttributedString alloc] initWithString:total attributes:attributes];
+                            NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15.0],NSFontAttributeName,[UIColor redColor],NSForegroundColorAttributeName,nil];
+                            [totalAttributes addAttributes:attributes1 range:NSMakeRange(2, total_item.length)];
+                            [totalAttributes addAttributes:attributes1 range:range];
+                            self.allDetailLabel.attributedText = totalAttributes;
+                            [_tableView reloadData];
+                        }];
+        }];
+        
     }
     return _dataArray;
 }

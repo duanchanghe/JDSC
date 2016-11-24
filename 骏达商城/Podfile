@@ -6,6 +6,7 @@ target '商城模板' do
 pod 'RBStoryboardLink'
 pod 'AFNetworking'
 pod 'MJRefresh'
+pod 'MJExtension'
 pod 'pop', :git => 'https://github.com/facebook/pop.git'
 
 pod 'UMengUShare/UI'

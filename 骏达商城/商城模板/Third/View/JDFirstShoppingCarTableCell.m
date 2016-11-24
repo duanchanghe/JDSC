@@ -7,7 +7,7 @@
 //
 
 #import "JDFirstShoppingCarTableCell.h"
-#import "UIKit+AFNetworking.h"
+#import "JDFristShoppiingCarTableModel.h"
 
 @interface JDFirstShoppingCarTableCell ()
 
@@ -17,18 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *numberText;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
-@property (nonatomic, copy) NSString *ID;
-@property (nonatomic, copy) NSString *mer_id;
-@property (nonatomic, copy) NSString *user_id;
-@property (nonatomic, copy) NSString *goods_id;
-@property (nonatomic, copy) NSString *goods_name;
-@property (nonatomic, copy) NSString *qty;
-@property (nonatomic, copy) NSString *price;
-@property (nonatomic, copy) NSString *sub_total;
-@property (nonatomic, copy) NSString *options;
-@property (nonatomic, copy) NSString *cur_price;
-@property (nonatomic, copy) NSString *icon;
-@property (nonatomic, assign) BOOL need_update;
+@property (nonatomic, strong) JDFristShoppiingCarTableModel *model;
+
 
 @end
 
@@ -74,24 +64,17 @@
 - (void)setDataDict:(NSDictionary *)dataDict
 {
     _dataDict = dataDict;
-    _ID = dataDict[@"id"];
-    _mer_id = dataDict[@"mer_id"];
-    _user_id = dataDict[@"user_id"];
-    _goods_id = dataDict[@"goods_id"];
-    _goods_name = dataDict[@"goods_name"];
-    _qty = dataDict[@"qty"];
-    _price = dataDict[@"price"];
-    _sub_total = dataDict[@"sub_total"];
-    _icon = dataDict[@"icon"];
-    _need_update = [dataDict[@"need_update"] boolValue];
+    [JDFristShoppiingCarTableModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{@"ID":@"id"};
+    }];
     
-    _numberText.text = _qty;
-    _priceLabel.text = _sub_total;
-    _priceDetailLabel.text = [NSString stringWithFormat:@"￥ %@",_price];
-    _detailLabel.text = _goods_name;
+    _model = [JDFristShoppiingCarTableModel mj_objectWithKeyValues:dataDict];
+    _numberText.text = _model.qty;
+    _priceLabel.text = _model.sub_total;
+    _priceDetailLabel.text = [NSString stringWithFormat:@"￥ %@",_model.price];
+    _detailLabel.text = _model.goods_name;
     
-    [_photoImageView setImageWithURL:[NSURL URLWithString:_icon]];
-    
+    [_photoImageView setImageWithURL:[NSURL URLWithString:_model.icon]];
 }
 
 

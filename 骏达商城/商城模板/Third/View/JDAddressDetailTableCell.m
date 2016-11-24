@@ -7,6 +7,7 @@
 //
 
 #import "JDAddressDetailTableCell.h"
+#import "JDAddressDetailTableModel.h"
 
 @interface JDAddressDetailTableCell ()
 
@@ -16,20 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *defualtButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
-
-@property (nonatomic, copy) NSString *address;
-@property (nonatomic, copy) NSString *area_id;
-@property (nonatomic, copy) NSString *ares_text;
-@property (nonatomic, copy) NSString *ID;
-@property (nonatomic, copy) NSString *is_default;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *phone;
-@property (nonatomic, copy) NSString *postcode;
-@property (nonatomic, copy) NSString *status;
-@property (nonatomic, copy) NSString *user_id;
+@property (nonatomic, strong) JDAddressDetailTableModel *model;
 
 @end
-
 
 @implementation JDAddressDetailTableCell
 
@@ -37,37 +27,19 @@
 - (void)setDataDict:(NSDictionary *)dataDict
 {
     _dataDict = dataDict;
-    _address = dataDict[@"address"];
-    _area_id = dataDict[@"area_id"];
-    _ares_text = dataDict[@"ares_text"];
-    _ID = dataDict[@"id"];
-    _is_default = dataDict[@"is_default"];
-    _name = dataDict[@"name"];
-    _phone = dataDict[@"phone"];
-    _postcode = dataDict[@"postcode"];
-    _status = dataDict[@"status"];
-    _user_id = dataDict[@"user_id"];
-    
-    _nameLabel.text = _name;
-    _phoneLable.text = _phone;
-    _detailLabel.text = _address;
-    
-    if ([_is_default boolValue]) {
+    [JDAddressDetailTableModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{@"ID":@"id"};
+    }];
+    _model = [JDAddressDetailTableModel mj_objectWithKeyValues:dataDict];
+    _nameLabel.text = _model.name;
+    _phoneLable.text = _model.phone;
+    _detailLabel.text = _model.address;
+    if ([_model.is_default boolValue]) {
         _defualtButton.selected = YES;
     }else{
         _defualtButton.selected = NO;
     }
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

@@ -32,13 +32,13 @@
 {
     [super viewWillAppear:YES];
     
-    [self detailGoodsID:_goods_id
-                  Block:^(NSMutableDictionary *data) {
-                      
-
-                      
-                      
-                  }];
+//    [self detailGoodsID:_goods_id
+//                  Block:^(NSMutableDictionary *data) {
+//                      
+//
+//                      
+//                      
+//                  }];
     
 }
 

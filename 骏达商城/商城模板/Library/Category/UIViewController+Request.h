@@ -128,10 +128,10 @@
 
 // 订单准备
 //currency=cny&goods=[{"id":"","qty":""}]&mer_id=1&opt=Order/Prepare&type=goods
+// goods的格式为 @[@[@"商品 id",@"商品数量 "],@[@"商品 id",@"商品 id"]];
 - (void)prepareType:(NSString *)type
            Currency:(NSString *)currency
-            GoodsID:(NSString *)ID
-           GoodsQty:(NSString *)qty
+              Goods:(NSArray <NSArray *>*)goods
               Block:(void(^)(NSMutableDictionary *data))block;
 
 

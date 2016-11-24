@@ -327,21 +327,30 @@
 
 
 // 订单准备
-//currency=cny&goods=[{"id":"","qty":""}]&mer_id=1&opt=Order/Prepare&type=goods
+//currency=cny&goods=[{"id":"7","qty":"1"}]&opt=Order/Prepare&type=goods
+
 - (void)prepareType:(NSString *)type
            Currency:(NSString *)currency
-            GoodsID:(NSString *)ID
-           GoodsQty:(NSString *)qty
+              Goods:(NSArray <NSArray *>*)goods
               Block:(void(^)(NSMutableDictionary *data))block
 {
-    NSString *data = [NSString stringWithFormat:@"[{\"id\":%@,\"qty\":%@}]",ID,qty];
+    NSMutableString *Goods = [NSMutableString stringWithFormat:@"["];
+    for (int i = 0; i < goods.count; i++) {
+        NSArray *temp = goods[i];
+        [Goods appendFormat:@"{\"id\":%@,\"qty\":%@}",temp[0],temp[1]];
+        
+        if (i < goods.count - 1) {
+            [Goods appendString:@","];
+        }
+    }
+    [Goods appendString:@"]"];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"Order/Prepare"     forKey:@"opt"];
     [dic setObject:[self getMerID]      forKey:@"mer_id"];
     [dic setObject:[self getToken]      forKey:@"token"];
     [dic setObject:type                 forKey:@"type"];
     [dic setObject:currency             forKey:@"currency"];
-    [dic setObject:data                 forKey:@"data"];
+    [dic setObject:Goods                 forKey:@"goods"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -663,7 +672,8 @@
 - (NSString *)getToken
 {
     NSString *token;
-    
+//    token = @"487108ea010ee6507e58693f5c1899ac";
+
     token = @"46504168e4794b30bb3bd8f3a8bd14e6";
     
     return token;

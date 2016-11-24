@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>MJExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>035CEAAF84D8F382CEA3CBC1ABDC9E1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>19C4ADDB286AC35D365E52DB98C98B72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +97,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A69418BC90C194191FF10DE82CD2732A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>AA9014E592563C9EDF0CA2CB67FA9100</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF6729D1C5A9873529C53BECEFB0D366</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -98,6 +123,11 @@
 			<true/>
 		</dict>
 		<key>B6C2AB493F56A16D7E28F8672279BB10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2356AA9E72B7D12C1BAD4112A5853A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

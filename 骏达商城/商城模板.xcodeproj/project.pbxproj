@@ -21,6 +21,15 @@
 		90D532EA1DD1C657007A7768 /* DCHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D532E91DD1C657007A7768 /* DCHTabBar.m */; };
 		B7079A571DE52F04004DFCB3 /* JDAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A561DE52F04004DFCB3 /* JDAddressController.m */; };
 		B7079A5A1DE5358E004DFCB3 /* JDAddressDetailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A591DE5358E004DFCB3 /* JDAddressDetailTableCell.m */; };
+		B7079A861DE59AA6004DFCB3 /* NSObject+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A851DE59AA6004DFCB3 /* NSObject+Model.m */; };
+		B7079A891DE671E9004DFCB3 /* JDSortedCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A881DE671E9004DFCB3 /* JDSortedCollectionModel.m */; };
+		B7079A8C1DE675C4004DFCB3 /* JDFristShoppiingCarTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A8B1DE675C4004DFCB3 /* JDFristShoppiingCarTableModel.m */; };
+		B7079A8F1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A8E1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.m */; };
+		B7079A921DE67630004DFCB3 /* JDShoppingCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A911DE67630004DFCB3 /* JDShoppingCollectionModel.m */; };
+		B7079A951DE6764F004DFCB3 /* JDAddressTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A941DE6764F004DFCB3 /* JDAddressTableModel.m */; };
+		B7079A981DE67672004DFCB3 /* JDGoodsTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A971DE67672004DFCB3 /* JDGoodsTableModel.m */; };
+		B7079A9B1DE67693004DFCB3 /* JDPayTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A9A1DE67693004DFCB3 /* JDPayTableModel.m */; };
+		B7079A9E1DE676AE004DFCB3 /* JDAddressDetailTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7079A9D1DE676AE004DFCB3 /* JDAddressDetailTableModel.m */; };
 		B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */; };
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
 		B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2E1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m */; };
@@ -77,6 +86,24 @@
 		B7079A561DE52F04004DFCB3 /* JDAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddressController.m; sourceTree = "<group>"; };
 		B7079A581DE5358E004DFCB3 /* JDAddressDetailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddressDetailTableCell.h; sourceTree = "<group>"; };
 		B7079A591DE5358E004DFCB3 /* JDAddressDetailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddressDetailTableCell.m; sourceTree = "<group>"; };
+		B7079A841DE59AA6004DFCB3 /* NSObject+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Model.h"; sourceTree = "<group>"; };
+		B7079A851DE59AA6004DFCB3 /* NSObject+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Model.m"; sourceTree = "<group>"; };
+		B7079A871DE671E9004DFCB3 /* JDSortedCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDSortedCollectionModel.h; sourceTree = "<group>"; };
+		B7079A881DE671E9004DFCB3 /* JDSortedCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDSortedCollectionModel.m; sourceTree = "<group>"; };
+		B7079A8A1DE675C4004DFCB3 /* JDFristShoppiingCarTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFristShoppiingCarTableModel.h; sourceTree = "<group>"; };
+		B7079A8B1DE675C4004DFCB3 /* JDFristShoppiingCarTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFristShoppiingCarTableModel.m; sourceTree = "<group>"; };
+		B7079A8D1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDSecondShoppingCarTableModel.h; sourceTree = "<group>"; };
+		B7079A8E1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDSecondShoppingCarTableModel.m; sourceTree = "<group>"; };
+		B7079A901DE67630004DFCB3 /* JDShoppingCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShoppingCollectionModel.h; sourceTree = "<group>"; };
+		B7079A911DE67630004DFCB3 /* JDShoppingCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShoppingCollectionModel.m; sourceTree = "<group>"; };
+		B7079A931DE6764F004DFCB3 /* JDAddressTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddressTableModel.h; sourceTree = "<group>"; };
+		B7079A941DE6764F004DFCB3 /* JDAddressTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddressTableModel.m; sourceTree = "<group>"; };
+		B7079A961DE67672004DFCB3 /* JDGoodsTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDGoodsTableModel.h; sourceTree = "<group>"; };
+		B7079A971DE67672004DFCB3 /* JDGoodsTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDGoodsTableModel.m; sourceTree = "<group>"; };
+		B7079A991DE67693004DFCB3 /* JDPayTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPayTableModel.h; sourceTree = "<group>"; };
+		B7079A9A1DE67693004DFCB3 /* JDPayTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPayTableModel.m; sourceTree = "<group>"; };
+		B7079A9C1DE676AE004DFCB3 /* JDAddressDetailTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddressDetailTableModel.h; sourceTree = "<group>"; };
+		B7079A9D1DE676AE004DFCB3 /* JDAddressDetailTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddressDetailTableModel.m; sourceTree = "<group>"; };
 		B70A5D8B1DDD6D8A002AFE8B /* JDShoppingCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShoppingCollectionCell.h; sourceTree = "<group>"; };
 		B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShoppingCollectionCell.m; sourceTree = "<group>"; };
 		B7413E2A1DDC0836006BFB12 /* JDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNavigationController.h; sourceTree = "<group>"; };
@@ -371,6 +398,8 @@
 		90D532C31DD1C0D2007A7768 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B7079A871DE671E9004DFCB3 /* JDSortedCollectionModel.h */,
+				B7079A881DE671E9004DFCB3 /* JDSortedCollectionModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,6 +439,20 @@
 		90D532C71DD1C0D2007A7768 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B7079A8A1DE675C4004DFCB3 /* JDFristShoppiingCarTableModel.h */,
+				B7079A8B1DE675C4004DFCB3 /* JDFristShoppiingCarTableModel.m */,
+				B7079A8D1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.h */,
+				B7079A8E1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.m */,
+				B7079A901DE67630004DFCB3 /* JDShoppingCollectionModel.h */,
+				B7079A911DE67630004DFCB3 /* JDShoppingCollectionModel.m */,
+				B7079A931DE6764F004DFCB3 /* JDAddressTableModel.h */,
+				B7079A941DE6764F004DFCB3 /* JDAddressTableModel.m */,
+				B7079A961DE67672004DFCB3 /* JDGoodsTableModel.h */,
+				B7079A971DE67672004DFCB3 /* JDGoodsTableModel.m */,
+				B7079A991DE67693004DFCB3 /* JDPayTableModel.h */,
+				B7079A9A1DE67693004DFCB3 /* JDPayTableModel.m */,
+				B7079A9C1DE676AE004DFCB3 /* JDAddressDetailTableModel.h */,
+				B7079A9D1DE676AE004DFCB3 /* JDAddressDetailTableModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -453,6 +496,8 @@
 				B7C2DC421DD95F9900428D66 /* UIView+Category.m */,
 				B76D0F1C1DD9B07500EEF537 /* UIViewController+Request.h */,
 				B76D0F1D1DD9B07500EEF537 /* UIViewController+Request.m */,
+				B7079A841DE59AA6004DFCB3 /* NSObject+Model.h */,
+				B7079A851DE59AA6004DFCB3 /* NSObject+Model.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -618,12 +663,15 @@
 			files = (
 				90D532D01DD1C1D2007A7768 /* SecondViewController.m in Sources */,
 				B7E7AA151DDFCD2C00005857 /* JDGoodsTableCell.m in Sources */,
+				B7079A9B1DE67693004DFCB3 /* JDPayTableModel.m in Sources */,
 				B7079A571DE52F04004DFCB3 /* JDAddressController.m in Sources */,
 				B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */,
+				B7079A891DE671E9004DFCB3 /* JDSortedCollectionModel.m in Sources */,
 				B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */,
 				B7E7AA141DDFCD2B00005857 /* JDAddressTableCell.m in Sources */,
 				B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */,
 				900534B61DD1ADD4000E089C /* ____.xcdatamodeld in Sources */,
+				B7079A921DE67630004DFCB3 /* JDShoppingCollectionModel.m in Sources */,
 				90D532CD1DD1C1B2007A7768 /* FirstViewController.m in Sources */,
 				CCCA5BC51DDC33B200F6FC1C /* FourthViewController.m in Sources */,
 				B755A7A51DE187380009E8D1 /* MyButton.m in Sources */,
@@ -636,17 +684,23 @@
 				CCCA5BCE1DDC33C500F6FC1C /* FootprintCell.m in Sources */,
 				B76D0F1E1DD9B07500EEF537 /* UIViewController+Request.m in Sources */,
 				B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */,
+				B7079A951DE6764F004DFCB3 /* JDAddressTableModel.m in Sources */,
+				B7079A981DE67672004DFCB3 /* JDGoodsTableModel.m in Sources */,
 				CCCA5BC81DDC33BD00F6FC1C /* FootprintModel.m in Sources */,
 				B7E7AA191DDFCDC200005857 /* JDCreateOrdeController.m in Sources */,
 				90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */,
+				B7079A8F1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.m in Sources */,
 				B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */,
 				B7E7AA0D1DDFCBF100005857 /* AppDelegate.m in Sources */,
+				B7079A8C1DE675C4004DFCB3 /* JDFristShoppiingCarTableModel.m in Sources */,
 				B7E7AA161DDFCD2C00005857 /* JDPayTableCell.m in Sources */,
 				B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */,
 				90D532D31DD1C1DF007A7768 /* ThirdViewController.m in Sources */,
 				CCCA5BD21DDC341F00F6FC1C /* Footprint.m in Sources */,
 				B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */,
 				B7079A5A1DE5358E004DFCB3 /* JDAddressDetailTableCell.m in Sources */,
+				B7079A9E1DE676AE004DFCB3 /* JDAddressDetailTableModel.m in Sources */,
+				B7079A861DE59AA6004DFCB3 /* NSObject+Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

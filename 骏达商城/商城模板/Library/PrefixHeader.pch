@@ -20,5 +20,7 @@
 #import <UMSocialCore/UMSocialCore.h>
 #import "MyButton.h"
 #import "JDGoodsDetailController.h"
+#import "NSObject+Model.h"
+#import "MJExtension.h"
 
 #endif /* PrefixHeader_pch */
