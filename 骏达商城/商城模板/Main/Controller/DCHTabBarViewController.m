@@ -174,11 +174,11 @@
     [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_WechatTimeLine messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
         NSString *message = nil;
         if (!error) {
-            message = [NSString stringWithFormat:@"分享成功"];
+            message = [NSString stringWithFormat:@"噢耶! 分享成功"];
         } else {
-            message = [NSString stringWithFormat:@"失败原因Code: %d\n",(int)error.code];
+            message = [NSString stringWithFormat:@"没有分享出去哦!"];
         }
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"成功"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"欢迎回来"
                                                         message:message
                                                        delegate:nil
                                               cancelButtonTitle:NSLocalizedString(@"确定", nil)

@@ -53,20 +53,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
     [[UMSocialManager defaultManager] openLog:NO];
-//     获取友盟social版本号
+    
     [[UMSocialManager defaultManager] setUmSocialAppkey:@"58097c68717c196f76002c13"];
     
+    // 获取友盟social版本号
+    //NSLog(@"UMeng social version: %@", [UMSocialGlobal umSocialSDKVersion]);
+    
     //设置微信的appKey和appSecret
-//    微信  appKey和appSecret
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx70eabd25dae34d6b" appSecret:@"f3a5f956f835af65f04248eba6be08a0" redirectURL:@"http://mobile.umeng.com/social"];
-//    QQ    appKey和appSecret
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1105084924"  appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];
-//    新浪    appKey和appSecret
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"528141039"  appSecret:@"fbc81249c320f902767ff3b10c398968" redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
     
-    // Override point for customization after application launch.
+    
+    
     return YES;
 }
 
@@ -85,6 +85,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+
 }
 
 

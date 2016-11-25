@@ -11,6 +11,7 @@
 #import "JDGoodsTableCell.h"
 #import "JDPayTableCell.h"
 #import "JDAddressController.h"
+#import <AlipaySDK/AlipaySDK.h>
 
 static NSString *addressTableCell = @"JDAddressTableCell";
 static NSString *goodsTableCell = @"JDGoodsTableCell";
@@ -163,6 +164,20 @@ static NSString *payTableCell = @"JDPayTableCell";
     
 }
 
+- (IBAction)goPayClickButton:(UIButton *)sender
+{
+    
+    [[AlipaySDK defaultService] payOrder:@"   "
+                              fromScheme:@"   "
+                                callback:^(NSDictionary *resultDic) {
+                                    
+                                    
+                                    NSLog(@"%@",resultDic);
+                                    
+                                }];
+    
+    
+}
 
 
 @end

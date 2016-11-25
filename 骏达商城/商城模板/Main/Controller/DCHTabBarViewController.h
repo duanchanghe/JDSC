@@ -12,4 +12,7 @@
 @interface DCHTabBarViewController : UITabBarController
 @property (nonatomic, strong) DCHTabBar *myTabbar;
 @property UIControl*view1;
+
+
+- (void)revolveView:(UIView *)view;
 @end
