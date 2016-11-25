@@ -70,10 +70,10 @@
     [control pop_addAnimation:controlSpring forKey:@"position"];
     
     [_view1 addSubview:control];
-    NSArray *array = @[@[@"我的积分",@"测试图片"]
-                       ,@[@"我的积分",@"测试图片"]
-                       ,@[@"我的积分",@"测试图片"]
-                       ,@[@"我的积分",@"测试图片"]];
+    NSArray *array = @[@[@"朋友圈",@"沃克家分享"]
+                       ,@[@"推广账户1",@"推广账户"]
+                       ,@[@"我的积分",@"我的积分"]
+                       ,@[@"我的佣金",@"我的佣金"]];
     
     int r = 3;
     int l = 3;
