@@ -87,6 +87,8 @@
 		B755A7A61DE187380009E8D1 /* MyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B755A7A41DE187380009E8D1 /* MyButton.xib */; };
 		B76D0F1E1DD9B07500EEF537 /* UIViewController+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F1D1DD9B07500EEF537 /* UIViewController+Request.m */; };
 		B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B76D0F291DDB030700EEF537 /* JDSortedCollectionCell.m */; };
+		B78789361DEBC13F00CC396E /* JDMyCommissionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78789351DEBC13F00CC396E /* JDMyCommissionController.m */; };
+		B78789391DEBC24700CC396E /* JDMyCommissionTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B78789381DEBC24700CC396E /* JDMyCommissionTableCell.m */; };
 		B7C2DC431DD95F9900428D66 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2DC421DD95F9900428D66 /* UIView+Category.m */; };
 		B7E7AA0D1DDFCBF100005857 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA0C1DDFCBF100005857 /* AppDelegate.m */; };
 		B7E7AA141DDFCD2B00005857 /* JDAddressTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E7AA0F1DDFCD2B00005857 /* JDAddressTableCell.m */; };
@@ -243,6 +245,10 @@
 		B76D0F1D1DD9B07500EEF537 /* UIViewController+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Request.m"; sourceTree = "<group>"; };
 		B76D0F281DDB030700EEF537 /* JDSortedCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDSortedCollectionCell.h; sourceTree = "<group>"; };
 		B76D0F291DDB030700EEF537 /* JDSortedCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDSortedCollectionCell.m; sourceTree = "<group>"; };
+		B78789341DEBC13F00CC396E /* JDMyCommissionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDMyCommissionController.h; sourceTree = "<group>"; };
+		B78789351DEBC13F00CC396E /* JDMyCommissionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDMyCommissionController.m; sourceTree = "<group>"; };
+		B78789371DEBC24700CC396E /* JDMyCommissionTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDMyCommissionTableCell.h; sourceTree = "<group>"; };
+		B78789381DEBC24700CC396E /* JDMyCommissionTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDMyCommissionTableCell.m; sourceTree = "<group>"; };
 		B7C2DC401DD94EB600428D66 /* TabBarMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarMacros.h; sourceTree = "<group>"; };
 		B7C2DC411DD95F9900428D66 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		B7C2DC421DD95F9900428D66 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
@@ -388,6 +394,8 @@
 				B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */,
 				B718C2D01DE7D8CC00BECCC5 /* JDShareMyController.h */,
 				B718C2D11DE7D8CC00BECCC5 /* JDShareMyController.m */,
+				B78789341DEBC13F00CC396E /* JDMyCommissionController.h */,
+				B78789351DEBC13F00CC396E /* JDMyCommissionController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -406,6 +414,8 @@
 				B718C2D61DE7EB0A00BECCC5 /* ActionSheetView.m */,
 				B718C2D71DE7EB0A00BECCC5 /* VerButton.h */,
 				B718C2D81DE7EB0A00BECCC5 /* VerButton.m */,
+				B78789371DEBC24700CC396E /* JDMyCommissionTableCell.h */,
+				B78789381DEBC24700CC396E /* JDMyCommissionTableCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -852,6 +862,7 @@
 				B7079A891DE671E9004DFCB3 /* JDSortedCollectionModel.m in Sources */,
 				B718C2DB1DE7EB0A00BECCC5 /* VerButton.m in Sources */,
 				B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */,
+				B78789391DEBC24700CC396E /* JDMyCommissionTableCell.m in Sources */,
 				B7E7AA141DDFCD2B00005857 /* JDAddressTableCell.m in Sources */,
 				B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */,
 				B7079AFF1DE69206004DFCB3 /* SelectBtnView.m in Sources */,
@@ -879,6 +890,7 @@
 				90D532D91DD1C210007A7768 /* PlusViewController.m in Sources */,
 				B7079AFC1DE69206004DFCB3 /* IndexOneCell.m in Sources */,
 				B7079AE41DE69206004DFCB3 /* ChangesPassWord.m in Sources */,
+				B78789361DEBC13F00CC396E /* JDMyCommissionController.m in Sources */,
 				B7079A8F1DE6760B004DFCB3 /* JDSecondShoppingCarTableModel.m in Sources */,
 				B7079AE51DE69206004DFCB3 /* EditingAddress.m in Sources */,
 				B7079AF51DE69206004DFCB3 /* FootprintCell.m in Sources */,
@@ -1038,7 +1050,7 @@
 				INFOPLIST_FILE = "商城模板/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miniwudao.wkj;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miniwudao.wkj---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1057,7 +1069,7 @@
 				INFOPLIST_FILE = "商城模板/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miniwudao.wkj;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miniwudao.wkj---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

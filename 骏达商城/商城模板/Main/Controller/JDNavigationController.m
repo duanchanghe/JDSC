@@ -22,8 +22,10 @@
                                                       green:0.369
                                                        blue:0.200
                                                       alpha:1.00];
-    self.navigationBar.titleTextAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:19],
-                                               NSForegroundColorAttributeName:[UIColor whiteColor]};
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
 - (void)didReceiveMemoryWarning {

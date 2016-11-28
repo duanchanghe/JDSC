@@ -9,7 +9,7 @@
 #import "DCHTabBarViewController.h"
 #import "DCHTabBar.h"
 #import "JDShareMyController.h"
-
+#import "JDMyCommissionController.h"
 
 @interface DCHTabBarViewController ()<DCHtabBarDelegate,UITabBarDelegate>
 
@@ -74,7 +74,7 @@
     [_view1 addSubview:control];
     NSArray *array = @[@[@"朋友圈",@"沃克家分享"]
                        ,@[@"推广账户1",@"推广账户"]
-                       ,@[@"我的积分",@"我的积分"]
+                       ,@[@"积分兑换",@"我的积分"]
                        ,@[@"我的佣金",@"我的佣金"]];
     
     int r = 4;
@@ -163,12 +163,29 @@
 {
     
     
+    JDMyCommissionController *vc = StoryboardIdentifier(@"JDMyCommissionController");
+    
+    [self presentViewController:vc
+                       animated:YES
+                     completion:^{
+                         
+                         
+                     }];
+    
     [self ViewFire];
 }
 
-// 跳转到我的"积分"界面
+// 跳转到我的"积分兑换"界面
 -(void)JF
 {
+    JDShareMyController *vc = StoryboardIdentifier(@"JDShareMyController");
+    
+    [self presentViewController:vc
+                       animated:YES
+                     completion:^{
+                         
+                         
+                     }];
     
     [self ViewFire];
 }
