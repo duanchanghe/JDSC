@@ -147,7 +147,7 @@
 
 // 文件上传 post
 //opt=System/FileUpload&path=icon&type=img
-- (void)fileUploadFileData:(NSData *)file_data
+- (void)fileUploadFileData:(NSString *)file_data
                       Type:(NSString *)type
                       Path:(NSString *)path
                      Block:(void(^)(NSMutableDictionary *data))block;

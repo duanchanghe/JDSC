@@ -25,6 +25,12 @@
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
     [self revolveView:self.myTabbar.addButton];
 }
 

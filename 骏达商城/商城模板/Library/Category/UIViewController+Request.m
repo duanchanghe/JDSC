@@ -109,11 +109,11 @@
                 Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"Auth/Login"     forKey:@"opt"];
-    [dic setObject:pwd           forKey:@"pwd"];
-    [dic setObject:regustration_id         forKey:@"regustration_id"];
-    [dic setObject:type           forKey:@"type"];
-    [dic setObject:user_info         forKey:@"user_info"];
+    [dic setObject:@"Auth/Login"        forKey:@"opt"];
+    [dic setObject:pwd                  forKey:@"pwd"];
+    [dic setObject:regustration_id      forKey:@"regustration_id"];
+    [dic setObject:type                 forKey:@"type"];
+    [dic setObject:user_info            forKey:@"user_info"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
@@ -375,30 +375,17 @@
           Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"System/Area"     forKey:@"opt"];
-    [dic setObject:pid           forKey:@"pid"];
+    [dic setObject:@"System/Area"       forKey:@"opt"];
+    [dic setObject:pid                  forKey:@"pid"];
     [self getParmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
 }
 
-#pragma mark -- 上传
-// 文件上传 post
-//opt=System/FileUpload&path=icon&type=img
-- (void)fileUploadFileData:(NSData *)file_data
-                      Type:(NSString *)type
-                      Path:(NSString *)path
-                     Block:(void(^)(NSMutableDictionary *data))block
-{
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setObject:@"System/FileUpload"     forKey:@"opt"];
-    [dic setObject:file_data                forKey:@"file_data"];
-    [dic setObject:type                     forKey:@"type"];
-    [dic setObject:path                     forKey:@"path"];
-    [self getParmar:dic Block:^(NSMutableDictionary *temp) {
-        block(temp);
-    }];
-}
+
+
+
+
 
 // 系统信息
 //opt=System/Info
@@ -684,7 +671,6 @@
 {
     NSString *mer_id;
     mer_id = @"1";
-    
     return mer_id;
 }
 
@@ -695,13 +681,12 @@
 {
     NSDate *senddate = [NSDate date];
     NSString *date2 = [NSString stringWithFormat:@"%ld", (long)[senddate timeIntervalSince1970]];
-
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-    [session.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-os"];
-    [session.requestSerializer setValue:@"8.0.0" forHTTPHeaderField:@"client-os-ver"];
-    [session.requestSerializer setValue:@"1.0.0" forHTTPHeaderField:@"client-ver"];
-    [session.requestSerializer setValue:@"V1" forHTTPHeaderField:@"api-ver"];
-    [session.requestSerializer setValue:date2 forHTTPHeaderField:@"timestamp"];
+    [session.requestSerializer setValue:@"ios"      forHTTPHeaderField:@"client-os"];
+    [session.requestSerializer setValue:@"8.0.0"    forHTTPHeaderField:@"client-os-ver"];
+    [session.requestSerializer setValue:@"1.0.0"    forHTTPHeaderField:@"client-ver"];
+    [session.requestSerializer setValue:@"V1"       forHTTPHeaderField:@"api-ver"];
+    [session.requestSerializer setValue:date2       forHTTPHeaderField:@"timestamp"];
     [parmar setObject:date2 forKey:@"timestamp"];
     NSArray *allKeys = [parmar allKeys];
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc]initWithKey:nil ascending:YES];
@@ -717,7 +702,6 @@
         str = [str stringByAppendingString:sktt];
         str = [str stringByAppendingString:@"&"];
     }
-    
     str = [str stringByAppendingString:@"secret=junda_signature_key"];
     NSString *output = [self md5:str];
     [session.requestSerializer setValue:output forHTTPHeaderField:@"signature"];
@@ -725,8 +709,6 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSMutableDictionary * dic = (NSMutableDictionary*) responseObject;
-        
-        
         if ([dic[@"code"] integerValue]) {
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
@@ -753,21 +735,109 @@
 }
 
 
+
+#pragma mark -- 上传
+// 文件上传 post
+//opt=System/FileUpload&path=icon&type=img
+- (void)fileUploadFileData:(NSString *)file_data
+                      Type:(NSString *)type
+                      Path:(NSString *)path
+                     Block:(void(^)(NSMutableDictionary *data))block
+{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObject:@"System/FileUpload"     forKey:@"opt"];
+    [dic setObject:file_data                forKey:@"file_data"];
+    [dic setObject:type                     forKey:@"type"];
+    [dic setObject:path                     forKey:@"path"];
+    
+    [self getFilePath:file_data Parmar:dic Block:^(NSMutableDictionary *temp) {
+        block(temp);
+    }];
+}
+
+// 上传文件 图片方法
+-(void)getFilePath:(NSString *)file_data
+            Parmar:(NSMutableDictionary*)parmar
+             Block:(void(^)(NSMutableDictionary*temp))block;
+{
+    NSDate *senddate = [NSDate date];
+    NSString *date2 = [NSString stringWithFormat:@"%ld", (long)[senddate timeIntervalSince1970]];
+    
+    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
+    [manger.requestSerializer setValue:@"ios"      forHTTPHeaderField:@"client-os"];
+    [manger.requestSerializer setValue:@"8.0.0"    forHTTPHeaderField:@"client-os-ver"];
+    [manger.requestSerializer setValue:@"1.0.0"    forHTTPHeaderField:@"client-ver"];
+    [manger.requestSerializer setValue:@"V1"       forHTTPHeaderField:@"api-ver"];
+    [manger.requestSerializer setValue:date2       forHTTPHeaderField:@"timestamp"];
+    [parmar setObject:date2 forKey:@"timestamp"];
+    NSArray *allKeys = [parmar allKeys];
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc]initWithKey:nil ascending:YES];
+    NSArray *sortArray = [NSArray arrayWithObjects:descriptor,nil];
+    NSArray *sortedArray = [allKeys sortedArrayUsingDescriptors:sortArray];
+    NSString* str = @"";
+    for (int i = 0; i < sortedArray.count; i ++) {
+        NSString*sf = [sortedArray objectAtIndex:i];
+        NSString *sfg = [sortedArray objectAtIndex:i];
+        str = [str stringByAppendingString:sfg];
+        NSString*sktt = (NSString*)[parmar objectForKey:sf];
+        str = [str stringByAppendingString:@"="];
+        str = [str stringByAppendingString:sktt];
+        str = [str stringByAppendingString:@"&"];
+    }
+    str = [str stringByAppendingString:@"secret=junda_signature_key"];
+    NSString *output = [self md5:str];
+    [manger.requestSerializer setValue:output forHTTPHeaderField:@"signature"];
+    NSURL *filePath = [NSURL fileURLWithPath:file_data];
+    
+    [manger POST:URI
+      parameters:parmar
+constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [formData appendPartWithFileURL:filePath
+                               name:@"file_data"
+                              error:nil];
+    
+}
+        progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        }
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             
+             if ([responseObject[@"code"] integerValue]) {
+                 
+                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                                 message:responseObject[@"msg"]
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"取消"
+                                                       otherButtonTitles:@"确定", nil];
+                 [alert show];
+                 
+             }
+             
+             block(responseObject);
+             
+         }
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             
+             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                             message:[NSString stringWithFormat:@"%@",error]
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"取消"
+                                                   otherButtonTitles:@"确定", nil];
+             [alert show];
+             
+         }];
+    
+}
+
 - (NSString *) md5:(NSString *) input {
     const char *cStr = [input UTF8String];
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
     CC_MD5( cStr, (int)strlen(cStr), digest );
-    
     NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    
     for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x", digest[i]];
     
     return  output;
 }
-
-
-
-
 
 @end

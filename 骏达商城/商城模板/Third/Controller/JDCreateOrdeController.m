@@ -13,6 +13,9 @@
 #import "JDAddressController.h"
 #import <AlipaySDK/AlipaySDK.h>
 
+#import "ShippingAddressVC.h"
+
+
 static NSString *addressTableCell = @"JDAddressTableCell";
 static NSString *goodsTableCell = @"JDGoodsTableCell";
 static NSString *payTableCell = @"JDPayTableCell";
@@ -151,7 +154,11 @@ static NSString *payTableCell = @"JDPayTableCell";
     
     if (indexPath.section == 0)
     {
-        JDAddressController *vc = StoryboardIdentifier(@"JDAddressController");
+        
+        ShippingAddressVC *vc = [[ShippingAddressVC alloc] init];
+
+        
+//        JDAddressController *vc = StoryboardIdentifier(@"JDAddressController");
         [self.navigationController pushViewController:vc animated:YES];
 
     }else if (indexPath.section == 1)
