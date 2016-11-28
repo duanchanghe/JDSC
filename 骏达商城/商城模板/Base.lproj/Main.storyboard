@@ -33,6 +33,127 @@
             </objects>
             <point key="canvasLocation" x="740" y="682"/>
         </scene>
+        <!--Share My Controller-->
+        <scene sceneID="6LP-X3-If9">
+            <objects>
+                <viewController storyboardIdentifier="JDShareMyController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pyx-gg-ECX" customClass="JDShareMyController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pbh-9O-oUw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nye-WB-56e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6QX-qH-86R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fr_02" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-d1-fuk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RVj-Z0-knd">
+                                <rect key="frame" x="102" y="264" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RVj-Z0-knd" secondAttribute="height" multiplier="1:1" id="bGC-1G-fhX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cma-Y9-Fkg">
+                                <rect key="frame" x="125" y="497" width="125" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rNc-gp-T91"/>
+                                </constraints>
+                                <state key="normal" title="邀请好友">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickInviteFriendsButton:" destination="pyx-gg-ECX" eventType="touchUpInside" id="FdZ-iv-g24"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njN-xq-KeD">
+                                <rect key="frame" x="0.0" y="434" width="375" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adX-qn-dBj">
+                                        <rect key="frame" x="297" y="8" width="70" height="39"/>
+                                        <color key="backgroundColor" red="0.8626509309" green="0.86279940610000005" blue="0.86264163260000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="fRT-lm-Qyg"/>
+                                        </constraints>
+                                        <state key="normal" title="点击复制">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickCopyButton:" destination="pyx-gg-ECX" eventType="touchUpInside" id="JJL-44-had"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6T-lG-aGA">
+                                        <rect key="frame" x="8" y="8" width="284" height="39"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93323183060000003" green="0.93339174989999996" blue="0.93322181699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="adX-qn-dBj" firstAttribute="top" secondItem="njN-xq-KeD" secondAttribute="top" constant="8" id="4O7-uf-5Li"/>
+                                    <constraint firstAttribute="trailing" secondItem="adX-qn-dBj" secondAttribute="trailing" constant="8" id="8IW-R0-0uc"/>
+                                    <constraint firstAttribute="height" constant="55" id="Dfv-fr-f4D"/>
+                                    <constraint firstItem="adX-qn-dBj" firstAttribute="leading" secondItem="f6T-lG-aGA" secondAttribute="trailing" constant="5" id="bXd-Pv-dEt"/>
+                                    <constraint firstAttribute="bottom" secondItem="f6T-lG-aGA" secondAttribute="bottom" constant="8" id="dZD-1g-czi"/>
+                                    <constraint firstItem="f6T-lG-aGA" firstAttribute="top" secondItem="njN-xq-KeD" secondAttribute="top" constant="8" id="phS-eP-WOL"/>
+                                    <constraint firstAttribute="bottom" secondItem="adX-qn-dBj" secondAttribute="bottom" constant="8" id="poc-4B-R2d"/>
+                                    <constraint firstItem="f6T-lG-aGA" firstAttribute="leading" secondItem="njN-xq-KeD" secondAttribute="leading" constant="8" id="xFO-WJ-ZRg"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71Z-Y7-yMf">
+                                <rect key="frame" x="16" y="28" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="71Z-Y7-yMf" secondAttribute="height" multiplier="1:1" id="4RH-pI-OZB"/>
+                                    <constraint firstAttribute="width" constant="30" id="eM0-Cm-Ut8"/>
+                                </constraints>
+                                <state key="normal" title="✖️">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCloseButton:" destination="pyx-gg-ECX" eventType="touchUpInside" id="Qki-Kc-Obb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RVj-Z0-knd" firstAttribute="centerY" secondItem="6QX-qH-86R" secondAttribute="centerY" constant="15" id="4ck-9s-zfm"/>
+                            <constraint firstAttribute="trailing" secondItem="hE0-d1-fuk" secondAttribute="trailing" id="9pK-yD-air"/>
+                            <constraint firstAttribute="trailing" secondItem="njN-xq-KeD" secondAttribute="trailing" id="H3l-bj-gOK"/>
+                            <constraint firstItem="RVj-Z0-knd" firstAttribute="width" secondItem="hE0-d1-fuk" secondAttribute="width" multiplier="1:2.2" id="KDP-1u-wUm"/>
+                            <constraint firstItem="hE0-d1-fuk" firstAttribute="top" secondItem="6QX-qH-86R" secondAttribute="top" id="LGd-om-mGj"/>
+                            <constraint firstItem="njN-xq-KeD" firstAttribute="top" secondItem="RVj-Z0-knd" secondAttribute="bottom" id="LQy-cL-eu6"/>
+                            <constraint firstItem="Cma-Y9-Fkg" firstAttribute="top" secondItem="njN-xq-KeD" secondAttribute="bottom" constant="8" id="Prz-9t-Wdi"/>
+                            <constraint firstItem="njN-xq-KeD" firstAttribute="leading" secondItem="6QX-qH-86R" secondAttribute="leading" id="RPR-VR-nAs"/>
+                            <constraint firstItem="Nye-WB-56e" firstAttribute="top" secondItem="hE0-d1-fuk" secondAttribute="bottom" id="U3c-Zp-dKL"/>
+                            <constraint firstItem="71Z-Y7-yMf" firstAttribute="leading" secondItem="6QX-qH-86R" secondAttribute="leadingMargin" id="WWN-9n-TFN"/>
+                            <constraint firstItem="RVj-Z0-knd" firstAttribute="centerX" secondItem="6QX-qH-86R" secondAttribute="centerX" id="Ypi-8G-yhY"/>
+                            <constraint firstItem="Cma-Y9-Fkg" firstAttribute="centerX" secondItem="6QX-qH-86R" secondAttribute="centerX" id="gZf-LE-h6P"/>
+                            <constraint firstItem="Cma-Y9-Fkg" firstAttribute="width" secondItem="hE0-d1-fuk" secondAttribute="width" multiplier="1:3" id="oqR-pK-rhu"/>
+                            <constraint firstItem="hE0-d1-fuk" firstAttribute="leading" secondItem="6QX-qH-86R" secondAttribute="leading" id="ryd-gC-lje"/>
+                            <constraint firstItem="71Z-Y7-yMf" firstAttribute="top" secondItem="pbh-9O-oUw" secondAttribute="bottom" constant="8" id="tEB-z9-KVz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="QRCodeImageView" destination="RVj-Z0-knd" id="0Tq-lj-rch"/>
+                        <outlet property="inviteButton" destination="Cma-Y9-Fkg" id="ohy-2V-4e3"/>
+                        <outlet property="shareText" destination="f6T-lG-aGA" id="9fS-VV-g8k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqK-UX-S76" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="1426.2368815592206"/>
+        </scene>
         <!--First View Controller-->
         <scene sceneID="O0W-1c-t5n">
             <objects>
@@ -1498,6 +1619,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fr_02" width="640" height="1170"/>
         <image name="next" width="6" height="11"/>
         <image name="分类" width="20" height="20"/>
         <image name="分类-选中" width="20" height="20"/>

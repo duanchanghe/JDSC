@@ -34,13 +34,12 @@
     }];
     _model = [JDGoodsTableModel mj_objectWithKeyValues:dataDict];
     
-    
-//    _detailLabel.text = _goods_name;
-//    _priceLabel.text = [NSString stringWithFormat:@"￥ %@",_price];
-//    _countLabel.text = [NSString stringWithFormat:@"X %@",_qty];
-//    _totalLabel.text = [NSString stringWithFormat:@"合计：￥ %ld",[_qty integerValue] * [_price integerValue]];
-//    _totalCountLabel.text = [NSString stringWithFormat:@"共计%@件商品",_qty];
-//    [_photoView setImageWithURL:[NSURL URLWithString:_icon]];
+    _detailLabel.text = _model.name ;
+    _priceLabel.text = [NSString stringWithFormat:@"￥ %@",_model.price];
+    _countLabel.text = [NSString stringWithFormat:@"X %d",_model.qty];
+    _totalLabel.text = [NSString stringWithFormat:@"合计：￥ %ld",[_model.price integerValue]*(_model.qty)];
+    _totalCountLabel.text = [NSString stringWithFormat:@"共计%d件商品",_model.qty];
+    [_photoView setImageWithURL:[NSURL URLWithString:_model.icon]];
 }
 
 

@@ -8,6 +8,8 @@
 
 #import "DCHTabBarViewController.h"
 #import "DCHTabBar.h"
+#import "JDShareMyController.h"
+
 
 @interface DCHTabBarViewController ()<DCHtabBarDelegate,UITabBarDelegate>
 
@@ -75,41 +77,45 @@
                        ,@[@"我的积分",@"我的积分"]
                        ,@[@"我的佣金",@"我的佣金"]];
     
-    int r = 3;
-    int l = 3;
+    int r = 4;
+    int l = 4;
     CGFloat W = 100;
-    CGFloat x = control.frame.size.width / (CGFloat)r;
-    CGFloat y = control.frame.size.width / (CGFloat)l;
+    CGFloat x = control.width / (CGFloat)r;
+    CGFloat y = control.height / (CGFloat)l;
     int m = 0;
     for (int i = 1; i < r; i++) {
         for (int j = 1; j < l; j++) {
-            MyButton *button =
-            [[[NSBundle mainBundle] loadNibNamed:@"MyButton"
-                                           owner:nil
-                                         options:nil]
-             lastObject];
-            button.width = W;
-            button.height = W;
-            button.centerX = SCREEN_WIDTH/2.0;
-            button.centerY = control.frame.size.height + 100;
-// 设置 button 弹出动画
-            POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-            spring.fromValue = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH/2.0, control.frame.size.height + 100)];
-            spring.toValue = [NSValue valueWithCGPoint:CGPointMake(x*j, y*i)];
-            spring.beginTime = CACurrentMediaTime();
-            spring.springBounciness = 5.0f;
-            spring.springSpeed = 1.0f;
-            [button pop_addAnimation:spring forKey:@"position"];
-            
-            
-            button.phoneView.image = [UIImage imageNamed:array[m][0]];
-            button.textLabel.text = array[m][1];
-            [control addSubview:button];
-            button.actionControl.tag = m;
-            m++;
-            [button.actionControl addTarget:self
-                                     action:@selector(Buttonclick:)
-                           forControlEvents:UIControlEventTouchUpInside];
+            if (i%2 && j%2) {
+                MyButton *button =
+                [[[NSBundle mainBundle] loadNibNamed:@"MyButton"
+                                               owner:nil
+                                             options:nil]
+                 lastObject];
+                button.width = W;
+                button.height = W;
+                button.centerX = SCREEN_WIDTH/2.0;
+                button.centerY = control.frame.size.height + 100;
+                // 设置 button 弹出动画
+                POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+                spring.fromValue = [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH/2.0, control.frame.size.height + 100)];
+                spring.toValue = [NSValue valueWithCGPoint:CGPointMake(x*j, y*i)];
+                spring.beginTime = CACurrentMediaTime();
+                spring.springBounciness = 5.0f;
+                spring.springSpeed = 1.0f;
+                [button pop_addAnimation:spring forKey:@"position"];
+                
+                
+                button.phoneView.image = [UIImage imageNamed:array[m][0]];
+                button.textLabel.text = array[m][1];
+                [control addSubview:button];
+                button.actionControl.tag = m;
+                m++;
+                [button.actionControl addTarget:self
+                                         action:@selector(Buttonclick:)
+                               forControlEvents:UIControlEventTouchUpInside];
+                
+            }
+
         }
     }
     [self.view addSubview:_view1];
@@ -152,25 +158,44 @@
 }
 
 
-
+// 跳转到"佣金"界面
 -(void)YJ
 {
+    
+    
+    [self ViewFire];
 }
 
+// 跳转到我的"积分"界面
 -(void)JF
 {
+    
+    [self ViewFire];
 }
+
+// 跳转到分享我的"推广"
 -(void)SHareMY
 {
     
+    JDShareMyController *vc = StoryboardIdentifier(@"JDShareMyController");
+    
+    [self presentViewController:vc
+                       animated:YES
+                     completion:^{
+        
+        
+    }];
+    
+    [self ViewFire];
 }
+
+// 分享"沃克家"
 -(void)ShareWKJ
 {
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:@"来自沃克家的分享" descr:@"沃克家" thumImage:[UIImage imageNamed:@"收藏"]];
     shareObject.webpageUrl = @"http://wkj.miliwudao.com/wap/index/index";
     messageObject.shareObject = shareObject;
-    
     [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_WechatTimeLine messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
         NSString *message = nil;
         if (!error) {
@@ -185,8 +210,11 @@
                                               otherButtonTitles:nil];
         [alert show];
     }];
+    
+    [self ViewFire];
 }
 
+// 移出 _view 到界面外
 -(void)ViewFire{
     
     POPSpringAnimation *controlSpring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
@@ -199,8 +227,4 @@
 }
 
 
-- (void)dealloc
-{
-    [_view1 pop_removeAllAnimations];
-}
 @end

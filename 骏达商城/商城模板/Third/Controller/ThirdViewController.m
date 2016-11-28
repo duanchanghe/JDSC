@@ -167,7 +167,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     if (indexPath.section == 0) {
         return 120;
     } else {
-        return SCREEN_WIDTH + 84;
+        return SCREEN_WIDTH + 88;
     }
 }
 

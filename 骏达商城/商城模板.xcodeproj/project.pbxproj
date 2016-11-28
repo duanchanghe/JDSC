@@ -75,6 +75,10 @@
 		B7079B5C1DE6CF82004DFCB3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7079B5B1DE6CF82004DFCB3 /* CoreTelephony.framework */; };
 		B7079B5E1DE6CF8C004DFCB3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7079B5D1DE6CF8C004DFCB3 /* SystemConfiguration.framework */; };
 		B70A5D8D1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */; };
+		B718C2D21DE7D8CC00BECCC5 /* JDShareMyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B718C2D11DE7D8CC00BECCC5 /* JDShareMyController.m */; };
+		B718C2D91DE7EB0A00BECCC5 /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B718C2D41DE7EB0A00BECCC5 /* ActionButton.m */; };
+		B718C2DA1DE7EB0A00BECCC5 /* ActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = B718C2D61DE7EB0A00BECCC5 /* ActionSheetView.m */; };
+		B718C2DB1DE7EB0A00BECCC5 /* VerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B718C2D81DE7EB0A00BECCC5 /* VerButton.m */; };
 		B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */; };
 		B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E2E1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m */; };
 		B7413E321DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7413E311DDC247C006BFB12 /* JDSecondShoppingCarTableCell.m */; };
@@ -216,6 +220,14 @@
 		B7079B5D1DE6CF8C004DFCB3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B70A5D8B1DDD6D8A002AFE8B /* JDShoppingCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShoppingCollectionCell.h; sourceTree = "<group>"; };
 		B70A5D8C1DDD6D8A002AFE8B /* JDShoppingCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShoppingCollectionCell.m; sourceTree = "<group>"; };
+		B718C2D01DE7D8CC00BECCC5 /* JDShareMyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDShareMyController.h; sourceTree = "<group>"; };
+		B718C2D11DE7D8CC00BECCC5 /* JDShareMyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDShareMyController.m; sourceTree = "<group>"; };
+		B718C2D31DE7EB0A00BECCC5 /* ActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionButton.h; sourceTree = "<group>"; };
+		B718C2D41DE7EB0A00BECCC5 /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
+		B718C2D51DE7EB0A00BECCC5 /* ActionSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetView.h; sourceTree = "<group>"; };
+		B718C2D61DE7EB0A00BECCC5 /* ActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetView.m; sourceTree = "<group>"; };
+		B718C2D71DE7EB0A00BECCC5 /* VerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerButton.h; sourceTree = "<group>"; };
+		B718C2D81DE7EB0A00BECCC5 /* VerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerButton.m; sourceTree = "<group>"; };
 		B7413E2A1DDC0836006BFB12 /* JDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNavigationController.h; sourceTree = "<group>"; };
 		B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDNavigationController.m; sourceTree = "<group>"; };
 		B7413E2D1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFirstShoppingCarTableCell.h; sourceTree = "<group>"; };
@@ -374,6 +386,8 @@
 				90D532E61DD1C46C007A7768 /* DCHTabBarViewController.m */,
 				B7413E2A1DDC0836006BFB12 /* JDNavigationController.h */,
 				B7413E2B1DDC0836006BFB12 /* JDNavigationController.m */,
+				B718C2D01DE7D8CC00BECCC5 /* JDShareMyController.h */,
+				B718C2D11DE7D8CC00BECCC5 /* JDShareMyController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -386,6 +400,12 @@
 				B755A7A21DE187380009E8D1 /* MyButton.h */,
 				B755A7A31DE187380009E8D1 /* MyButton.m */,
 				B755A7A41DE187380009E8D1 /* MyButton.xib */,
+				B718C2D31DE7EB0A00BECCC5 /* ActionButton.h */,
+				B718C2D41DE7EB0A00BECCC5 /* ActionButton.m */,
+				B718C2D51DE7EB0A00BECCC5 /* ActionSheetView.h */,
+				B718C2D61DE7EB0A00BECCC5 /* ActionSheetView.m */,
+				B718C2D71DE7EB0A00BECCC5 /* VerButton.h */,
+				B718C2D81DE7EB0A00BECCC5 /* VerButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -580,6 +600,8 @@
 		B7079AA01DE69206004DFCB3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B7079AAB1DE69206004DFCB3 /* FourthViewController.h */,
+				B7079AAC1DE69206004DFCB3 /* FourthViewController.m */,
 				B7079AA11DE69206004DFCB3 /* ChangesPassWord.h */,
 				B7079AA21DE69206004DFCB3 /* ChangesPassWord.m */,
 				B7079AA31DE69206004DFCB3 /* EditingAddress.h */,
@@ -590,8 +612,6 @@
 				B7079AA81DE69206004DFCB3 /* Footprint.m */,
 				B7079AA91DE69206004DFCB3 /* ForgotPassword.h */,
 				B7079AAA1DE69206004DFCB3 /* ForgotPassword.m */,
-				B7079AAB1DE69206004DFCB3 /* FourthViewController.h */,
-				B7079AAC1DE69206004DFCB3 /* FourthViewController.m */,
 				B7079AAD1DE69206004DFCB3 /* GetVerificationCode.h */,
 				B7079AAE1DE69206004DFCB3 /* GetVerificationCode.m */,
 				B7079AAF1DE69206004DFCB3 /* MyCollection.h */,
@@ -822,6 +842,7 @@
 				90D532D01DD1C1D2007A7768 /* SecondViewController.m in Sources */,
 				B7E7AA151DDFCD2C00005857 /* JDGoodsTableCell.m in Sources */,
 				B7079AEE1DE69206004DFCB3 /* SettingsList.m in Sources */,
+				B718C2D91DE7EB0A00BECCC5 /* ActionButton.m in Sources */,
 				B7079A9B1DE67693004DFCB3 /* JDPayTableModel.m in Sources */,
 				B7079AF91DE69206004DFCB3 /* CitysSelectedVC.m in Sources */,
 				B7079AE91DE69206004DFCB3 /* FourthViewController.m in Sources */,
@@ -829,6 +850,7 @@
 				B7413E2C1DDC0836006BFB12 /* JDNavigationController.m in Sources */,
 				B7079AEA1DE69206004DFCB3 /* GetVerificationCode.m in Sources */,
 				B7079A891DE671E9004DFCB3 /* JDSortedCollectionModel.m in Sources */,
+				B718C2DB1DE7EB0A00BECCC5 /* VerButton.m in Sources */,
 				B76D0F2A1DDB030700EEF537 /* JDSortedCollectionCell.m in Sources */,
 				B7E7AA141DDFCD2B00005857 /* JDAddressTableCell.m in Sources */,
 				B7413E2F1DDC2455006BFB12 /* JDFirstShoppingCarTableCell.m in Sources */,
@@ -864,6 +886,7 @@
 				B7413E351DDC51AA006BFB12 /* JDGoodsDetailController.m in Sources */,
 				B7E7AA0D1DDFCBF100005857 /* AppDelegate.m in Sources */,
 				B7079AF21DE69206004DFCB3 /* FootprintModel.m in Sources */,
+				B718C2D21DE7D8CC00BECCC5 /* JDShareMyController.m in Sources */,
 				B7079AEB1DE69206004DFCB3 /* MyCollection.m in Sources */,
 				B7079B031DE69206004DFCB3 /* XLPlainFlowLayout.m in Sources */,
 				B7079AEF1DE69206004DFCB3 /* ShippingAddressVC.m in Sources */,
@@ -879,6 +902,7 @@
 				B7079AF01DE69206004DFCB3 /* TheLoginVC.m in Sources */,
 				B7079A5A1DE5358E004DFCB3 /* JDAddressDetailTableCell.m in Sources */,
 				B7079A9E1DE676AE004DFCB3 /* JDAddressDetailTableModel.m in Sources */,
+				B718C2DA1DE7EB0A00BECCC5 /* ActionSheetView.m in Sources */,
 				B7079AF11DE69206004DFCB3 /* ToViewTheOrder.m in Sources */,
 				B7079A861DE59AA6004DFCB3 /* NSObject+Model.m in Sources */,
 			);
@@ -1014,7 +1038,7 @@
 				INFOPLIST_FILE = "商城模板/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jdnt.www.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miniwudao.wkj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1033,7 +1057,7 @@
 				INFOPLIST_FILE = "商城模板/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jdnt.www.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miniwudao.wkj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
