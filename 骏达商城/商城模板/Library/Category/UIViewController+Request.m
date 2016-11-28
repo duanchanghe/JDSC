@@ -739,24 +739,23 @@
 #pragma mark -- 上传
 // 文件上传 post
 //opt=System/FileUpload&path=icon&type=img
-- (void)fileUploadFileData:(NSString *)file_data
+- (void)fileUploadFileData:(NSString *)file_path
                       Type:(NSString *)type
                       Path:(NSString *)path
                      Block:(void(^)(NSMutableDictionary *data))block
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"System/FileUpload"     forKey:@"opt"];
-    [dic setObject:file_data                forKey:@"file_data"];
     [dic setObject:type                     forKey:@"type"];
     [dic setObject:path                     forKey:@"path"];
     
-    [self getFilePath:file_data Parmar:dic Block:^(NSMutableDictionary *temp) {
+    [self getFilePath:file_path Parmar:dic Block:^(NSMutableDictionary *temp) {
         block(temp);
     }];
 }
 
 // 上传文件 图片方法
--(void)getFilePath:(NSString *)file_data
+-(void)getFilePath:(NSString *)file_path
             Parmar:(NSMutableDictionary*)parmar
              Block:(void(^)(NSMutableDictionary*temp))block;
 {
@@ -787,46 +786,41 @@
     str = [str stringByAppendingString:@"secret=junda_signature_key"];
     NSString *output = [self md5:str];
     [manger.requestSerializer setValue:output forHTTPHeaderField:@"signature"];
-    NSURL *filePath = [NSURL fileURLWithPath:file_data];
+    NSURL *filePath = [NSURL fileURLWithPath:file_path];
     
     [manger POST:URI
       parameters:parmar
 constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    
     [formData appendPartWithFileURL:filePath
                                name:@"file_data"
                               error:nil];
-    
 }
         progress:^(NSProgress * _Nonnull uploadProgress) {
             
+            
         }
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             
-             if ([responseObject[@"code"] integerValue]) {
+             NSMutableDictionary * dic = (NSMutableDictionary*) responseObject;
+             if ([dic[@"code"] integerValue]) {
                  
                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                                 message:responseObject[@"msg"]
+                                                                 message:dic[@"msg"]
                                                                 delegate:nil
                                                        cancelButtonTitle:@"取消"
                                                        otherButtonTitles:@"确定", nil];
                  [alert show];
-                 
              }
-             
-             block(responseObject);
-             
+             block(dic);
          }
          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-             
              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
                                                              message:[NSString stringWithFormat:@"%@",error]
                                                             delegate:nil
                                                    cancelButtonTitle:@"取消"
                                                    otherButtonTitles:@"确定", nil];
              [alert show];
-             
          }];
-    
 }
 
 - (NSString *) md5:(NSString *) input {
